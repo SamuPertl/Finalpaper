@@ -1,0 +1,257 @@
+\documentclass[12pt,a4paper]{article} 
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage[all]{nowidow} 
+\usepackage[style=authoryear, backend=biber, maxnames=3]{biblatex} 
+\usepackage[all]{nowidow} 
+\usepackage{hyperref} 
+\usepackage[pdftex]{graphicx}
+\usepackage[onehalfspacing]{setspace} 
+
+\usepackage{tikz}
+\usepackage{standalone}
+\usepackage{eurosym}
+\usepackage{ntheorem}
+\theoremseparator{:}
+\newtheorem{hyp}{Hypothese}
+\usepackage{dcolumn}
+\usepackage{graphics}
+\usepackage{graphicx}
+
+\usepackage[english]{babel} % for the language
+
+\usepackage{fullpage} % this and the next one is for 1-inch margin 
+%\usepackage{setspace}
+%\doublespacing
+
+
+\addbibresource{bib_file.bib} 
+\setlength\parindent{0pt} 
+
+\newcommand{\Title}{Religious people do not discount the future less} 
+
+
+\newcommand{\Programme}{Corporate Management \& Economics}
+\newcommand{\AsssignmentName}{Assignment}
+\newcommand{\Name}{Samuel Pertl}
+\newcommand{\MatrikelNummer}{000055998}
+\newcommand{\Date}{20-12-2016}
+\newcommand{\Semester}{Fall Term 2017}
+\newcommand{\Supervisor}{Thor Veen}
+\newcommand{\Class}{Data Science A}
+
+\begin{document}
+\pagenumbering{gobble}
+\input{front}
+\newpage
+
+\pagenumbering{roman}
+\tableofcontents
+\listoffigures
+\listoftables
+
+\newpage
+
+\begin{abstract}
+Hello my name is Samuel. I am form Germany and I attend
+\end{abstract}
+ 
+
+\section{Introduction \& Methods}
+Introduction (3/4 page), Methods (1 page), 
+Results (2 pages) and Discussion (3/4 pages) sections
+
+
+introduction: intertemporal choice experiment
+delay gratification has several beneficial outcomes 
+ 
+Delay gratification could be encouraged by religion as many religions emphasize future rewards instead of immediate gratification such as reincarnation, resurrection and immorality \parencite{carter2012religious}. Furthermore patience has an important role in many religions \parencite{carter2012religious}. Socialization in a religious environment might therefore lead to a more patient behavior resulting in a preferce for a higher later reward instead of a instant gratification \parencite{carter2012religious}.\\
+In line with the economic literature the trad-off between instant and delay gratification can be model through an intertemporal choice experiment. In an intertemporal choice experiment participants have to decide between an amount $x$ now and a higher amount $x+y$ later, where $y$ is a positive number.\\ 
+
+% not clear what I mean by future discounting 
+To my knowledge three papers have investigated the relationship between religion and future discounting so far. 
+ 
+\textcite{carter2012religious} found that religious people discount have a stronger preference for later reward as their non-religious counterparts and therefore discount future rewards less. Controversial, neither \textcite{thornton2015divine} nor \textcite{benjamin2010religious} observed a significant relationship between religion and discounting of future rewards.\\ 
+
+Based on the controversial findings as well as the scarcity of the previous research more research is needed to to clarify the relationship between religion and discounting of future rewards.\\
+Besides this all three studies have major drawbacks. \textcite{carter2012religious, benjamin2010religious} use undergraduate students from the United States as their participants. According to \textcite{henrich2010weirdest} undergraduate students from "Western, Educated, Industrialized, Rich and Democratic" (WEIRD) societies - especially form the USA - are the least representative samples which substantially limits the generalization of their findings. \textcite{thornton2015divine} take this drawback into consideration and recruited their participants on the online labour market M-Turk. Even though, participants from M-Turk are a more representative sample than undergraduates they are not a representative sample since people who work online are just a small fraction of the hole population \parencite{horton2011online}.\
+Additionally, all three studies either do not control or just control for very few variables which could have an influence on future discounting.\\
+
+Based on these drawbacks this study uses a representative sample of the German population to investigate the relationship between future discounting and religion and controls for several variables that are associated with future discounting.
+Based on the existing literature the research question for the following paper is: 
+\begin{hyp}
+Religious people discount the future less than non-religious people and have therefore a stronger preference for later rewards as non-religious participants
+\end{hyp}
+
+\subsection{Sample} 
+The sample consist of a cross section of the German population.\footnote{For a detailed description of the data collection see \textcite{dohmen2010risk}} To measure future discounting each participant took part in an intertemporal choice experiment. For this purpose each participant with 
+
+
+
+100 euros "today" and a higher amount $Y$ in 12 months. 
+
+which variables do I use and why do I use them 
+
+\subsection{Methods}
+Methods
+visualization  
+descriptive statistics 
+linear regression 
+glm: I do not know if I have count data or not 
+Question for Monday 
+
+\section{Results}
+
+
+describe the demographics 
+mean age 46 (range 14 - 90) 
+
+religious affiliation: 
+
+Catholic: 31.4 percent
+Protestant: 34.8 
+A member of a different Christian denomination or religious community: 2.6
+A member of an Islamic religious community: 2.2 
+A member of another religious community: 0.2 
+not a member of a religious community: 28.8 
+
+gender 
+female: 53.8
+male 46.2 
+
+west/east 
+west 77.8 
+east 22.2
+\subsection{Methods}
+
+
+
+I use a significance level of alpha is 5 percent which allows to observe significant results that are not significant under the conventional 5 percent significance level. I do not mention the significance level if not stated otherwise. 
+
+the same applies for ceteris paribus 
+
+\subsection{Visualizing the data }
+Visualizing the data with a histogram and a QQplot shows that switching row might not be normally distributed. 
+a lot of observations on the very right   
+A Shapiro-Wilk normality test supports this impression of a non normal distribution (p-value $< 0.0001$).\\
+% try the same but exclude the 21 observations 
+\begin{figure}
+\scalebox{0.8}{
+\input{switchingrow.tex}}
+\end{figure}
+Applying various transformation to the the variable switching row does not result in a normal distributed variable. Therefore, I refrain from transforming the variable. 
+
+According the the Central Limit Theorem (CLT) samples with sample size $>$ 50 are approximately normal distributed and therefore parametric tests are suitable. As the data set has a sample size of 500 observations parametric test can be applied. 
+ 
+
+
+mean switching row 13.42 (sd = 7.28) correspond to a mean return of 33.56 (sd = 18.19)
+
+
+\subsection{Descriptive Statistic}
+what I want to do 
+
+what is the mean for the switching row of religious people and not religious people? 
+
+
+compare the means 
+Welch Two Sample t-test shows that means of switching row religious and non-religious people are significantly different and that religious people have a higher switching row than their non religious counterparts (p-value: $0.066$). 
+
+
+confidence interval 
+
+Wilcoxon-Mann-Whitney test supports these results indicating that the switching row of religious participants is likely shifted left or right with respect to switching row of the non-religious participants (p-value: $0.081$). 
+
+compare the variances? 
+
+correlation 
+The (linear) correlation between switching row and religion is 0.078 (spearman; p-value: 0.08) indicating.  
+
+\section{Regression}
+linear regression with one variable
+
+The intercept of the first regression model indicates the expected switching row for the non-religious participants is 12.45(p-value$<$ 0.0001). 
+ 
+The estimator for the dummy variable religion shows that that the expected switching row for religious participants is 1.36 higher than the switching row of non-religious participants (p-value: 0.058).
+
+Model fits the data F-test p-value: 0058
+The F-test shows that the model is fits the data since the estimator religion is different from zero (p-value: 0.058) 
+
+The adjusted $R^2$ implies that the model explains 0.05\% of the variance of switching row. The remaining 99.5\% of the variance are still unexplained. 
+ 
+
+
+
+linear regression with all variables
+The second model controls for all the variables that might additionally have an influence on the switching row.
+
+
+intercept: 
+The intercept is 27.14 and is statistical (p-value $<$ 0.0001) but not economical significant as the maximum switching row in the experiment is 21. 
+
+The estimator religion shows that the expected switching row for religious participants is  1.69 lower than the expected switching row for non-religious participants (p-value: 0.056).
+
+logincome 
+if we increase income by 10 percent the switching row decreases by 0.2048635 (p-value: 0.002)
+
+
+abi
+Participants that have a high-school degree have an expected switching row that is 1.827 lower than the switching row for participants that do not have a high-school degree (p-value: 0.094).
+
+
+% interaction term 
+
+The F-test indicates that the model fits the data since at least one of the coefficients is nonzero (p-value: 0.059). 
+3.3\% of the variance in switching row in explained by the model but the remaining 96.7\% are still unexplained. 
+
+
+comparison of the two models through anova 
+have to adjust the two rows 
+Comparing the two models with an analysis of variance (ANOVA) shows that that we should keep the additional variables in the model as they reduce the sum of squared residuals by 1658.4 and the two models are therefore significantly different (p-value: 0.055). 
+
+%glm (poisson): I am not sure if a poisson distribution is appropriate 
+
+%with one variable 
+
+%with all variables
+
+ 
+\section{Discussion}
+
+\begin{table}[!htbp] 
+\centering 
+  \caption{Pay-off matrix for intertemporal choice experiment}
+\begin{center}
+\scalebox{0.7}{
+\begin{tabular}{p{2cm}|p{3cm}|p{2cm}|p{3cm}}
+  & today & or & in 12 months\\
+\hline 1 & 100.00 & & 102.50\\
+\hline 2 & 100.00 & & 105.10 \\
+\hline 3 & 100.00 & & 107.60 \\
+\hline 4 & 100.00 & & 110.20 \\
+\hline 5 & 100.00 & & 112.80 \\
+\hline 6 & 100.00 & & 115.50 \\
+\hline 7 & 100.00 & & 118.20 \\
+\hline 8 & 100.00 & & 121.00 \\
+\hline 9 & 100.00 & & 123.70 \\
+\hline 10 & 100.00 & & 126.50 \\
+\hline 11 & 100.00 & & 129.30 \\
+\hline 12 & 100.00 & & 132.20 \\
+\hline 13 & 100.00 & & 135.10 \\
+\hline 14 & 100.00 & & 138.00 \\
+\hline 15 & 100.00 & & 141.00 \\
+\hline 16 & 100.00 & & 144.00 \\
+\hline 17 & 100.00 & & 147.00 \\
+\hline 18 & 100.00 & & 150.00 \\
+\hline 19 & 100.00 & & 153.10 \\
+\hline 20 & 100.00 & & 156.20\\
+\hline
+\end{tabular}}
+\end{center}
+\end{table}
+
+goal: Monday everything is ready 
+
+\end{document}

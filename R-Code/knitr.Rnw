@@ -1,0 +1,8 @@
+\documentclass{article}
+
+\begin{document}
+
+Hi, my name is Samuel 
+
+
+\end{document}
