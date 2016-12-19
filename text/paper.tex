@@ -76,7 +76,7 @@ To my knowledge three papers have investigated the relationship between religion
 \textcite{carter2012religious} found that religious people discount have a stronger preference for later reward as their non-religious counterparts and therefore discount future rewards less. Controversial, neither \textcite{thornton2015divine} nor \textcite{benjamin2010religious} observed a significant relationship between religion and discounting of future rewards.\\ 
 
 Based on the controversial findings as well as the scarcity of the previous research more research is needed to to clarify the relationship between religion and discounting of future rewards.\\
-Besides this all three studies have major drawbacks. \textcite{carter2012religious, benjamin2010religious} use undergraduate students from the United States as their participants. According to \textcite{henrich2010weirdest} undergraduate students from "Western, Educated, Industrialized, Rich and Democratic" (WEIRD) societies - especially form the USA - are the least representative samples which substantially limits the generalization of their findings. \textcite{thornton2015divine} take this drawback into consideration and recruited their participants on the online labour market M-Turk. Even though, participants from M-Turk are a more representative sample than undergraduates they are not a representative sample since people who work online are just a small fraction of the hole population \parencite{horton2011online}.\
+Beside this, all three studies have major drawbacks. \textcite{carter2012religious, benjamin2010religious} use undergraduate students from the United States as their participants. According to \textcite{henrich2010weirdest} undergraduate students from "Western, Educated, Industrialized, Rich and Democratic" (WEIRD) societies - especially form the USA - are the least representative samples which substantially limits the generalization of their findings. \textcite{thornton2015divine} take this drawback into consideration and recruited their participants on the online labour market M-Turk. Even though, participants from M-Turk are a more representative sample than undergraduates they are not a representative sample since people who work online are - as well as undergraduates - just a small fraction of the hole population \parencite{horton2011online}.\
 Additionally, all three studies either do not control or just control for very few variables which could have an influence on future discounting.\\
 
 Based on these drawbacks this study uses a representative sample of the German population to investigate the relationship between future discounting and religion and controls for several variables that are associated with future discounting.
@@ -86,51 +86,66 @@ Religious people discount the future less than non-religious people and have the
 \end{hyp}
 
 \subsection{Sample} 
-The sample consist of a cross section of the German population.\footnote{For a detailed description of the data collection see \textcite{dohmen2010risk}} To measure future discounting each participant took part in an intertemporal choice experiment. For this purpose each participant with 
+The sample consist of a cross section of the German population.\footnote{For a detailed description of the data collection see \textcite{dohmen2010risk}} To measure future discounting each participant took part in an intertemporal choice experiment. For this purpose each participant received a intertemporal choice matrix witch 20 rows.\footnote{The intertemporal choice matrix can be found in the appendix} For each row the participant had to decide between 100 euros "today" or a higher amount of $Y$ in 12 months \parencite{dohmen2010risk}. For all rows the early payment was 100 euros but the future payment increased by each the subsequent row.\\
+The first time that a participant switched from the early payment to the later payment shows to which extent the participant discounts future rewards, indicated by the internal rate of return.\footnote{some more information to internal rate of return} For participants who never switch from the early payment to the later one, a switching row of 21 is assumed.\\  
+
+% it always increased by 2.5 percentage points 
+
+\subsection{variables that I use}
+The response variable is the switching row, which indicates how strong a participant discounts future rewards. A higher switching row indicates that the participant discounts future payments stronger. 
+% why does a higher switching row indicate more discounting 
+The explanatory variable is the religious affiliation of a participant. Religious affiliation is coded as a dummy variable with 1 when the participant belongs to a religious community and with 0 if this is not the case.\\
+
+Control variables are extracted from the existing literature and are displayed in following table.\footnote{For exact coding of the control variables can be found in the R-script}
 
 
+\begin{table}[!htbp] 
+\centering 
+  \caption{Control variables}
+\begin{center}
+\scalebox{0.7}{
+\begin{tabular}{|p{5cm}|p{17cm}|}
+\hline Gender & 1 = male and 0 = female \\
+\hline Age  & age in years \\
+\hline Cognitive ability & \\
+\hline High-school degree & 1 = high-school degree and 0 = no high-school degree\\ 
+\hline Secondary school & 1 = secondary school degree and 0 = no secondary school degree\\ 
+\hline Enrolled & 1 = still enrolled and 0 = not enrolled\\
+\hline Without degree & 1 = without degree and 0 = degree\\
+\hline Income & log income \\ 
+\hline Credit constraint & 1 = Credit constraint and 0 = no credit constraint\\
+\hline Big Five & Openness to experience, Conscientiousness, Extraversion, Agreeableness, Neuroticism\\  
+\hline
+\end{tabular}}
+\end{center}
+\end{table}
 
-100 euros "today" and a higher amount $Y$ in 12 months. 
+% how are the variables coded 
 
-which variables do I use and why do I use them 
+%which variables do I use and why do I use them 
 
 \subsection{Methods}
-Methods
-visualization  
-descriptive statistics 
-linear regression 
-glm: I do not know if I have count data or not 
-Question for Monday 
+In a first step the data is visualized to get an overview and observe whether the response variable switching row is normally distributed. Checking the normality provides the basis which statistical tests can be applied. 
+In a second step a Welch two-sample t-test is applied to compare the means of switching row between religious and non-religious people. A Welch two-sample t-test is appropriate as switching row is approximatly normally distributed. \footnote{Why see results section} Although a Welch t-test is sufficient a nonparametric test (Wilcoxon-Mann-Whitney test) is conducted to verify the previous results.
+% probably I want to compare the variances with a levene or F-test 
+To investigate whether there is linear relationship between religion and switching row a Spearman rank task is conducted. 
+ 
+%glm: I do not know if I have count data or not 
+In a third step a linear regression model is fitted to the data. This allows to control for several variables that may have an influence on intertemporal decision making and detect whether religion still has an influence on the switching row when controlling for all this variables.
 
+% quantify the influence of religion on switching row  
+
+Finally an analysis of variance (ANOVA) is performed to compare two regression models and decide whether the  model with more variables fits the data better than the model with less variables. 
+
+%eventually a Tobit model 
+
+Throughout the paper I use a significance level of alpha 10 \% which allows to observe significant results that would not be significant at the conventional 5 \% significance level.\\
+For the interpretation of the linear regression I will just interpret statistically significant estimators and the ceteris paribus clause pertains for the analysis and is not mentioned again.
 \section{Results}
-
-
-describe the demographics 
-mean age 46 (range 14 - 90) 
-
-religious affiliation: 
-
-Catholic: 31.4 percent
-Protestant: 34.8 
-A member of a different Christian denomination or religious community: 2.6
-A member of an Islamic religious community: 2.2 
-A member of another religious community: 0.2 
-not a member of a religious community: 28.8 
-
-gender 
-female: 53.8
-male 46.2 
-
-west/east 
-west 77.8 
-east 22.2
-\subsection{Methods}
-
-
-
-I use a significance level of alpha is 5 percent which allows to observe significant results that are not significant under the conventional 5 percent significance level. I do not mention the significance level if not stated otherwise. 
-
-the same applies for ceteris paribus 
+53.8 \% of the participants are female and 46.2 \% are male with a mean of age of 46 (range: 14 - 90).  
+% eventually the standard deviation of age  
+Participants belong to a wide range of religious communities (Protestant: 34.8\%, Catholic: 31.4 \%, member of a different Christian denomination or religious community: 2.6\%, Islamic: 2.2\%, another religious community: 0.2\%, no religious community: 28.8\%) 
+ 
 
 \subsection{Visualizing the data }
 Visualizing the data with a histogram and a QQplot shows that switching row might not be normally distributed. 
@@ -138,7 +153,7 @@ a lot of observations on the very right
 A Shapiro-Wilk normality test supports this impression of a non normal distribution (p-value $< 0.0001$).\\
 % try the same but exclude the 21 observations 
 \begin{figure}
-\scalebox{0.8}{
+\scalebox{0.6}{
 \input{switchingrow.tex}}
 \end{figure}
 Applying various transformation to the the variable switching row does not result in a normal distributed variable. Therefore, I refrain from transforming the variable. 

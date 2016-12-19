@@ -1,38 +1,37 @@
 ##### statistics 
 
 # baisc statistics 
-# switching row 
+# switching row (various desctriptive statistics)
 mean(dtnew$T012, na.rm = T) # 13.422
 sd(dtnew$T012, na.rm = T) # 7.276
 var(dtnew$T012, na.rm = T) # 52.946 
 median(dtnew$T012, na.rm = T) # 15 
 
 
-# return 
+# return (mean and standard deviation)
 mean(dtnew$return, na.rm = T) # 33.555 
 sd(dtnew$return, na.rm = T) # 18.19097 
 
-#age 
+#age (various descritpve statistics)
 median(dtnew$age, na.rm = T) # 44
 mean(dtnew$age, na.rm = T) # 46.09 
 sd(dtnew$age, na.rm = T) # 18.0117 
 range(dtnew$age, na.rm = T) # 14-90 
 
-# religious communities with table 
+# distribution for all the religious communities  
 (tablereli <- table(dtnew$relicom))
 prop.table(tablereli)*100
 
-# gender 
+# Gender distributio  
 (tablegender <- table(dtnew$male))
 prop.table(tablegender)*100
 
-
-
-# west 
+# how many people in the sample are from west/east Germany 
 (tablewest <- table(dtnew$west))
 prop.table(tablewest)*100
 
-########## visualize the data
+####################### visualize the data
+
 tikz(file = "switchingrow.tex", width = 5, height = 5)
 ggplot(dtnew, aes(T012 !=21))+
   geom_histogram(aes(y=..density..), bins = 20)+
@@ -41,16 +40,18 @@ ggplot(dtnew, aes(T012 !=21))+
   xlab("switching row")
 dev.off()
 
+# data does not look normally distributed as most observations are on the very reight end 
+# data also looks right censored/this is true as for all participants that do not switch the row a 
+# switiching row of 21 is assumed 
 
-# does not look normally distributed, right censored 
+# check the normality with a qqplot 
 
-# check the same with a qqplot 
 # try the same with ggplot 
 ggplot(dtnew, aes(sample = T012))+
   stat_qq(geom="lines")
+# qqline is still missing 
 
-
-# base package 
+# normality of switching row with base package 
 qqnorm(dtnew$T012)
 qqline(dtnew$T012)
 
@@ -60,7 +61,9 @@ switch.t <- rnorm(500, mean(dtnew$T012), sd(dtnew$T012) )
 qqnorm(switch.t)
 qqline(switch.t)
 
-# compare the two plots in one window 
+# compare the two qqplots (normality) in one window 
+
+
 tikz(file = "normalityswitchingrow.tex", width = 5, height = 5)
 par(mfrow = c(2,1))
 
@@ -69,16 +72,13 @@ qqline(dtnew$T012)
 
 qqnorm(switch.t)
 qqline(switch.t)
-
 dev.off()
 
-
 # T012 does not look normally distributed so parametric test are probably not appropriate 
-# sample size is large enough so central limit theorem 
+# sample size is large enough so central limit theorem applies 
 
-# shows that there is a substantial heterogenity 
 
-# check the normality of T012 with a base plot
+# check the normality of T012 with a base histogram and add a normal distribution 
 hist(dtnew$T012, density=20, breaks=20, prob=TRUE, xlim = c(0,21))
 curve(dnorm(x, mean = mean(dtnew$T012), sd = sd(dtnew$T012)), 
       col="darkblue", lwd=2, add=TRUE)
@@ -90,22 +90,21 @@ curve(dnorm(x, mean = mean(dtnew$T012), sd = sd(dtnew$T012)),
 logT12 <- log(dtnew$T012)
 
 hist(logT12)
-# does not look normally distributed 
+#does not look normally distributed 
 
 qqnorm(logT12)
 qqline(logT12)
 # does not look normally distributed 
-# look transformation is not a good transformation for this data 
+####### look transformation is not a good transformation for this data 
 
 # arcsin transformation
 asinT012 <- asin(sqrt(dtnew$T012))
-# get a lot of NaN 
+######## get a lot of NaN 
 
 # histogram 
 hist(asinT012)
 
 # sqrt transformation 
-
 sqrtT012 <- sqrt(dtnew$T012)
 
 # histogram 
@@ -114,10 +113,9 @@ hist(sqrtT012)
 
 qqnorm(sqrtT012)
 qqline(sqrtT012)
-# does not look normally distributed 
+####### does not look normally distributed 
 
 # square transformaton 
-
 squT012 <- dtnew$T012^2
 
 # histogram 
@@ -125,14 +123,14 @@ hist(squT012)
 
 qqnorm(squT012)
 qqline(squT012)
-# does not look normally distributed 
+######## does not look normally distributed 
 
 # reciprocal 
 reciT012 <- 1/dtnew$T012
 
 # hist 
 hist(reciT012)
-# not violates assumptions of transformation 
+######### violates assumptions of transformation 
 
 # antilog 
 expT012 <- exp(dtnew$T012)
@@ -140,11 +138,16 @@ expT012 <- exp(dtnew$T012)
 
 #hist 
 hist(expT012)
-# not appropriate 
+########### not appropriate 
 
-# no transformation is appropriate so we go on with the untransformed T012 
+########### no transformation is appropriate so we go on with the untransformed T012 
 
-# testing for normality 
+
+
+
+
+
+############ testing for normality Shapiro test 
 # check if the switching row is normally distributed 
 shapiro.test(dtnew$T012) # p< 0.0001 -> T012 is likely not normally distrbuted 
 
@@ -152,14 +155,9 @@ shapiro.test(dtnew$T012) # p< 0.0001 -> T012 is likely not normally distrbuted
 shapiro.test(dtnew$wordtest)
 shapiro.test(dtnew$symtest)
 
-
-
-
 # Testing for Runs 
 runs.test(as.factor(dtnew$religion))
 runs.test(as.factor(dtnew$male))
-
-
 
 
 # t-Test check out what does alternative mena? is it Ho?
