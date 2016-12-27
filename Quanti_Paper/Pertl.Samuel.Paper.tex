@@ -1,0 +1,738 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc} 
+\usepackage{amsmath}  
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage[all]{nowidow} 
+\usepackage[style=authoryear, backend=biber, maxnames=3]{biblatex}
+\usepackage[all]{nowidow} 
+\usepackage{hyperref} 
+\usepackage[pdftex]{graphicx}
+\usepackage[ngerman]{babel}
+\usepackage{tikz}
+\usepackage{standalone}
+\usepackage{eurosym}
+
+\usepackage{ntheorem}
+\theoremseparator{:}
+\newtheorem{hyp}{Hypothese}
+\usepackage{dcolumn}
+\usepackage{graphics}
+\usepackage{graphicx}
+\usepackage[toc,page]{appendix}
+\usepackage{booktabs,caption,fixltx2e}
+\usepackage[flushleft]{threeparttable}
+
+\usepackage{fullpage} % this and the next one is for 1-inch margin 
+\usepackage{setspace}
+\doublespacing % this is for doublespacing 
+%\usepackage[doublespacing]{setspace} 
+\addbibresource{bib_file.bib} 
+\setlength\parindent{0pt} 
+
+\newcommand{\Title}{Religious people do not discount the future less} 
+\newcommand{\Programme}{Corporate Management \& Economics}
+\newcommand{\AsssignmentName}{Hausarbeit}
+\newcommand{\Name}{Samuel Michael Pertl}
+\newcommand{\MatrikelNummer}{14201998}
+\newcommand{\Date}{31-01-2017}
+\newcommand{\Semester}{Fall Term 2017}
+\newcommand{\Supervisor}{Dr. Kilian Seng }
+\newcommand{\Class}{Quantitative Sozialforschung}
+
+\begin{document}
+\input{frontmatter/front}
+\newpage
+\tableofcontents
+\listoffigures
+\listoftables
+\newpage
+\begin{abstract}
+\textcite{carter2012religious} zeigte dass religiöse Personen zukünftige Auszahlungen weniger diskontieren als nicht religiöse Personen. Weder \textcite{benjamin2013religious} noch \textcite{thornton2015divine} könnten einen derartigen Zusammenhang feststellen. Ich berücksichtige sämtliche Limitation dieser Untersuchungen und zeige, dass religiöse Personen zukünftige Auszahlungen stärker diskontieren als nicht religiöse Personen. Dieser Zusammenhang besteht weiterhin, wenn für Alter, Gender, Einkommensniveau, Kreditbeschränkung, Big Five und Bildungsniveau kontrolliert wird. Auch eine umfassende Robustheitsanalyse unterstützt dieses Ergebnis. 
+\end{abstract}
+
+\section{Einleitung}
+% what is still missing: 1) Klar die Forschungsfrage, mir geht es um den Diskontierungssatz und Religion intertemporale Entscheidungen wurden ja auch schon vorher untersucht  
+
+Religion legte in den letzten beiden Jahrzehnten die Grundlage für eine  wachsende interdisziplinäre Forschungsliteratur. Religiöse Personen genießen eine längereren Lebensdauer \parencite{mccullough2000religious}, haben weniger depressiven Symptomen \parencite{smith2003religiousness}, zeigen eine geringen  Kriminalitätsrate und weniger Drogenkonsum \parencite{baier2001if} und zeigen bessere Schulleistungen \parencite{jeynes2002meta}. Darüber hinaus zeigen \textcite{norenzayan2008origin}, dass Religion prosoziales Verhalten fördert.\\
+Religion wird in Übereinstimmung mit der bisherigen Forschungsliteratur als  “[...] a braod cultureal complex, one characterized by deeply held beliefs as well as the empotions and behaviors that accompany such beliefs." verstanden \parencite{mccullough2013religion}\\
+
+Gründe der aufgezeigten vorteilhaften Assoziationen von Religion und Individuen können in der Entstehung von Religion gefunden werden. Religion in der uns heute bekannten Form entwickelte sich vor circa $10.000$ Jahren, als sich die Menschheit von einer Jäger und Sammler Gesellscahft hin zu einer Ackerbaugesellschaft entwickelte\parencite{wright2010evolution}. Moderne Formen der Religion entstand in diesem Zeiteabschnitt, da sie die menschliche Selbstkontrolle über Appetit, Emotionen und Lust unterstützen und fördern \parencite{mccullough2013religion}. Selbstkontrolle waren insbesondere in einer Ackerbaugesellschaft von große Bedeutung, da die Menschheit sesshaft wurde und die wirtschaftliche Grundlage von Landwirtschaft und Tierhaltung abhing \parencite{mccullough2013religion}.\footnote{Ein ausführliche Darstellung bezüglich der Entstehung der modernen Form der Religion bieten \textcite{mccullough2013religion}}\\
+
+%Vor dem Hintergrund der Entstehung der modernen Form der Religion, lassen sich die aufgeführten positiven Einflüsse von Religion rekapitulierend dadurch erklären, dass "[...] religion fosters the development and exercise of self-control [...], which lead to beneficial outcomes in a variety of behavioral and pychological domains."\parencite{mccullough2013religion}.\\ 
+
+Selbstkontrolle ist die Fähigkeit "[...] for altering one's own responses, especially to bring them into line with standards such as ideals, values, morals, and social expectations, and to support the pursuit of long-term goals." \parencite{baumeister2007strength}. In anderen Worten erlaubt es Selbstkontrolle ein Handlung zu unterdrücken um eine andere Handlung zu verfolgen die individuell einen höheren Stellenwert hat \parencite{mccullough2013religion}.\\
+%Beispiel lässt sich ein leichtes ein Abendessen vorstellen, zu dem man mit dem Vorhaben geht kein Dessert zu essen, da man gerade eine Diät für die “Strandfigur“ für den nächsten Urlaub macht. Wenn jedoch zum Ende des Hauptgangs die Dessertkarte kommt und man die verschiedenen “süßen Verführungen" ließt ist es ein leichtes, dass sich die Präferenzen hin zu einem kurzfristigen Vergnügen verschieben. Selbstkontrolle  erlaubt es nun, diesen kurzfristigen Verführungen zu widerstehen um das langfristige Ziel der “Strandfigur“ zu verfolgen.\\
+
+In der ökonomischen Literatur wird Selbstkontrolle experimentell unter anderem durch intertemporale Entscheidungen untersucht \parencite{thaler1991some}. Intertemporale Entscheidungen geben ein Maß dafür, wie stark eine zukünftige Entlohnung oder Bestrafung diskontiert wird. Intertemporale Entscheidungen implizieren beispielsweise eine Abwägung zwischen einem Betrag $x$ jetzt und einem höheren Betrag $x+y$ später, wobei $y$ ein positiv ist. Diese Abwägung erfordert Selbstkontrolle, da das Warten auf die spätere höhere Auszahlung mentale Energie verbraucht \parencite{thaler1991some}.\\
+
+Ziel dieser Arbeit ist es den Zusammenhang von Religionszugehörigkeit und Selbstkontrolle zu untersuchen. Selbstkontrolle wird konkreter durch das Ausmaß mit dem zukünftige Auszahlungen diskontiert werden konzeptualisiert. Wie bereits ausgeführt fördert Religion Selbstkontrolle, was mit einer größeren Neigung von späteren gegenüber sofortigen Belohnungen einhergehen könnte. %Für eine Erhöhung der Selbstkontrolle durch Religion spricht zudem, dass nahezu jede Weltreligion "[...] delay gratification - that is, the ability to forego smaller rewards available immediately in the interest of obtaining larger rewards that are available only after a time delay." preist \parencite{carter2012religious}.\\
+ 
+Meines Wissens gibt es bis zum jetzigen Zeitpunkt nur drei Studien, die explizit den Zusammenhang von Religion und das Diskontieren von zukünftigen Auszahlungen untersuchen. Diese Studien kommen zudem zu unterschiedlichen Ergebnissen. Aufgrund der begrenzten bisherigen Forschungsergebnisse sowie deren unterschiedlichen Befunde wird weitere empirische Evidenz benötigt, um klarere Aussagen über den  Zusammenhang von Religion und dem Diskontieren von zukünftigen Belohnungen zu treffen. Darüber hinaus haben alle drei Studien substantielle Schwächen in ihrem Experimentdesigns. Diese Arbeit berücksichtige diese Nachteile und analysiert den Zusammenhang von Religion und Diskontieren von zukünftigen Auszahlungen anhand einer repräsentativen Stichprobe der deutschen Population.\\ 
+ 
+Der Aufbau der Forschungsarbeit gliedert sich wie folgt. Im folgenden Teil wird das Discounted-Utility Model vorgestellt. Das Discounted-Untility Model ist die Grundlage für eine ökonomische Untersuchung von intertemporalen Entscheidungen. Teil drei Entwickelt die Forschungsfrage und Hypothesen, gefolgt von einer Beschreibung des Datensatzes und des Experimentaufbaus. Anschließend werden die in der Analyse verwendeten Variablen erklärt und erste Ergebnisse einer linearen Regression aufgezeigt. Teil sechs überprüft diese Ergebnisse auf deren Robustheit. Teil acht führt eine Regressionsdiagnositik durch, gefolgt von eine Analyse der Endogentität. Das Paper schließt mit einer Conclusion. 
+
+% Gender Proband es wird die maskuline Form verwendet
+
+\section{Discounted-Utility Model}
+Die Grundlage für die moderne Analyse von intertemporale Entscheidungen legte \textcite{samuelson1937note} in "A Note on Measurement of Utility". Das von Samuelson ausgearbeitete Discounted-Utility (DU) Model ist ein gerneralisiertes Model, das auf multiple Zeitperioden anwendbar ist \parencite{frederick2002time}.\\
+
+Im DU Model haben Entscheidungsträger intertemporale Konsumpräferenzen $(c_t,...,c_T)$ \parencite{frederick2002time}. Diese Präferenzen können - unter Annahme der herkömmlichen Annahmen Vollständigkeit, Transitivität und Kontinuität -  durch eine intertemporale Nutzenfunktion $U^{t}(c_{t},...,c_{T}) $ dargestellt werden \parencite{frederick2002time}. Diese Nutzenfunktion ist durch folgende Gleichungen formalisiert: 
+
+
+\begin{equation}
+U^t(c_t,...,c_T) = \sum^{T - t}_{k=0}D(k)u(c_t+k)
+\end{equation}
+
+
+wobei $D(k)$ als 
+ 
+\begin{equation}
+D(k) = (\frac{1}{1+\rho})^k
+\end{equation}
+
+definiert ist \parencite{frederick2002time}.\
+
+Der Term $u(c_t+k)$ wird herkömmlich als “cardinal instantaeous utility function“ bezeichnet und stellt das Wohlbefinden in der Periode $t+k$ dar \parencite{frederick2002time}. $D(k)$ ist die individuelle Diskontierungsfunktion d.h. die relative Präferenz für Konsum in Periode $t$ gegenüber der Periode $t+k$ \parencite{frederick2002time}. Das Ausmaß, mit dem zukünftiger Konsum diskontiert wird, ist durch den Diskontierungssatz $\rho$ dargestell\parencite{frederick2002time}.\\
+
+Obwohl Samuelson das DU Model weder als normatives noch als deskriptiv valides Model für intertemporale Entscheidungen angesehen hat, entwickelte es sich aufgrund seiner Einfachheit und Eleganz als das normative Model zur Analyse von intertemporalen Entscheidungen in den Wirtschaftswissenschaften \parencite{frederick2002time}. 
+
+\section{Forschungsfrage und Hypothesen}
+Mehrere Gründe sprechen dafür, warum religiöse Personen eine späteren Auszahlung weniger stark diskontieren als nicht religiöse Personen und damit späteren Belohnungen einen höheren Stellenwert zukommen lassen.\\
+
+Erstens legen die meisten Religion einen starken Fokus auf zukünftige Belohnung wie Unsterblichkeit, Reinkarnation oder Wiederauferstehung und vertrösten auf ein belohnendes Leben nach dem Tod \parencite{carter2012religious}. Ein weiteres Beispiel ist das religiöse Fasten, in dem Gläubige auf gegenwärtige Konsum verzichten, um spätere eine spirituelle Wohltat zu erfahren \parencite{thornton2015divine}. Ferner kommt Geduld in den meisten Weltreligionen ein sehr hoher Stellenwert zu \parencite{carter2012religious}. Sozialisation in einem religiösen Umfeld kann somit dazu führt, dass Personen lernen sich geduldiger zu verhalten und einen starken Fokus auf zukünftige Belohnungen legen \parencite{carter2012religious}.\\
+
+Wie bereits aufgeführt, förder und verstärkt Religion zudem die Selbstkontrolle und erlaubt es, Belohnungen “jetzt“ zu widerstehen um dadurch eine größere zukünftige Belohnung zu erhalten \parencite{mccullough2009religion, rounding2012religion, kim2015longitudinal}. Dieses Wiederstehen einer sofortigen  zu Gunsten einer zukünftigen Entlohnung impliziert ein geringeres Diskontieren der zukünftigen Entlohnung.\\
+
+%Für eine Erhöhung der Selbstkontrolle durch Religion spricht zudem, dass nahezu jede Weltreligion "[...] delay gratification - that is, the ability to forego smaller rewards available immediately in the interest of obtaining larger rewards that are available only after a time delay." preist \parencite{carter2012religious}.
+
+Die meines Wissens bis dato einzig exisiterenden Studien, die expliziet den Zusammenhang von Religion und dem Diskontieren von zukünftigen Auszahlungen untersuchen stammt von \textcite{carter2012religious, thornton2015divine, benjamin2013religious}.\\
+
+
+\textcite{carter2012religious} stellen in ihrer Studie  fest: 
+
+\begin{quote}
+"More religious participants tended to exhibit a stronger preference for larger - later rewards than did their less religious counterparts - a finding that is, as far as we aware, reported for the first time in this paper."
+\end{quote} 
+
+Kontrovers dazu finden weder \textcite{thornton2015divine} noch \textcite{benjamin2013religious} einen signifikanten Einfluss von Religion auf das Diskontieren von zukünftigen Auszahlungen.\\
+ 
+Alle drei Studien haben jedoch maßgebliche Limitationen. \textcite{benjamin2013religious} und \textcite{carter2012religious} verwenden für ihre Studie Bachlorstudenten aus den USA was die Generalisierbarbeit der Forschungsergebnisse beschränkt\parencite{carter2012religious}. \textcite{henrich2010weirdest} stellte fest, dass Bachelorstudenten aus "Western, Educated, Industrialized, Rich and Democratic (WEIRD) societies" - vornehmlich aus den USA - das am wenigsten repräsentative Sample darstellen. Eine Überprüfung der Ergebnisse mit einem repräsentativen Sample ist deshalb notwendig.\\
+\textcite{thornton2015divine} berücksichtigen diese Limitation und verwenden für ihre Studie Probanden von dem online Arbeitsmarkt Amazon M-Turk. Auch wenn ein Sample von M-Turk  repräsentativer ist als ein Sample aus Bachelorstudenten, ist es keineswegs ein repräsentatives Sample, da Personen die online arbeiten - wie auch Bachelorstudenten - nur ein kleines Segment der gesamten Population darstellen \parencite{horton2011online}.\\
+
+Diese Studie berücksichtigt diese Limitationen und verwendet ein repräsentatives Sample von erwachsenen Personen aus Deutschland.\\ 
+
+Des Weiteren könnten einige Ergebnisse verzerrt sein, da frühere Zahlungen relativ attraktiver waren als spätere Auszahlungen. \textcite{carter2012religious}  spätere Zahlungen sind relativ teurer da die Probanden zum Labor zurückkehren mussten um die Zahlung zu erhalten, wohingegen frühere Zahlungen sofort ausgezahlt wurden. Im Experiment von \textcite{benjamin2013religious} wurde den Probanden die frühere Zahlung während des Experiments ausgezahlt, was eine frühere Auszahlung relativ attraktiver gegenüber einer späteren Auszahlung macht \parencite{dohmen2012interpreting}.\\
+
+% für M-Turk Studie bin ich mir nicht sicher 
+ 
+In diesem Experimentdesign wird daher sichergestellt, dass spätere Auszahlungen nicht relativ teurer durch zusätzliche Transaktionskosten sind. Des Weiteren wird eine gleiche Glaubwürdigkeit der beiden Auszahlungen sichergestellt.\\
+
+Zusätzlich kontrollieren alle drei Studien nur für eine sehr begrenzte Anzahl oder gar keine weiteren Faktoren die  intertemporale Entscheidungen beeinflussen könne.
+Vorliegende Studie kontrolliert für eine Vielzahl von weiteren Faktoren, die einen Einfluss haben könnten.\\ 
+
+% \textcite{benjamin2013religious} und \textcite{thornton2015divine} verwenden relativ kleine Beträge für die Abwägung zwischen einer sofortigen oder zukünfigen Auszahlung. Dieses Experimentdesign verwenet daher hohe Beträge um differenzen aufgrund der höhe des Geldbetrags festzustellen. 
+
+
+% Zitat für höhere Beträge Darüber hinaus werden höhere Beträge verwendet, größeres Sample als alle anderen; was passiert bei höheren Beträgen insbesonder M-Turk Studie 
+
+Aufbauend auf den ausgeführten Limitationen sowie der bestehenden Literatur, wird folgende Hypothese untersucht:
+\begin{hyp}
+Religiöse Probanden diskontieren zukünftige Auszahlungen geringer und zeigen damit eine stärkere Präferenz für höhere spätere Auszahlungen als nicht religiöse Probanden 
+\end{hyp}
+
+\section{Datensatz}
+\subsection{Sample}
+Der zur Analyse der Forschungsfrage herangezogene Datensatz besteht aus einem Querschnitt von Teilnehmern des Deutschen Sozio-ökonomischen Pannels (SOEP) \parencite{dohmen2012interpreting}.\footnote{Eine detaillierte Beschreibung des SOEP bieten \textcite{schupp2002maintenance} und \textcite{wagner2006enhancing}} Dieser Datensatz wurde im Frühjahr 2005 erhoben und enthält insgesamt 500 Personen \parencite{dohmen2012interpreting}. Das Sampling entspricht dem des SOEP Datensatzes, wobei jede Person im eigenen Zuhause interviewt wurde \parencite{dohmen2012interpreting}. Der Datensatz ist als repräsentativer Datensatz von der in Deutschland lebenden erwachsenen Bevölkerung konstruiert \parencite{dohmen2012interpreting}. 
+
+\subsection{Experiment}
+\subsubsection{Experimentablauf}
+Alle Teilnehmer der Studie absolvierten ein “computer asssisted personal interview (CAPI)“ an einem Laptop \parencite{dohmen2012interpreting}. Das Interview bestand aus zwei Teilen, beginnend mit einem Fragebogen zu demographische Merkmalen, der finanziellen Situation, Gesundheit und Einstellungen \parencite{dohmen2012interpreting}. Im zweiten Teil absolvierten die Probanden ein intertemporales Entscheidungsexperiment in dem echtes Geld gewonnen werden konnte \parencite{dohmen2012interpreting}.\footnote{Ein Skript des Experiments befindet sich im Appendix}\\
+
+Teilnehmern wurden zuerst einige Beispiele zu intertemporalen Entscheidungen gezeigt \parencite{dohmen2012interpreting}. Der Experimentator informierte den Probanden, dass das Experiment mehrere Entscheidungen beinhaltet und dass eine Entscheidung nach dem Experiment zufällig ausgewählt wird um den möglichen Auszahlungsbetrag zu bestimmen \parencite{dohmen2012interpreting}. Mit einer Wahrscheinlichkeit von $\frac{1}{7}$ erhielt der Proband die zufällig ausgewählten Betrag der Entscheidung \parencite{dohmen2012interpreting}. Wenn der Proband keine Fragen mehr hatte begann das Experiment \parencite{dohmen2012interpreting}. %Nachdem der Aufbau des Experiments und die Auszahlung erklärt wurde, fragte der Experimentator erneut, ob der Probanden am Experiment teilnehmen möchten \parencite{dohmen2012interpreting}. Falls der Proband einverstanden war und dieser keine weiteren Fragen hatte, begann das Experiment \parencite{dohmen2012interpreting}. 
+
+\subsubsection{Experimentdesign}
+Um einen Index für das Diskontieren von zukünftige Auszahlungen zu entwickeln, trafen Probanden eine Auswahl zwischen unterschiedlichen Auszahlungsbeträgen zu zwei unterschiedlichen Zeitpunkten. Dazu erhielten die Probanden eine Tabelle mit 20 intertemporalen Entscheidungen \parencite{dohmen2010risk}. Für jede Zeile wurde eine  Entscheidung zwischen dem früheren oder späteren Betrag getroffen \parencite{dohmen2010risk}. Tablle 1 zeigt die Entscheidungsmatrix für jeden Probanden.\\
+Jede Zeile stellt eine Abwägung zwischen 100 Euro “jetzt“ und einem höheren Betrag $Y$ in 12 Monaten dar \parencite{dohmen2010risk}. Der Auszahlungsbetrag über 100 Euro heute ist für jede Zeile gleich, der höhere Betrag $Y$ hingegen steigt mit jeder nachfolgenden Zeile sequenziell an \parencite{dohmen2010risk}. Der Diskontierungssatz der ersten Zeile beträgt $2.5\%$ - unter der Annahme einer halbjährlichen Verzinsung - und stieg mit jeder weiteren nachfolgenden Zeile um jeweils $2.5\%$ an \parencite{dohmen2010risk}.\\
+
+Probanden begannen mit der ersten Zeile und bearbeiteten die Tabelle nachfolgend von oben nach unten \parencite{dohmen2010risk}. Das erste mal, bei dem ein Proband von der früheren zu der späteren Auszahlung wechselte zeigt wie stark zukünftige Auszahlungen diskontiert werden.\footnote{Keiner der Probanden wechselte nach dem ersten Wechsel von der früher zu der späteren Auszahlung nochmals zu der früheren Auszahlung} Die switching row zeigt, wie stark ein Proband zukünftige Auszahlungen diskontiert \parencite{becker2012relationship}. Folglich impliziert eine höhere switching row ein starkes disktontieren von zukünftigen Auszahlungen und eine niedrige switching row ein geringeres diskontieren von  zukünftige Zahlungen. Für Probanden die niemals von der früheren Auszahlung zu der späteren Auszahlung wechselten wurde eine switching row von 21 angenommen \parencite{dohmen2012interpreting}.\\
+
+% dadurch ist es natürlich censored 
+\begin{table}[!htbp] 
+\centering 
+  \caption{Auszahlungsmatrix der intertemporalen Entscheidung}
+\begin{center}
+\scalebox{0.7}{
+\begin{tabular}{p{2cm}|p{3cm}|p{2cm}|p{3cm}}
+  & heute & oder & in 12 Monaten\\
+\hline 1 & 100.00 & & 102.50\\
+\hline 2 & 100.00 & & 105.10 \\
+\hline 3 & 100.00 & & 107.60 \\
+\hline 4 & 100.00 & & 110.20 \\
+\hline 5 & 100.00 & & 112.80 \\
+\hline 6 & 100.00 & & 115.50 \\
+\hline 7 & 100.00 & & 118.20 \\
+\hline 8 & 100.00 & & 121.00 \\
+\hline 9 & 100.00 & & 123.70 \\
+\hline 10 & 100.00 & & 126.50 \\
+\hline 11 & 100.00 & & 129.30 \\
+\hline 12 & 100.00 & & 132.20 \\
+\hline 13 & 100.00 & & 135.10 \\
+\hline 14 & 100.00 & & 138.00 \\
+\hline 15 & 100.00 & & 141.00 \\
+\hline 16 & 100.00 & & 144.00 \\
+\hline 17 & 100.00 & & 147.00 \\
+\hline 18 & 100.00 & & 150.00 \\
+\hline 19 & 100.00 & & 153.10 \\
+\hline 20 & 100.00 & & 156.20\\
+\hline
+\end{tabular}}
+\end{center}
+\end{table}
+
+Wie bereits erwähnt war jedem Probanden bewusst, dass mit einer Wahrscheinlichkeit von $\frac{1}{7}$ die eigene Entscheidung am Ende des Experiment ausgewählt wird und somit die einzelnen Entscheidungen relevant für den eigenen Payoff sind \parencite{dohmen2010risk}. Dieser Aufbau gab den Probanden einen Anreiz Entscheidungen entsprechend ihrer wahren Präferenzen zu treffen und ist damit anreizkompatible \parencite{dohmen2012interpreting}.
+
+\subsubsection{Auszahlung und Glaubwürdigkeit der Auszahlung}
+Die Auszahlung erfolgte per Post entsprechend der gewählten Entscheidung \parencite{dohmen2012interpreting}. Eine sofortige Auszahlung wurd unmittelbar nach dem Experiment verschickt und wurde innerhalb von zwei Tage zugestellt \parencite{dohmen2012interpreting}. Eine Auszahlung nach in zwölf Monaten wurde erst nach zwölf Monaten verschickt \parencite{dohmen2012interpreting}.\\
+
+Eine gleiche Glaubwürdigkeit von früheren und späteren Auszahlungen sowie das Vermeiden von zusätzlichen Transaktionskosten für einer der beiden Zahlungen ist ein zentrales Element für Experimente zu intertemporalen Entscheidungen \parencite{dohmen2012interpreting}. Dadurch soll vermieden werden, dass eine der beiden Zahlungen als relativ glaubwüridger oder attraktiver angesehen wird und aus diesem Grund bevorzugt werden \parencite{dohmen2012interpreting}.\\
+
+Das Experimentdesign gewährleistet dies durch verschiedene Bestandteile. Erstens ist die von \textcite{coller1999eliciting} entwickelte  "front-end delay"  Auszahlung implementiert, womit die auszuzahlenden Beträge erst nach dem Experiment per Post verschickt wurden. Damit wird vermieden, dass frühere Auszahlungen keine besondere Glaubwürdigkeit und Attraktivität erhalten, da sie während des Experiment ausgezahlt werden \parencite{dohmen2012interpreting}.\\
+Zweitens wurde das Experiment von einer professionellen Agentur durchgeführt, welche eine sehr hohe Glaubwürdigkeit und Bekanntheit genießt \parencite{dohmen2012interpreting}.\\
+Drittens sind alle Probanden zugleich Teilnehmer des SOEP-Panels und stehen damit in einer langfristigen Beziehung mit dem Experimentator \parencite{dohmen2012interpreting}. 
+ 
+
+\section{Methodik}
+Im ersten Schritt werden die Daten visualisiert um visuell zu untersuchen, ob die abhängige Variable normalverteilt ist. Eine Untersuchung der Normalverteilung legt die Grundlage dafür, welche statistischen Test verwendet werden können. Um die durchschnittlichen switichig rows für religiöse und nicht religiöse Probanden zu vergleichen wird ein Welch two sample t-test durchgeführt, da die Varianzen der beiden Gruppen nicht gleich sind. Ein Welch t-Test ist angemessen, da die abhängige Variable approximativ normalverteilt ist.\footnote{Für eine detaillierte Erklärung warum switching row normalveteilt ist, siehe Abschnitt Central Limit Theorem} Im dritten Schritt wird eine umfassende Regressionsanalyse durchgeführt. Dies erlaubt es, für Variablen zu kontrollieren die einen Einfluss auf intertemporale Entscheidungen haben könnten. Anschließend wird das Ergebnis der Regression auf seine Robustheit untersucht. Dazu wird einerseits die abhängigen Variable und andererseits ein Tobit Model geschätzt. Abschließend werden in einer Regressionsdiagnostik die theoretischen Annahmen der linearen Regression überprüft und potentielle abnormale Beobachtungen untersucht. \\
+
+Für die Analyse wird eine Signifikanzniveau von 10\% verwendet. In der Regressionsanalyse werden nur Ergebnisse interpretiert, die statistisch signifikant sind. Für alle Interpretationen gilt zudem die ceteris paribus Klausel. Das Signifikanzniveau sowie die ceteris paribus Klausel wird entsprechend folgend nicht nochmals erwähnt.
+
+\subsection{Variablen}
+\subsubsection{Abhängige Variable}
+Abhängige Variable ist die switching row, die Zeile in dem der Proband von der Auszahlung "jetzt“ zu der Auszahlung in 12 Monaten wechselt. Ein höhere Wert impliziert dass der Proband zukünftige Auszahlungen stärker diskontiert, da der Proband eine höhere Rendite fordert, um die Auszahlung “jetzt“ zu Gunsten der Auszahlung in 12 Monaten aufzugeben. 
+ 
+
+\subsubsection{Unabhängige Variable}
+Unabhängige Variable ist die Religionszugehörigkeit einer Person. Religionszugehörigkeit ist als dummy Variable kodiert mit 1, wenn der Proband einer Religionsgemeinschaft zugehört und 0, wenn dem nicht so ist.  
+
+
+\subsubsection{Kontrollvariablen}
+Kontrollvariablen werden aus der bestehenden Literatur übernommen und sind in Tabelle \ref{tab:b} aufgelistet. Es wird für Gender, Alter, Big Five, Einkommensniveau, Kreditbeschränkung und Bildungsniveau kontrolliert, da diese Variablen intertemporalen Entscheidungen beeinflussen könnten \textcite{dohmen2012interpreting,carter2012religious}.  \\
+
+\begin{table}[!htbp] 
+\centering 
+  \caption{Kontrollvariablen}\label{tab:b}
+\begin{center}
+\scalebox{0.7}{
+\begin{tabular}{|p{5cm}|p{17cm}|}
+\hline Gender & 1 = männlich und 0 = weiblich \\
+\hline Alter  & Alter in Jahren \\
+\hline Big Five & Gewissenhaftigkeit, Extraversion, Verträglichkeit, Offenheit, Neurotizismus\\
+\hline Einkommen & Logarithmus des monatlichen Haushaltseinkommens (net of taxes and benefits) \\ 
+\hline Kreditbeschränkung & 1 = keine Kreditbeschränkung und 0 = Kreditbeschränkung\\
+\hline Abitur & 1 = Abitur und 0 = kein Abitur \\
+\hline Realschulabschluss & 1 = Realschulabschluss und 0 = kein Realschulabschluss \\
+\hline Hauptschulabschluss & 1 = Hauptschulabschluss und 0 = kein Hauptschulabschluss \\
+\hline Besucht die Schule & 1 = Besucht die Schule und 0 = besucht nicht mehr die Schule \\
+\hline Kein Schulabschluss & 1 = kein Schulabschluss und 0 = Schulabschluss\\
+%\hline Kognitive Fähigkeiten &   \\  
+\hline
+\end{tabular}}
+\end{center}
+\end{table}
+
+
+Für Gender wird kontrolliert, da \textcite{kirby1996delay} einen Geschlechterunterschied in Diskontierungssätzen feststellten.\\ 
+ 
+\textcite{harrison2002estimating} zeigten, dass der individuelle Diskontierungssatz mit dem Alter abnimmt. Um für den möglichen nicht linearen Einfluss von Alter zu kontrollieren, wird  Alter zudem quadriert.\\
+
+Für die  "Big Five" wird kontrolliert, da mehrere Studien einen Zusammenhang zwischen den Big Five und dem Diskontieren von zukünftigen Auszahlungen belgen\parencite{carter2012religious}. Die Big Five sind ein psychologisches Modell zur Klassifizierung von Persönlichkeitsmerkmalen anhand von fünf Merkmalen (Neurotizismus, Extraversion, Offenheit für Erfahrungen, Gewissenhaftigkeit und Verträglichkeit) \parencite{becker2012relationship}. Die Big Five werden mit Hilfe des BFI-S gemessen. Das von \textcite{gerlitz2005erhebung} entwickelte BFI-S misst die Big Five anhand von drei Fragen pro Persönlichkeitsausprägung  \parencite{becker2012relationship}. Jede Frage wurde auf einer sieben Punkte Skala erfasst. \footnote{Wenn nötig wurden einzelne Fragen umgepolt um eine mögliche maximale Punktezahl zu erreichen} 
+Anschließend wurden die erreichten Punkte pro Persönlichkeitsausprägung addiert um einen Gesamtwert pro Big Five  zu erhalten. Um die individuell erzeilten Testergebnisse im Vergleich zu den Testergenbissen des Samples zu analysieren, werden die Ergebnisse der beiden Tests standardisiert \parencite{wooldridge2015introductory}. Folgend zeigen Koeffizienten in der Regressionsanalyse eine Veränderung in der switching row durch die Erhöhung der jeweiligen Persönlichkeitsausprägung um eine Standardabweichung, ceteris paribus.\\
+
+Um systematische Unterschiede zwischen Männern und Frauen zu erfassen, werden die einzelnen Persönlichkeitsmerkmale mit Gender interagiert.\\
+
+Das Einkommen oder eine Kreditbeschränkung könnten einen Einfluss haben, wenn sich Probanden zwischen der Auszahlung “jetzt“ und der “späteren“ Auszhalung kein Geld leihen oder ausgeben können und deshalb eine frühere Auszahlung relativ attraktiver ist \parencite{dohmen2012interpreting}.\\ 
+Einkommen wird als monatliches Nettohaushaltseinkommen gemessen. Um eine möglichst große Anzahl von Beobachtungen zu generieren wurden NA`s durch Werte einer anderen Fragestellung ersetzt, die das monatliche Haushaltseinkommen durch Intervallen  abfragte (0-750; 750-1500; 1500-2500; 2500-3500; 3500-5000; >5000)\parencite{dohmen2010risk}. NA`s  wurden durch den Mittelpunkt der einzelnen Intervall ersetzt. In dem Fall eines monatlichen Haushaltseinkommen das größer als 5000 ist wurde ein Wert von 7500 angenommen.\\
+Abschließend wurde die Variable Einkommen logarithmiert. \\
+
+Um Kreditbeschränkung zu erfassen wurde jedem Probanden folgende Frage gestellt: "If you suddenly encountered an unforeseen situation, and had to pay an expense of 1000 Euros within the next two weeks, would it be possible for you to make the payment?" \parencite{dohmen2012interpreting}. Eine Kreditbeschränkung liegt vor wenn es dem Probanden nicht möglich war die 1000 Euro zu beschaffen. \\ 
+
+Das Bildungsniveau wird durch den Schulabschluss eines Probanden gemessen \parencite{dohmen2010risk}. Die dummy Variablen Abitur, Realschule, Hauptschule, besucht die Schule und kein Schulabschluss sind zutreffend, wenn der Proband den jeweiligen Schulabschluss erreicht hat. NA`s wurden in Anlehnung an \textcite{dohmen2010risk} als 0 kodiert.\\
+
+
+
+
+
+
+
+% results of dohem for cognitive abilities 
+%Die kognitiven Fähigkeiten oder das Bildungsniveau könnte einen Einfluss auf die Erfahrung mit finanziellen Entscheidungen haben \parencite{dohmen2012interpreting}. Des Weiteren könnte ein Zusammenhang mit der Vertrautheit von Marktzinssätzen sowie eine unterschiedliche Sensitivität auf variierende Zeitperioden bestehen \parencite{dohmen2012interpreting}. Kognitive Fähigkeiten werden, wie bereits ausgeführt, durch zweit unterschiedliche Tests gemessen \parencite{dohmen2012interpreting}. Um die individuell erzeilten Testergebnisse im Vergleich zu den Testergenbissen der Population zu analysieren, werden die Ergebnisse der beiden Tests standardisiert \parencite{wooldridge2015introductory}. Schätzer in der Regressionsanalyse sind als Veränderung in der switching row (Ungeduld) durch die Erhöhung des jeweiligen Test um eine Standardabweichung, ceteris paribus, zu interpretieren.\\ 
+
+
+  
+% Interaktion zwschen Religion und Big 5 sowie alter und Religion da Studien zeigen 
+
+
+\section{Resultate}
+53.8\% der Probanden sind weiblich und 46.2\% sind männlich.  $77.8\%$ der Probanden kommen aus Westdeutschland und $22.2\%$ Ostdeutschland. Das arithmetische Mittel des Alters beträgt $46.09$ Jahre ($S.D. = 18.01$,  jüngste Person = 14, älteste Person = 90). Probanden gaben eine breite Bandbreite der jeweiligen Religionszugehörigkeit an ( Protestantisch = $34.8\%$, Katholisch = $31.4\%$, andere christliche Gemeinschaft = $2.6\%$, Islam = $2.2\%$, andere religiöse Gemeinschaft = $0.2\%$). $28.8\%$ der Probanden gaben an, dass sie keiner Religionsgemeinschaft zugehören.
+
+\subsection{Datenvisualisierung}
+Das Histogramm in Abbildung \ref{fig:a} zeigt, dass switching row keiner Normalverteilung (rote Kurve) folgt, sondern extrem linksschief ist. Auch ein Q-Q Plot (Abbildung \ref{fig:b}) sowie ein Shapiro-Wilk ($p < 0.001$) zeigen, dass das switching row nicht normalverteilt ist. 
+
+\begin{figure}
+    \centering
+    \begin{minipage}{0.45\textwidth}
+\caption{Histogramm der switching row mit einer Normalverteilung}\label{fig:a}
+        \includegraphics[width=0.9\textwidth]{histswitchingrow.tex} % first figure itself
+        
+    \end{minipage}\hfill
+    \begin{minipage}{0.45\textwidth}
+\caption{Q-Q Plot switching row}\label{fig:b}
+        \includegraphics[width=0.9\textwidth]{QQplotswitching.tex} % second figure itself
+        
+    \end{minipage}
+\end{figure}
+
+Das Anwenden verschiedener Transformationen\footnote{Logarithmus, Arcsine, Wurzel, Quadrieren, Reziproke, Antilog Transformationen wurden durchgeführt und können im R-Script gefunden werden} resultiert in keiner Normalverteilung von switching row und wird daher nicht weiter verwendet.\\
+
+\subsubsection{Central Limit Theorem}
+Entsprechend dem Central Limit Theorem (CLT) sind “ausreichend große" Samples approximativ normalverteilt. Dies erlaubt es parametrische Test zu verwenden. Normalverteilung ist zudem keine Voraussetzung für eine lineare Regression, da nur die Koeffizienten der Schätzer $\hat{\beta}$ normalverteilt sein müssen um Konfidenzintervall zu bilden und Tests durchzuführen \parencite{lumley2002importance}. Da $\hat{\beta}$ die gewichtete Summe der abhängigen Variable ist “the CLT guarantees that it will be normally distributed if the sample size is large enough, and so tests and confidence intervals can be based on the associated t-statistic" \parencite{lumley2002importance}. Fraglich ist jedoch, ob das CLT zur Geltung kommt, da mein Sample extrem linksschief ist und welche Samplegröße in diesem Fall “ausreichend groß" wäre. \textcite{lumley2002importance} zeigten für Public Health Daten, dass extrem abnormale Verteilungen mit einer Stichprobengröße von circa 500 ausreichend groß sind und das CLT zur Geltung kommt. Da mein Datensatz 500 Beobachtungen umfasst und ich keinen Grund sehe warum sich mein repräsentatives Sample substantiell von den von \textcite{lumley2002importance} verwendeten Daten unterschieden sollt, sind parametrische Tests sowie lineare Regression zur Analyse angemessen.
+
+\subsection{Deskriptive Statistik}
+Die durchschnittliche switching row ist 13.81 für religiöse Probanden und 12.45 für nicht religiöse Probanden. Ein Welch t-Test zeigt, dass dieser Unterschied statistisch signifikant ist und religiöse Personen eine höhere switching row haben als nicht religiöse Personen ($p = 0.066$). Ein 90\% Konfidenzintervall enthält nicht eine durchschnittlich Differenz von null und unterstützt damit das Ergebnis des Welch t-Test. Auch ein Wilcoxon-Mann-Whitney zeigt, dass sich die durchschnittliche swichting row von religiösen Probanden statistisch signifikant von der durchschnittlichen switching row von nicht religiösen Probanden unterscheidet ($p = 0.081$).\\ 
+% better interpretation 
+
+Dieses Ergebnis widerspricht dem bisherigen Forschungsstand, da religiöse Probanden eine höhere swichting row haben als nicht religiöse Probanden und damit zukünftige Auszahlungen stärker diskontieren. 
+
+% F-test 
+
+\subsection{Regression} 
+
+\begin{table}[!htbp] \centering 
+  \caption{Ergebnisse der linearen Regression } 
+  \label{tab:c} 
+  \scalebox{0.7}{
+\begin{tabular}{@{\extracolsep{5pt}}lD{.}{.}{-3} D{.}{.}{-3} } 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{2}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-3} 
+\\[-1.8ex] & \multicolumn{2}{c}{Switching row} \\ 
+\\[-1.8ex] & \multicolumn{1}{c}{(1)} & \multicolumn{1}{c}{(2)}\\ 
+\hline \\[-1.8ex] 
+ Religionszugehörigkeit & 1.363^{*} & 1.874^{**} \\ 
+  & (0.717) & (0.806) \\ 
+  Alter &  & 0.098 \\ 
+  &  & (0.118) \\ 
+  Alter quadriert &  & -0.001 \\ 
+  &  & (0.001) \\ 
+  Male &  & -0.009 \\ 
+  &  & (0.728) \\ 
+  Einkommen (log) &  & -2.231^{***} \\ 
+  &  & (0.588) \\ 
+  Kreditbeschränkung &  & -1.200 \\ 
+  &  & (0.927) \\ 
+  Gewissenhaftigkeit &  & 0.574 \\ 
+  &  & (0.514) \\ 
+  Extraversion &  & 0.364 \\ 
+  &  & (0.530) \\ 
+  Neurotizismus &  & -0.636 \\ 
+  &  & (0.496) \\ 
+  Offenheit &  & 0.395 \\ 
+  &  & (0.527) \\ 
+  Verträglichkeit &  & 0.812 \\ 
+  &  & (0.506) \\ 
+  Gewissenhaftigkeit*Male &  & -1.078 \\ 
+  &  & (0.724) \\ 
+  Extraversion*Male &  & 0.591 \\ 
+  &  & (0.802) \\ 
+  Neurotizismus*Male &  & 0.163 \\ 
+  &  & (0.772) \\ 
+  Offenheit *Male &  & -0.212 \\ 
+  &  & (0.768) \\ 
+  Verträglichkeit*Male &  & -0.926 \\ 
+  &  & (0.770) \\ 
+  Abitur &  & -1.352 \\ 
+  &  & (0.950) \\ 
+  Realschulabschluss &  & 1.920^{**} \\ 
+  &  & (0.949) \\ 
+  Besucht die Schule &  & 2.087 \\ 
+  &  & (2.352) \\ 
+  Kein Schulabschluss &  & 8.630^{*} \\ 
+  &  & (5.193) \\ 
+  Constant & 12.451^{***} & 27.216^{***} \\ 
+  & (0.605) & (4.710) \\ 
+ \hline \\[-1.8ex] 
+Observations & \multicolumn{1}{c}{500} & \multicolumn{1}{c}{423} \\ 
+R$^{2}$ & \multicolumn{1}{c}{0.007} & \multicolumn{1}{c}{0.094} \\ 
+Adjusted R$^{2}$ & \multicolumn{1}{c}{0.005} & \multicolumn{1}{c}{0.048} \\ 
+Residual Std. Error & \multicolumn{1}{c}{7.257 (df = 498)} & \multicolumn{1}{c}{7.098 (df = 402)} \\ 
+F Statistic & \multicolumn{1}{c}{3.618$^{*}$ (df = 1; 498)} & \multicolumn{1}{c}{2.076$^{***}$ (df = 20; 402)} \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{2}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+Standardfehler in ()\\
+\end{tabular}}
+\end{table} 
+
+Tabelle \ref{tab:c} zeigt die Ergebnisse der Regressionsanalyse.\footnote{Die Ergebnisse von weiteren Regressionen befinden sich im R-Skript}. 
+
+% warum 
+
+Der Ordinatenabschnitt der ersten Regression (kleines Model/Spalte 1) ist ökonomisch sinnvoll interpretierbar und statistisch signifikant ($p<0.001$). Der Achsenabschnitt von $12.541$ ist die durchschnittliche erwartete switching row für Probanden, die keiner Religionsgemeinschaft zugehören. Der Schätzer $\hat{\beta}_{Religion}$ zeigt, dass die erwartete switching row für religiöse Probanden 1.363 höher ist als die erwartet switching row für nicht religiöse Probanden ($p =  0.058$). Folglich diskontieren religiöse Probanden zukünftige Auszahlungen stärker als nicht religiöse Probanden.\\
+
+
+Das bereinigte $R^2$ impliziert, dass 0.5\% der Varianz in swichting row durch Religion erklärt werden können.\\
+
+% this is very low / comment on this 
+
+Entgegen der bisherigen Forschungsergebnisse zeigt die erste Regression - in Übereinstimmung mit der deskriptiven Statistik - einen positiven Zusammenhang zwischen Religionszugehörigkeit und dem Diskontieren von zukünftigen Auszahlungen. Im nächsten Schritt wird deshalb für Variablen kontrolliert, die einen Einfluss auf intertemporale Entscheidungen haben könnten. 
+
+%Das neue Regressionsmodell in Spalte 2, Tabelle 1 impliziert, dass eine Religionszugehörigkeit im Vergleich zu keiner Religionszugehörigkeit die geschätzt switching row um $1.292$ erhöht und damit eine positiven Zusammenhang zwischen Religionszugehörigkeit und dem diskontieren von zukünftigen Auszahlungen vorliegt ($p<0.1$). Des Weiteren besteht ein positiver Zusammenhang zwischen der Persönlichkeitsausprägung der Extraversion und Ungeduld. Wird Extraversion um eine Standardabweichung erhöht, erhöht sich die switching row um $0.769$ ($p<0.05$). Ein F-Test ergibt jedoch ergibt jedoch, dass die Schätzer gemeinsam insignifikant sind. Ein Vergleich der beiden Regressionen durch eine ANOVA unter Anpassung der unterschiedlichen Anzahl von Beobachtungen ergibt, dass sich die beiden Modelle auf einem Signifikanzniveau von $\alpha = 10\%$ nicht signifikant unterscheiden (Nullhypothese kann nicht verworfen werden kann). Spalte 3 in Tabelle 1 zeigt die zusätzlichen Interaktionseffekte der Big Five mit Gender. Religionszugehörigkeit ist weiterhin ökonomisch sinnvoll interpretierbar und  positiv mit der switching row korreliert ($p<0.10$). Wenn Gewissenhaftigkeit für Frauen um eine Standardabweichung erhöht wird, erhöht sich die geschätzte switching row um $0.797$ ($p<0.10$). Wird für Männer Gewissenhaftigkeit um eine Standardabweichung erhöht, vermindert sich die geschätzt switching row um $0.48$. Der Unterschied einer $1.277$ niedrigeren switching row für Männer ist ökonomisch groß und statistisch signifikant ($p<0.10$). Demzufolge kann die Nullhypothese, dass es keinen Unterschied zwischen Männer und Frauen hinsichtlich ihrer Gewissenhaftigkeit auf einem $\alpha = 10\%$ Signifikanzniveau verworfen werden.\\
+% how can I test for joint significance between all the interactions and no interactions 
+
+Spalte zwei (Abbildung \ref{tab:c}) zeigt die Ergebnisse dieser Regression (großes Model). Der Achsenabschnitt ist statistisch signifikant ($p < 0.001$), jedoch ökonomisch nicht sinnvoll interpretierbar, da die maximale switching row bei 21 liegt. Der Schätzer $\hat{\beta}_{Religion}$ zeigt, dass die erwartete switching row für religiöse Probanden 1.874 höhere ist als die erwartete switching row für nicht religiöse Probanden ($p = 0.021$). Der Schätzer $\hat{\beta}_{Einkommen}$ zeigt, dass bei einem Anstieg des Einkommens um 10\% die erwartete switching row um 0.223 sinkt ($p < 0.001$). Das negativen Vorzeichen des logarithmierten Einkommens entspricht auch der ökonomischen Erwartung. Personen, die ein höheres Einkommen haben sind auf die mögliche sofortige, zusätzliche Auszahlung des Experiments nicht angewiesen und können deshalb ihren Konsum auf die spätere höhere Auszahlung aufschieben.\\
+Der Schätzer $\hat{\beta}_{Realschule}$ zeigt, dass Probanden die einen Realschulabschluss haben eine 1.92 höhere switching row haben als Probanden die einen Hauptschulabschluss haben ($p = 0.044$). Dieses Ergebnis entspricht nicht der ökonomischen Erwartung, da ein höherer Schulabschluss eine höhere Wertschätzung für zukünftige Entlohnungen implizieren könnte. Entsprechend investieren Jugendliche zuerst Zeit in die schulische Bildung um spätere von dem erworbenen Humankapital profitieren zu können.\\
+Probanden die keinen Schulabschluss haben, haben eine 8.63 höhere switching row als Probanden mit einem Hauptschulabschluss ($p = 0.097$). Dieses Ergebnis entspricht den ausgeführten ökonomischen Erwartungen. Jedoch hat $\hat{\beta}_{kein Abschluss}$ nur 3 Beobachtungen, was die Aussagekraft dieses Schätzers limitiert.\\ 
+
+
+Ein F-Test zeigt, dass das Model statistische signifikant ist, da mindestens einer der Koeffizienten nicht null ist ($p = 0.004$). Das adjusted $R^2$ impliziert, dass 4.85\% der Varianz in switching row durch das Modell erklärt werden wird.\\ 
+
+Um die beiden Modelle zu vergleichen wird eine ANOVA durchgeführt. Die ANOVA zeigt, dass die beiden Modelle statistisch signifikant unterschiedlich sind und wir die zusätzlichen Variablen beibehalten sollen ($p = 0.042$).\\ 
+
+% reduction of the sum of squares by 1244.2
+
+
+%Tabelle 2 untersucht, ob der  Zusammenhang von Religionszugehörigkeit und Ungeduld für verschiedene Untergruppen besteht oder ob der Effekt nur für einzelne Subgruppen vorzufinden ist. In Anlehnung an \textcite{dohmen2010risk} werden Subgruppen für das Alter und Gender gebildet. Subgruppen für das Alter sind als $\leq$ als der Median des Alters und als $>$ als der Median des Alters definiert.\\
+
+
+
+
+%Tabelle 2 zeigt, dass ein positiver Zusammenhang zwischen Religionszugehörigkeit und switching row nur für Subgruppe besteht, deren Alter größer als der Median ist ($p<0.05$). Dieser Befund ist kontrovers zu dem Befund von \textcite{harrison2002estimating} die feststellen, dass der individuelle Diskontierungssatz mit dem Alter abnimmt.
+
+% how correctly interpret this result -> is the difference statistically significant? 
+
+Zusammenfassend besteht ein positiver Zusammenhang zwischen Religionszugehörigkeit und der switching row. Probanden die einer Religionsgemeinschaft zugehören haben eine höhere switching row und  diskontieren damit zukünftige Auszahlungen stärker als Probanden die in keiner Religionsgemeinschaft sind. Dieser Befund besteht, wenn für weitere Variablen kontrolliert wird und ist gegensätzlich zu den Ergebnissen von \textcite{carter2012religious,benjamin2013religious, thornton2015divine}.\\
+
+Im nächsten Abschnitt wird dieses Ergebnis weiter auf seine Robustheit hin untersucht. 
+
+\section{Robustheit}
+In diesem Abschnitt wird die lineare Regression zwei Mal durch andere Verfahren neu geschätzt. Beide mal wird die Regressionsanalyse für das kleines sowie das großes Model durchgeführt. Für die Interpretation wird jedoch nur $\hat{\beta}_{Religion}$ interpretiert. 
+\subsection{Transformation der abhängigen Variable}
+Sowohl \textcite{benjamin2013religious} als auch \textcite{thornton2015divine} logarithmieren die unabhängige Variable. Um dies zu berücksichtigen wird die abhängige Variable logarithmiert. Tabelle \ref{tab:d} zeigt das kleine und große Model für die logarithmierten switching rows. Schätzer werden  nun als Elastizität interpretiert. Das kleine Model (Spalte 1) zeigt, dass religiöse Probanden eine 22.31\% höhere erwartete switching row haben als nicht religiöse Probanden ($p = 0.014$).\\
+Der Schätzer $\hat{\beta}_{religion}$ im großen Modell (zweite Spalte) zeigt, dass religiöse Probanden eine um 28\% höhere, erwartete switching row haben als nicht religiöse Probanden ($p = 0.006$). Ein F-Test zeigt, dass das Model statistisch signifikant ist ($p = 0.003$) und 5.1\% der Varianz in switching row durch das Model erklärt wird.\\
+
+
+Beide Modelle bestätigen die Ergebnisse der vorangegangenen Analyse und zeigen, dass religiöse Probanden zukünftige Auszahlungen stärker diskontieren als nicht religiöse Probanden. Dies gilt auch nachdem die abhängige Variable logarithmiert wurde. 
+
+\begin{table}[!htbp] \centering 
+  \caption{Regressionsanlayse mit logarithmierter abhängiger Variable} 
+  \label{tab:d} 
+  \scalebox{0.7}{
+\begin{tabular}{@{\extracolsep{5pt}}lD{.}{.}{-3} D{.}{.}{-3} } 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{2}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-3} 
+\\[-1.8ex] & \multicolumn{2}{c}{Switching row (log)} \\ 
+\\[-1.8ex] & \multicolumn{1}{c}{(1)} & \multicolumn{1}{c}{(2)}\\ 
+\hline \\[-1.8ex] 
+ Religionszugehörigkeit & 0.223^{**} & 0.280^{***} \\ 
+  & (0.091) & (0.102) \\ 
+  Alter &  & 0.005 \\ 
+  &  & (0.015) \\ 
+  Alter quadriert &  & -0.0001 \\ 
+  &  & (0.0001) \\ 
+  Male &  & 0.013 \\ 
+  &  & (0.092) \\ 
+  Einkommen (log) &  & -0.291^{***} \\ 
+  &  & (0.074) \\ 
+  Kreditbeschränkung &  & -0.081 \\ 
+  &  & (0.117) \\ 
+  Gewissenhaftigkeit &  & 0.086 \\ 
+  &  & (0.065) \\ 
+  Extraversion &  & 0.040 \\ 
+  &  & (0.067) \\ 
+  Neurotizismus &  & -0.081 \\ 
+  &  & (0.063) \\ 
+  Offenheit &  & 0.042 \\ 
+  &  & (0.067) \\ 
+  Vertraeglichkeit &  & 0.133^{**} \\ 
+  &  & (0.064) \\ 
+  Gewissenhaftigkeit*Male &  & -0.157^{*} \\ 
+  &  & (0.091) \\ 
+  Extraversion*Male &  & 0.065 \\ 
+  &  & (0.101) \\ 
+  Neurotizismus*Male &  & 0.029 \\ 
+  &  & (0.097) \\ 
+  Offenheit *Male &  & 0.008 \\ 
+  &  & (0.097) \\ 
+  Verträglichkeit*Male &  & -0.123 \\ 
+  &  & (0.097) \\ 
+  Abitur &  & -0.174 \\ 
+  &  & (0.120) \\ 
+  Realschulabschluss &  & 0.194 \\ 
+  &  & (0.120) \\ 
+  Besucht die Schule &  & 0.338 \\ 
+  &  & (0.297) \\ 
+  Kein Schulabschluss &  & 0.868 \\ 
+  &  & (0.655) \\ 
+  Constant & 2.155^{***} & 4.256^{***} \\ 
+  & (0.076) & (0.594) \\ 
+ \hline \\[-1.8ex] 
+Observations & \multicolumn{1}{c}{500} & \multicolumn{1}{c}{423} \\ 
+R$^{2}$ & \multicolumn{1}{c}{0.012} & \multicolumn{1}{c}{0.096} \\ 
+Adjusted R$^{2}$ & \multicolumn{1}{c}{0.010} & \multicolumn{1}{c}{0.051} \\ 
+Residual Std. Error & \multicolumn{1}{c}{0.917 (df = 498)} & \multicolumn{1}{c}{0.896 (df = 402)} \\ 
+F Statistic & \multicolumn{1}{c}{6.068$^{**}$ (df = 1; 498)} & \multicolumn{1}{c}{2.133$^{***}$ (df = 20; 402)} \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{2}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\
+Standardfehler in ()\\
+\end{tabular}}
+\end{table} 
+
+%\subsection{Religiöse Intensität}
+%In Anlehnung an \textcite{thornton2015divine} wird zudem untersucht, ob es einen Unterschied  zwischen der Religionszugehörigkeit einer Person und der Intensität der Ausübung einer Religion gibt. Um die Intensität zu erfassen wird eine Dummy Variable gebildet, welche mit 1 kodiert wird, wenn der Proband mindestens ein mal pro Monat eine religiöse Veranstaltung besucht und mit 0 wenn dem nicht so ist.\Tabelle ... zeigt die Regression, welche Religionszugehörigkeit durch Intensität der Religionsausübung ersetzt. Auf einem Signifikanzniveau von $\alpha = 10\%$ ist kein Zusammenhang zwischen Intensität der Religion und der switching row festzustellen. 
+
+
+\subsection{Tobit Model}
+
+\begin{table}[!htbp] 
+\centering
+\caption{Regressionsergebnisse Tobit Model}\label{tab:e}
+\scalebox{0.7}{
+\begin{tabular}{llr}
+\toprule
+\multicolumn{3}{r}{\textit{Dependent variable}}\\
+\cmidrule(r){2-3}\\
+\multicolumn{3}{r}{\textit{swichting row}}\\
+\midrule 
+Religionszugehörigkeit & $2.344^{\star}$ & $3.007^{\star\star}$\\
+ & $(1.224)$ & $(0.053)$\\ 
+ Alter & & $0.1701$\\ 
+ & & $(0.190)$\\ 
+ Alter quadriert & &$-0.001$\\
+ & & $(0.002)$\\
+ Male & & $-0.030$\\
+ & & $(1.170)$\\ 
+ Einkommen (log)& & $-3.337^{\star\star\star}$\\
+ & &$0.958$\\
+ Kreditbeschränkung & &$-2.227$\\
+ & &$(1.504)$\\
+ Gewissenhaftigkeit & &$1.169$\\
+ & &$(0.830)$\\
+ Extraversion & &$0.267$\\
+ & &$(0.857)$\\
+ Neurotizismus & &$-0.884$\\ 
+ & &$(0.806)$\\ 
+ Offenheit & &$0.805$\\
+ & &$(0.851)$\\
+ Verträglichkeit & &$1.245$\\
+ & &$(0.818)$\\
+ Gewissenhaftigkeit*Male& &$-2.118^\star$\\
+ & &$(1.171)$\\
+ Extraversion*Male & &$1.348$\\
+ & &$(1.294)$\\
+ Neurotizismus*Male & &$-0.077$\\
+ & &$(1.247)$\\
+ Offenheit*Male & &$-0.446$\\
+ & &$(1.239)$\\
+ Verträglichkeit*Male & &$-1.320$\\
+ & &$(1.243)$\\ 
+ Abitur& &$-1.661$\\
+ & &$(1.528)$\\
+ Realschulabschluss & &$2.992^\star$\\
+ & &$(1.542)$\\
+ Besucht die Schule& &$3.721$\\
+ & &$(3.813)$\\
+ $Constant_1$ &$13.980^{\star\star\star}$ &$35.106^{\star\star\star}$\\
+ &$(1.057)$ & $(7.671)$\\
+ $Constant_2$ &$2.464^{\star\star\star}$ &$2.384^{\star\star\star}$\\
+ &$(0.051)$ &$(0.053)$\\
+\hline
+Observations&$500$&$423$\\
+Log-likelihood & $-1302.473$ & $-1110.605$\\
+&on 997 df &on 825 df\\
+\midrule
+Note:  $^\star p<0.1$;  $^{\star\star} p<0.05$;  $ ^{\star\star\star} p<0.001$ \\
+Standardfehler in ()\\
+\bottomrule
+\end{tabular}}
+\end{table}
+ 
+Da für Probanden die nicht von der früheren Auszahlung zu der Späteren wechselten eine switching row von 21 angenommen wird und eine swithcing row unter 1 nicht möglich ist, sind die Beobachtungen left und right censored. \footnote{Für eine ausführlichere Erklärung von censored Variables siehe \textcite{wooldridge2010econometric}} 
+Um hierfür zu kontrollieren wird an Stelle des multipen linearen Regressionsmodells ein standard censored Tobit Model geschätzt.\footnote{Eine Ausführliche Erläuterung des Tobit Models befindet sich in \textcite{wooldridge2010econometric}}
+ 
+Tabelle \ref{tab:e} zeigt die Ergebnisse der Tobit-Regression. Spalte eins zeigt das kleine Model. Religiöse Probanden haben eine 2.34 höhere switching row  als nicht religiöse Probanden und diskontieren damit zukünftige Auszahlungen stärker ($p = 056$).\\
+Spalte zwei zeigt das große Model. Für dieses Model konnte die Variable “kein Schulabschluss" nicht berücksichtigt werden, da nicht genügend Beobachtungen vorliegen. Der Schätzer $\hat{\beta}_{Religion}$ impliziert, dass religiöse Probanden eine 3.007 höhere switching row haben als nicht religiöse Probanden ($p = 0.021$).\\
+
+Auch unter der Verwendung eines komplexeren Schätzverfahrens besteht weiterhin ein positiver Zusammenhang zwischen Religion und dem Diskontiren von zukünftigen Auszahlungen. 
+
+
+
+
+\section{Diagnostik}
+Für die Regressionsdiagnostik wird das große Model der linearen Regression herangezogen (Spalte 2, Tabelle\ref{tab:c}), da dieses für alle im theoretischen Teil ausgeführten Variablen kontrolliert. Es werden nur die Annahmen der linearen Regression überprüft. Das schätzen von neuen Regressionsmodellen, welche potentielle Verletzungen der Annahmen der linearen Regression berücksichtigt ist jenseits des Zwecks dieses Papers. 
+ 
+\subsection{Globaler Test von Modellannahmen}
+% insert grafic 
+
+Zu Beginn wird ein globaler Test der Modellannahmen durchgeführt um einen ersten Eindruck dafür zu bekommen, ob die Annahmen der linearen Regression erfüllt sind.\\ 
+
+Die erste Zeile zeigt, dass die Annahmen einer linearen Regression nicht erfüllt sind, was eine weitere Analyse erfordert. 
+Zeile 5 zeigt, dass die Homogentitätsannahme akzeptabel ist. Eine umfangreichere Analyse wird vorgenommen, um dieses Ergebnis zu validieren. 
+
+\subsection{Normalverteilung der Residuen}
+
+\begin{figure}
+    \centering
+    \begin{minipage}{0.45\textwidth}
+\caption{Q-Q Plot der Regressionsresiduen}\label{fig:c}
+        \includegraphics[width=0.9\textwidth]{reg3bresidualsnormal1.tex} % first figure itself
+        
+    \end{minipage}\hfill
+    \begin{minipage}{0.45\textwidth}
+\caption{Histogramm mit Normalverteilung der Regressionsresiduen}\label{fig:d}
+        \includegraphics[width=0.9\textwidth]{residhistreg3b.tex} % second figure itself
+        
+    \end{minipage}
+\end{figure}
+
+Der Q-Q Plot in Abbildung \ref{fig:c} zeigt, dass die Regressionsresiduen nicht normalverteilt sind. Eine Normalverteilung würde vorliegen, wenn die Residuen der 45 Grad Diagonalen folgen würden. Dies ist nicht der Fall, da die Residuen an beiden Enden der Verteilung substantiell von der Diagonalen abweichen. Ein interaktiver Q-Q Plot\footnote{Siehe R-Skript} bestätigt dies und zeigt, dass der Großteil der Residuen nicht im 90\% Konfidenzintervall liegt.\footnote{Interaktiver Q-Q Plot befindet sich im $R$ Skript}\\
+
+Auch das Histogramm in Abbildung \ref{fig:d} zeigt keine Normalverteilung der Regressionsresiduen, da diese nicht der Normalverteilung (rote Kurve) folgen. Auffallend ist zudem die hohe Dichte von Residuen auf der rechten Seite der Normalverteilung und einer damit einhergehenden linksschiefe Verteilung der Residuen.\\  
+
+Ein Shapiro-Wilk Test bestätigt die grafische Analyse und zeigt, dass die Residuen nicht normalverteilt sind ($p < 0.001$).
+
+% how do I want to fix that 
+
+\subsection{Independence of Error}
+Unabhängigkeit der abhängigen Variable und damit der Residuen wird durch einen Durbin-Watson Test überprüft. Ein p-Value von $p = 0.004$ impliziert, dass Autokorrleation vorliegt und die Residuen damit nicht unabhängig sind. Eine mögliche Ursache hierfür könnte sein, dass mehrerer Beobachtungen aus der gleichen Familie stammen. Um eine konkretere Aussage bezüglich Autokorrelation treffen zu können, müsste die Datengenerierung genauer betrachtet werden. 
+
+% nur für time series Data? sagt zumindestens R in action
+
+\subsection{Linearität}
+Nichtlinearität zwischen der abhängigen Variable und den unabhängigen Variablen wird durch component plus residual Plots untersucht.\footnote{Component plus residuals Plots befinden sich im $R$ Skript} Hierfür mussten der Interaktionseffekt zwischen Gender und den Big Five aus der Regressionsgleichung genommen werden, da das $R$ package $crPlots$ keine Interaktionen bearbeitet. Die component plus residual Plots zeigen, dass die Linearitätsannahmen für alle Variablen bis auf $\hat{\beta}_{Besucht Schule}$ und $\hat{\beta}_{kein Abschluss}$ erfüllt sind. Im nächsten Schritt sollte daher versucht werden beide Variablen zu transformieren (z.B. $log$ oder $exp$) um einen linearen Zusammenhang herzustellen. 
+
+
+\subsection{Heteroskedastizität}
+Heteroskedastizität wird sowohl grafisch als auch statistisch analysiert. Homoskedastizität würde ein konstante symmetrische Verteilung der Residuen implizieren \parencite{faraway2014linear}. 
+
+\begin{figure}
+    \centering
+    \begin{minipage}{0.45\textwidth}
+\caption{Scale-Location Plot}\label{fig:e}
+        \includegraphics[width=0.9\textwidth]{heteroscedasticity.tex} % first figure itself
+        
+    \end{minipage}\hfill
+    \begin{minipage}{0.45\textwidth}
+\caption{Spread-Level Plot}\label{fig:f}
+        \includegraphics[width=0.9\textwidth]{Spreadlevel.tex} % second figure itself
+        
+    \end{minipage}
+\end{figure}
+
+% Scale location selber bauen 
+
+Abbildung \ref{fig:e} zeigt einen Scale-Location Plot. Eine konstante Varianz liegt vor, wenn die Punkte zufällig um die horizontale Linie verteilt sind \parencite{kabacoff2015r}. Die Punkte wirken zufällig verteilt. Jedoch weicht die rote Linie von einer horizontalen Linie ab und fällt ab der Mitte der Verteilung. Dies deutet auf eine nicht konstante Varianz hin. Jedoch gibt es zum Ende der Verteilung nur sehr wenige Punkte.\\
+
+Abbildung \ref{fig:f} zeigt einen Spread-Level Plot. Falls Homoskedastizität vorliegt, würde der Spread-Level Plot nur eine rote horizontale Linie zeigen. Die grüne Linie impliziert, dass die Varianz nicht konstant ist. Dieses Ergebnis deckt sich mit dem Eindruck aus Abbildung \ref{fig:e}.\\  
+Der Spread-Level Plot schlägt zudem eine power transformation von 1.788 vor. Demnach würde das Potenzieren der abhängigen Variable mit 1.788 zu einer konstanten Varianz führen.\\ 
+
+Um Heteroskedastizität weiter zu untersuchen wird ein Breush-Pagan Test durchgeführt. Die Nullhypothese des Breush-Pagan Test ist eine homogene Varianz der Residuen (Homoskedastitzität). Der Breush-Pagan Test ergibt, dass die Nullhypothese nicht verworfen werden kann ($p = 0.211$).
+Das Ergebnis des Breush-Pagan Test widerspricht der grafischen Analyse. Da die grafische Analyse keinen gravierenden Verstoß gegen die Homosketastitztätsannahme darstellt und ein globaler Test der Modellannahmen Homoskedastitzität als akzeptable einstuft, wird davon ausgegangen, dass die Annahme akzeptable erfüllt ist. Diese Annahme sollte jedoch in einer weiterführenden Analyse tiefgreifender untersucht werden.  
+
+\subsection{Multikollinarität}
+Multikollinarität wird durch den variance inflation factor (vif) überprüft. In Anlehnung an \textcite{kabacoff2015r} liegt Multikolliarität vor, wenn $\sqrt{vif}>2$ ist. Die Auswertung zeigt, dass keine Multikollinarität bis auf die Schätzer $Alter$ und $Alter^2$ vorliegt. Dies stellt jedoch kein Problem dar, da beide Schätzer nur zusammen interpretiert werden. 
+
+\subsection{Abnormale Beobachtungen}
+Dieser Teil untersucht die Regression hinsichtlich outliers, leverages, und influental observations. 
+
+\subsubsection{Outliers}
+Ausreißer sind Beobachtungen die nicht gut vom Modell geschätzt werden und daher abnormal große (positive oder negative) Residuen haben \parencite{kabacoff2015r}. Positive Residuen implizieren, dass das Modell die abhängige Variable unterschätzten, wohingegen negative Werte einen zu hohe Schätzer angeben \parencite{kabacoff2015r}.\\
+Auf outlier werden mit Hilf des $outlierTest$ getestet. Der $outlierTest$ kalkuliert ein Bonferroni adjusted p-Value für das größte absolute studentisierte Residuum. Dazu wird der unadjusted p-Value mit der Anzahl der Beobachtungen multipliziert. Ein Wert der größer als eins ist wird als $NA$ kodiert und impliziert, dass das größte Residuum als Ausreißer nicht statistisch signifikant ist.\\
+
+Der $outlierTest$ ergibt einen Bonferroni p-Value von $NA$ für die Beobachtung 497 und impliziert, dass es keine Outlier gibt.  
+
+
+\subsubsection{Leverage observations}
+Leverage observations sind Ausreißer bezüglich der anderen Schätzer \parencite{kabacoff2015r}. 
+
+% ist nicht ganz klar was ein leverage wirklich ist
+  
+Beobachtungen mit einem hohen leverage werden durch eine $hat statistic$ aufgedeckt \parencite{kabacoff2015r}. Der durchschnittlich $hat value$ ist $p/n$. $p$ ist die Anzahl der Schätzer im Model (inklusive des Oridnatenabschnitts) und $n$ die Samplegröße \parencite{kabacoff2015r}. Ein $hat value$ der drei mal größer ist als der durchschnittliche $hat value$ ist als leverage observation definiert \parencite{kabacoff2015r}. Die Beobachtungen 130 und 185 sind leverage observations. % so what? 
+
+\subsubsection{Influental observations}
+Influental observations sind Beobachtungen, die einen überproportional starken Einfluss auf Schätzung des Models haben \parencite{kabacoff2015r}. Influental observations werden anhand der Cooks's distance sowie einem added variable Plot analysiert. In Übereinstimmung mit \textcite{kabacoff2015r} sind Beobachtungen mit einem Cook's D value $>$ 1 influental observations. 
+
+\begin{figure}[!htbp] 
+\begin{center}
+\caption{Cook's Distance}\label{fig:g}
+\scalebox{0.5}{
+\input{CooksD.tex}}
+\end{center}
+\end{figure} 
+
+Abbildung \ref{fig:g} zeigt, dass keiner der Beobachtungen einen D-Value $>1$ hat. Entsprechend ist keine der Beobachtungen eine influental observation.\footnote{Um zu zeigen, wie potentielle influental observations das Regressionsmodell beeinflussen, werden added-variable Plots gebildet und im Appendix angefügt}\\
+
+
+
+%Die rote Linie zeigt den Regressionskoeffizienten für die erklärende Variable. Der Einfluss von influental observations kann durch die Veränderung der roten Linie gezeigt werden, wenn die einflussreiche Beobachtung gelöscht wird. 
+
+
+%Ein Influence Plot vereint die Informationen von Ausreißer, leverage und einflussreichen Beobachtungen \parencite{kabacoff2015r}. Beobachtungen auf der vertikalen Achse die größer als 2 oder kleiner als -2 sind, sind Ausreißer \parencite{kabacoff2015r}. Beobachtungen auf der horizontalen Achse, die größer als 0.3 sind, haben einen hohen leverage \parencite{kabacoff2015r}. Die Kreigröße ist proportional zum Einfluss der Beobachtung \parencite{kabacoff2015r}. Folglich implizieren Beobachtungen mit einem großen Kreis einen überproportionalen Einfluss auf die Schätzer. Der Plot zeigt, dass das keine der Beobachtungen einen hohen leverage hat. Dies steht in Kontrast zu der bereits durchgeführten Analyse die zeigte, dass die Beobachtungen 130 und 185 leverage observations sind. Die 4 Beobachtungen mit dem größten Kreis sind die Beobachtungen Mehrere Beobachtungen sind Ausreißer, was die bereits durchgeführte Analyse von Ausreißern bestätigt.\\ 
+
+
+
+
+\section{Endogenität}
+Endogenität und damit eine Korrelation zwischen einer unabhängigen Variable und dem Fehlerterm kann in der Form eines omitted variables bias, measurement errors oder aufgrund von simultaneity vorliegen \parencite{wooldridge2010econometric}. 
+
+\subsection{Omitted Variable Bias}
+Ein omitted variable Bias tritt auf, wenn für eine unabhängige Variable nicht kontrolliert wird, diese aber mit einer erklärenden Variable korreliert ist \parencite{wooldridge2010econometric}. Da nur $4.85\%$ der Varianz in der switching row durch dich unabhängigen Variablen erklärt werden können, gibt es weitere Variablen die switching row erklären. Es ist wahrscheinlich, dass diese nicht integrierte Variable sowohl mit der abhängigen Variable als auch mit der unabhängigen Variable korreliert ist. Eine mögliche nicht integrierte Variable sind die kognitiven Fähigkeiten des Probanden. Dies wiederum könnte mit der abhängigen Variable Schulabschluss und dem Einkommen korreliert sein.\\
+
+\subsection{Measurement Error}
+Ein Messfehler liegt vor, wenn ein unpräzises Messinstrument zur Quantifizierung einer Variable verwendet wird \parencite{wooldridge2015introductory}.\\
+
+Ein möglicher Messfehler könnte in der Variable Einkommen liegen, da das Einkommen von den Probanden selbst angegeben wurde. Mehrere Gründe könnte eine Person bewegen nicht das wirkliche Einkommen anzugeben. Dieses falsche angegebene Einkommen könnte mit dem Fehlerterm korreliert sein, womit ein Bias vorliegt.\\
+ 
+
+%Religionszugehörigkeit nicht die Religiösität einer Person wiederspiegelt
+
+\subsection{Simultaneity}
+Simultaneität liegt vor, wenn mindestens einer der erklärenden Variablen simultan durch die abhängige Variable bestimmt wird \parencite{wooldridge2010econometric}. Wenn einer der unabhängigen Variablen eine Funktion von der abhängigen Variable ist, dann ist die unabhänige Variable mit dem Fehlerterm korreliert und es liegt ein Bias vor \parencite{wooldridge2010econometric}.\\
+
+Es spricht nichts dafür, dass eine Simultaneität im Datensatz vorliegt.
+
+\section{Conclusion}
+Dieses Paper findet eine positive Beziehung zwischen Religion und zukünftigen Auszahlungen. Religiöse Personen diskontieren zukünftige Auszahlungen stärker als nicht religiöse Personen und haben damit eine Präferenz für frühere Auszahlungen. Eine positive Beziehung zwischen Religion und dem Diskontieren zukünftiger Auszahlungen hat auch bestand, wenn für Alter, Gender, Einkommensniveau, Kreditbeschränkung, Big Five, und das Bildungsniveau kontrolliert wird. Eine umfangreiche Robustheitsanalyse zusätzlich unterstützt  diese Ergebnisse.\\
+Dieses Ergebnis widerspricht der bisherigen Forschungsliteratur, welche entweder einen negativen Zusammenhang zwischen Religion und Diskontieren beobachtete (\textcite{carter2012religious}) oder aber keinen Zusammenhang feststellte (\textcite{thornton2015divine, benjamin2013religious}). Eine mögliche Erklärung für diesen Unterschied könnte darin liegen, dass ich ein repräsentatives Sample anstelle von Bachelorstudenten oder online Arbeitskräfte verwendet habe.\\
+Mehr Forschung wird benötigt, um die Beziehung zwischen Religion und dem Diskontieren von zukünftigen Auszahlungen klarzustellen.\\
+
+
+
+
+
+%Religion kann nicht auf ökonomische Fragestellungen übertragen werden \\
+
+Dieses Paper hat mehrere Limitationen. Erstens ist das Christentum die dominante Religionszugehörigkeit im Datensatz, was eine Generalisierbarbeit für andere Gesellschaften beschränkt.\\
+Zweitens kann nur ein sehr kleiner Prozentsatz der Varianz in switching row durch mein Modell erklärt werden. Es gibt daher andere Variablen die switching row weiter erklären. Des Weiteren ist mein Sample extrem linksschief. Obwohl das Central Limit Theorm bei meiner Samplegröße zu Geltung kommt, könnte es sein, dass die Stichprobengröße nicht groß genug ist. In diesem Fall ist die verwendete deskriptive Statistik sowie die lineare Regression nicht geeignet. Für 35\% der Probanden wurde eine switching row von 21 angenommen, da diese niemals von der frühen Auszahlung zu der späteren Auszahlung wechselten. Dies limitiert die Validität meiner Analyse da ich nicht die wirkliche switching row dieser Probanden kenne und 21 bloß als deren swtiching row annehme. Eine weiterführende Analyse sollte deshalb die gleiche Analyse nur mit den Beobachtungen der ersten 20 swichting rows durchführen.\\
+
+Zukünftige Untersuchungen sollten zudem das gleiche Experiment mit einem größeren Sample sowie in anderen Ländern durchführen. Dadurch wird sichergestellt, dass das CLT zur Geltung kommt und einer weitere Generalisierbarbeit der Ergebnisse ermöglicht. Des Weiteren sollten zukünftige Experimentaldesigns die Anzahl der möglichen switching rows erhöhen sowie die Weite der Diskontierungssätze variieren um extrem schiefe Verteilung zu vermeiden. Darüber hinaus könnten komplexere Regressionsmodelle wie robust regression methods oder non-linear models geschätzt werden um den Fit der linearen Regression zu verbessern. Zukünftige Forschung sollte zudem für weitere Variablen (z.B. kognitive Fähigkeiten) kontrollieren die einen Einfluss auf intertemporale Entscheidungen haben. Abschließend wird zusätzlicher theoretische Forschung benötigt die erklärt, warum Religion unmittelbare Gratifikation fördern könnte. 
+
+\newpage
+
+\section{Appendix}
+
+
+
+
+\newpage
+\printbibliography
+
+\newpage
+\input{frontmatter/erklaerung.tex}
+\end{document}
+
+\end{document}

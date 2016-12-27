@@ -1,0 +1,1219 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.7 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \sortlist[entry]{nyt/global/}
+    \entry{baier2001if}{article}{}
+      \name{author}{2}{}{%
+        {{uniquename=0,hash=0d4bd0042d3c05cf3e0cccd1b406cd79}{%
+           family={Baier},
+           family_i={B\bibinitperiod},
+           given={Colin\bibnamedelima J},
+           given_i={C\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{uniquename=1,hash=bdc4c8d14db0c3c675334f7e69b38205}{%
+           family={Wright},
+           family_i={W\bibinitperiod},
+           given={Bradley\bibnamedelima RE},
+           given_i={B\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Sage Publications}%
+      }
+      \strng{namehash}{88d1a8f5038121589c764183ad30ee08}
+      \strng{fullhash}{88d1a8f5038121589c764183ad30ee08}
+      \field{sortinit}{B}
+      \field{sortinithash}{4ecbea03efd0532989d3836d1a048c32}
+      \field{labelyear}{2001}
+      \field{datelabelsource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Research in Crime and Delinquency}
+      \field{number}{1}
+      \field{title}{“If you love me, keep my commandments”: A meta-analysis of the effect of religion on crime}
+      \field{volume}{38}
+      \field{year}{2001}
+      \field{pages}{3\bibrangedash 21}
+      \range{pages}{19}
+    \endentry
+    \entry{baumeister2007strength}{article}{}
+      \name{author}{3}{}{%
+        {{uniquename=0,hash=3a3e7ba39f95b6e47832c4928869ee0c}{%
+           family={Baumeister},
+           family_i={B\bibinitperiod},
+           given={Roy\bibnamedelima F},
+           given_i={R\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{uniquename=0,hash=65d50568f3195d019b3c139661d35269}{%
+           family={Vohs},
+           family_i={V\bibinitperiod},
+           given={Kathleen\bibnamedelima D},
+           given_i={K\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{uniquename=0,hash=42076d67f12ab26463552248d84f317a}{%
+           family={Tice},
+           family_i={T\bibinitperiod},
+           given={Dianne\bibnamedelima M},
+           given_i={D\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {SAGE Publications}%
+      }
+      \strng{namehash}{9bf0e649eb69a46a78deee1d346999f3}
+      \strng{fullhash}{9bf0e649eb69a46a78deee1d346999f3}
+      \field{sortinit}{B}
+      \field{sortinithash}{4ecbea03efd0532989d3836d1a048c32}
+      \field{labelyear}{2007}
+      \field{datelabelsource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Current directions in psychological science}
+      \field{number}{6}
+      \field{title}{The strength model of self-control}
+      \field{volume}{16}
+      \field{year}{2007}
+      \field{pages}{351\bibrangedash 355}
+      \range{pages}{5}
+    \endentry
+    \entry{becker2012relationship}{article}{}
+      \name{author}{5}{}{%
+        {{uniquename=0,hash=de7733c0406c5ce5febab9c48523096d}{%
+           family={Becker},
+           family_i={B\bibinitperiod},
+           given={Anke},
+           given_i={A\bibinitperiod}}}%
+        {{uniquename=0,hash=76a7d40a20082335c7230a29ee9a89fe}{%
+           family={Deckers},
+           family_i={D\bibinitperiod},
+           given={Thomas},
+           given_i={T\bibinitperiod}}}%
+        {{uniquename=0,hash=deb9532da0d94931851c88378a3ee388}{%
+           family={Dohmen},
+           family_i={D\bibinitperiod},
+           given={Thomas\bibnamedelima J},
+           given_i={T\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{uniquename=0,hash=5f90a9e145596548c0e27f8430eb3b62}{%
+           family={Falk},
+           family_i={F\bibinitperiod},
+           given={Armin},
+           given_i={A\bibinitperiod}}}%
+        {{uniquename=0,hash=aef0ba36925eb26cdb8ff0ee379ee1e7}{%
+           family={Kosse},
+           family_i={K\bibinitperiod},
+           given={Fabian},
+           given_i={F\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {CESifo Working Paper Series}%
+      }
+      \strng{namehash}{819c1e0ca6de005c4108071cd61dded8}
+      \strng{fullhash}{f0e48441d945b753bb019dbd02746a95}
+      \field{sortinit}{B}
+      \field{sortinithash}{4ecbea03efd0532989d3836d1a048c32}
+      \field{labelyear}{2012}
+      \field{datelabelsource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The relationship between economic preferences and psychological personality measures}
+      \field{year}{2012}
+    \endentry
+    \entry{benjamin2013religious}{article}{}
+      \name{author}{3}{}{%
+        {{uniquename=0,hash=93c26a55096787df7f55a852b64aab6d}{%
+           family={Benjamin},
+           family_i={B\bibinitperiod},
+           given={Daniel\bibnamedelima J},
+           given_i={D\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{uniquename=0,hash=1a6c485a6f85b471cc23c7b40f8e3ca9}{%
+           family={Choi},
+           family_i={C\bibinitperiod},
+           given={James\bibnamedelima J},
+           given_i={J\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{uniquename=0,hash=dd78943ff38d6c8aabdfdb6538e7006b}{%
+           family={Fisher},
+           family_i={F\bibinitperiod},
+           given={Geoffrey},
+           given_i={G\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {MIT Press}%
+      }
+      \strng{namehash}{cff432144b537878bbd9eeb337185051}
+      \strng{fullhash}{cff432144b537878bbd9eeb337185051}
+      \field{sortinit}{B}
+      \field{sortinithash}{4ecbea03efd0532989d3836d1a048c32}
+      \field{labelyear}{2013}
+      \field{datelabelsource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Review of Economics and Statistics}
+      \field{title}{Religious identity and economic behavior}
+      \field{year}{2013}
+    \endentry
+    \entry{carter2012religious}{article}{}
+      \name{author}{5}{}{%
+        {{uniquename=0,hash=335eed3ef4ed1ef2f74c0c25a91305d0}{%
+           family={Carter},
+           family_i={C\bibinitperiod},
+           given={Evan\bibnamedelima C},
+           given_i={E\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{uniquename=0,hash=1549954d33df2d95bbfceb8564d7dbb4}{%
+           family={McCullough},
+           family_i={M\bibinitperiod},
+           given={Michael\bibnamedelima E},
+           given_i={M\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{uniquename=0,hash=5b1402f8ca23e5821c192cf476ca2b6e}{%
+           family={Kim-Spoon},
+           family_i={K\bibinithyphendelim S\bibinitperiod},
+           given={Jungmeen},
+           given_i={J\bibinitperiod}}}%
+        {{uniquename=0,hash=25d9c207b9b788f6748534e43865c4c8}{%
+           family={Corrales},
+           family_i={C\bibinitperiod},
+           given={Carolina},
+           given_i={C\bibinitperiod}}}%
+        {{uniquename=0,hash=f4882bf7f4fc555c3a59d622772c1426}{%
+           family={Blake},
+           family_i={B\bibinitperiod},
+           given={Adam},
+           given_i={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{f90feca8494988c2e0abd77c2c993cc6}
+      \strng{fullhash}{0868d012d836a3a087bc79030a9bf544}
+      \field{sortinit}{C}
+      \field{sortinithash}{59f25d509f3381b07695554a9f35ecb2}
+      \field{labelyear}{2012}
+      \field{datelabelsource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Evolution and Human Behavior}
+      \field{number}{3}
+      \field{title}{Religious people discount the future less}
+      \field{volume}{33}
+      \field{year}{2012}
+      \field{pages}{224\bibrangedash 231}
+      \range{pages}{8}
+    \endentry
+    \entry{coller1999eliciting}{article}{}
+      \name{author}{2}{}{%
+        {{uniquename=0,hash=9514592c87ad1759b66bd85b11a0ca61}{%
+           family={Coller},
+           family_i={C\bibinitperiod},
+           given={Maribeth},
+           given_i={M\bibinitperiod}}}%
+        {{uniquename=0,hash=fa14ad9fd1eaf611005d215a782d5802}{%
+           family={Williams},
+           family_i={W\bibinitperiod},
+           given={Melonie\bibnamedelima B},
+           given_i={M\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{a36ca6ad54e4492ebb212725a50209a4}
+      \strng{fullhash}{a36ca6ad54e4492ebb212725a50209a4}
+      \field{sortinit}{C}
+      \field{sortinithash}{59f25d509f3381b07695554a9f35ecb2}
+      \field{labelyear}{1999}
+      \field{datelabelsource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Experimental Economics}
+      \field{number}{2}
+      \field{title}{Eliciting individual discount rates}
+      \field{volume}{2}
+      \field{year}{1999}
+      \field{pages}{107\bibrangedash 127}
+      \range{pages}{21}
+    \endentry
+    \entry{dohmen2012interpreting}{article}{}
+      \name{author}{4}{}{%
+        {{uniquename=1,hash=deb9532da0d94931851c88378a3ee388}{%
+           family={Dohmen},
+           family_i={D\bibinitperiod},
+           given={Thomas\bibnamedelima J},
+           given_i={T\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{uniquename=0,hash=5f90a9e145596548c0e27f8430eb3b62}{%
+           family={Falk},
+           family_i={F\bibinitperiod},
+           given={Armin},
+           given_i={A\bibinitperiod}}}%
+        {{uniquename=0,hash=6491b7bc27c657479fc024ac4ed49771}{%
+           family={Huffman},
+           family_i={H\bibinitperiod},
+           given={David},
+           given_i={D\bibinitperiod}}}%
+        {{uniquename=0,hash=77c12a1c8a332abc8ad4cad603c230d3}{%
+           family={Sunde},
+           family_i={S\bibinitperiod},
+           given={Uwe},
+           given_i={U\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Netspar Discussion Paper}%
+      }
+      \strng{namehash}{5bf97e3e6e24e9d37b3c6c4dd2e4e987}
+      \strng{fullhash}{baa8b84d201bc320a7370dc9d2ccc609}
+      \field{sortinit}{D}
+      \field{sortinithash}{78f7c4753a2004675f316a80bdb31742}
+      \field{labelyear}{2012}
+      \field{datelabelsource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Interpreting time horizon effects in inter-temporal choice}
+      \field{year}{2012}
+    \endentry
+    \entry{dohmen2010risk}{article}{}
+      \name{author}{4}{}{%
+        {{uniquename=1,hash=1baf3bef1e1e7d01d5a6b203d8f6ee70}{%
+           family={Dohmen},
+           family_i={D\bibinitperiod},
+           given={Thomas},
+           given_i={T\bibinitperiod}}}%
+        {{uniquename=0,hash=5f90a9e145596548c0e27f8430eb3b62}{%
+           family={Falk},
+           family_i={F\bibinitperiod},
+           given={Armin},
+           given_i={A\bibinitperiod}}}%
+        {{uniquename=0,hash=6491b7bc27c657479fc024ac4ed49771}{%
+           family={Huffman},
+           family_i={H\bibinitperiod},
+           given={David},
+           given_i={D\bibinitperiod}}}%
+        {{uniquename=0,hash=77c12a1c8a332abc8ad4cad603c230d3}{%
+           family={Sunde},
+           family_i={S\bibinitperiod},
+           given={Uwe},
+           given_i={U\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Economic Association}%
+      }
+      \strng{namehash}{a1da8727a34c930aba124da54760650b}
+      \strng{fullhash}{1e0e2cd43facb0ba098e295f89a50613}
+      \field{sortinit}{D}
+      \field{sortinithash}{78f7c4753a2004675f316a80bdb31742}
+      \field{labelyear}{2010}
+      \field{datelabelsource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The American Economic Review}
+      \field{number}{3}
+      \field{title}{Are risk aversion and impatience related to cognitive ability?}
+      \field{volume}{100}
+      \field{year}{2010}
+      \field{pages}{1238\bibrangedash 1260}
+      \range{pages}{23}
+    \endentry
+    \entry{faraway2014linear}{book}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=a9b8fac52262ee250f18efa78dfced72}{%
+           family={Faraway},
+           family_i={F\bibinitperiod},
+           given={Julian\bibnamedelima J},
+           given_i={J\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {CRC Press}%
+      }
+      \strng{namehash}{a9b8fac52262ee250f18efa78dfced72}
+      \strng{fullhash}{a9b8fac52262ee250f18efa78dfced72}
+      \field{sortinit}{F}
+      \field{sortinithash}{c6a7d9913bbd7b20ea954441c0460b78}
+      \field{labelyear}{2014}
+      \field{datelabelsource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Linear models with R}
+      \field{year}{2014}
+    \endentry
+    \entry{frederick2002time}{article}{}
+      \name{author}{3}{}{%
+        {{uniquename=0,hash=7948761e48219771d306c89d9053f7df}{%
+           family={Frederick},
+           family_i={F\bibinitperiod},
+           given={Shane},
+           given_i={S\bibinitperiod}}}%
+        {{uniquename=0,hash=898ca02622955fd1ccdcf47220061ed2}{%
+           family={Loewenstein},
+           family_i={L\bibinitperiod},
+           given={George},
+           given_i={G\bibinitperiod}}}%
+        {{uniquename=0,hash=d22b6824713187daf0d983a7dd3fd756}{%
+           family={O'Donoghue},
+           family_i={O\bibinitperiod},
+           given={Ted},
+           given_i={T\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Economic Association}%
+      }
+      \strng{namehash}{d60d749e3917c602e3e82e1a72aa9882}
+      \strng{fullhash}{d60d749e3917c602e3e82e1a72aa9882}
+      \field{sortinit}{F}
+      \field{sortinithash}{c6a7d9913bbd7b20ea954441c0460b78}
+      \field{labelyear}{2002}
+      \field{datelabelsource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of economic literature}
+      \field{number}{2}
+      \field{title}{Time discounting and time preference: A critical review}
+      \field{volume}{40}
+      \field{year}{2002}
+      \field{pages}{351\bibrangedash 401}
+      \range{pages}{51}
+    \endentry
+    \entry{gerlitz2005erhebung}{article}{}
+      \name{author}{2}{}{%
+        {{uniquename=0,hash=620255bc490dacdede4d9734689afa3e}{%
+           family={Gerlitz},
+           family_i={G\bibinitperiod},
+           given={Jean-Yves},
+           given_i={J\bibinithyphendelim Y\bibinitperiod}}}%
+        {{uniquename=0,hash=b5a94fba4fc7802f6cf0788dc20bd5c8}{%
+           family={Schupp},
+           family_i={S\bibinitperiod},
+           given={Jürgen},
+           given_i={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{9859ce3289a295a8b1ee83f5c416c04f}
+      \strng{fullhash}{9859ce3289a295a8b1ee83f5c416c04f}
+      \field{sortinit}{G}
+      \field{sortinithash}{1c854ef9177a91bf894e66485bdbd3ed}
+      \field{labelyear}{2005}
+      \field{datelabelsource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{DIW Research Notes}
+      \field{title}{Zur Erhebung der Big-Five-basierten persoenlichkeitsmerkmale im SOEP}
+      \field{volume}{4}
+      \field{year}{2005}
+      \field{pages}{2005}
+      \range{pages}{1}
+    \endentry
+    \entry{harrison2002estimating}{article}{}
+      \name{author}{3}{}{%
+        {{uniquename=0,hash=162b3827c2a86bc31e078f24067747b4}{%
+           family={Harrison},
+           family_i={H\bibinitperiod},
+           given={Glenn\bibnamedelima W},
+           given_i={G\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{uniquename=0,hash=2fa27d24271a355f240befddbeb37fee}{%
+           family={Lau},
+           family_i={L\bibinitperiod},
+           given={Morten\bibnamedelima I},
+           given_i={M\bibinitperiod\bibinitdelim I\bibinitperiod}}}%
+        {{uniquename=0,hash=fa14ad9fd1eaf611005d215a782d5802}{%
+           family={Williams},
+           family_i={W\bibinitperiod},
+           given={Melonie\bibnamedelima B},
+           given_i={M\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {JSTOR}%
+      }
+      \strng{namehash}{3ff1e53702fcc9a084c1471e9d1beaed}
+      \strng{fullhash}{3ff1e53702fcc9a084c1471e9d1beaed}
+      \field{sortinit}{H}
+      \field{sortinithash}{82012198d5dfa657b8c4a168793268a6}
+      \field{labelyear}{2002}
+      \field{datelabelsource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The American Economic Review}
+      \field{number}{5}
+      \field{title}{Estimating individual discount rates in Denmark: A field experiment}
+      \field{volume}{92}
+      \field{year}{2002}
+      \field{pages}{1606\bibrangedash 1617}
+      \range{pages}{12}
+    \endentry
+    \entry{henrich2010weirdest}{article}{}
+      \name{author}{3}{}{%
+        {{uniquename=0,hash=135deb37dc4a16e2d813922bf87fe654}{%
+           family={Henrich},
+           family_i={H\bibinitperiod},
+           given={Joseph},
+           given_i={J\bibinitperiod}}}%
+        {{uniquename=0,hash=9f51781f3657fb07c616af31dba1200a}{%
+           family={Heine},
+           family_i={H\bibinitperiod},
+           given={Steven\bibnamedelima J},
+           given_i={S\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{uniquename=0,hash=27efbf5c59eef289ed6ad538d7449347}{%
+           family={Norenzayan},
+           family_i={N\bibinitperiod},
+           given={Ara},
+           given_i={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge Univ Press}%
+      }
+      \strng{namehash}{a282865bcb7a8be6a278379d1005fe03}
+      \strng{fullhash}{a282865bcb7a8be6a278379d1005fe03}
+      \field{sortinit}{H}
+      \field{sortinithash}{82012198d5dfa657b8c4a168793268a6}
+      \field{labelyear}{2010}
+      \field{datelabelsource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Behavioral and brain sciences}
+      \field{number}{2-3}
+      \field{title}{The weirdest people in the world?}
+      \field{volume}{33}
+      \field{year}{2010}
+      \field{pages}{61\bibrangedash 83}
+      \range{pages}{23}
+    \endentry
+    \entry{hill2006religious}{article}{}
+      \name{author}{4}{}{%
+        {{uniquename=0,hash=4ce002d1190aace17afa01bbe5002427}{%
+           family={Hill},
+           family_i={H\bibinitperiod},
+           given={Terrence\bibnamedelima D},
+           given_i={T\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{uniquename=0,hash=9a74d0fd64618593b6ceedc8e8c48997}{%
+           family={Burdette},
+           family_i={B\bibinitperiod},
+           given={Amy\bibnamedelima M},
+           given_i={A\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{uniquename=0,hash=6c14d18f8d4aad7ace5f11219b109240}{%
+           family={Ellison},
+           family_i={E\bibinitperiod},
+           given={Christopher\bibnamedelima G},
+           given_i={C\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{uniquename=0,hash=27e33c4d1dc827182d307b55e4e1eefc}{%
+           family={Musick},
+           family_i={M\bibinitperiod},
+           given={Marc\bibnamedelima A},
+           given_i={M\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{c501cefc4d4f4f544aa8ecb477b97f46}
+      \strng{fullhash}{756a6786a4ee804bd0a745447f4aaa92}
+      \field{sortinit}{H}
+      \field{sortinithash}{82012198d5dfa657b8c4a168793268a6}
+      \field{labelyear}{2006}
+      \field{datelabelsource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Preventive medicine}
+      \field{number}{4}
+      \field{title}{Religious attendance and the health behaviors of Texas adults}
+      \field{volume}{42}
+      \field{year}{2006}
+      \field{pages}{309\bibrangedash 312}
+      \range{pages}{4}
+    \endentry
+    \entry{horton2011online}{article}{}
+      \name{author}{3}{}{%
+        {{uniquename=0,hash=3afd4d41615c9d9d3d99927d001323c7}{%
+           family={Horton},
+           family_i={H\bibinitperiod},
+           given={John\bibnamedelima J},
+           given_i={J\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{uniquename=0,hash=f5b740ed749bcb49a0c96b8d5be2c732}{%
+           family={Rand},
+           family_i={R\bibinitperiod},
+           given={David\bibnamedelima G},
+           given_i={D\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{uniquename=0,hash=df6d299dfe408c1d69d91f54f4d038f9}{%
+           family={Zeckhauser},
+           family_i={Z\bibinitperiod},
+           given={Richard\bibnamedelima J},
+           given_i={R\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{2a133c3f6b460d655a4d20367efa719f}
+      \strng{fullhash}{2a133c3f6b460d655a4d20367efa719f}
+      \field{sortinit}{H}
+      \field{sortinithash}{82012198d5dfa657b8c4a168793268a6}
+      \field{labelyear}{2011}
+      \field{datelabelsource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Experimental Economics}
+      \field{number}{3}
+      \field{title}{The online laboratory: Conducting experiments in a real labor market}
+      \field{volume}{14}
+      \field{year}{2011}
+      \field{pages}{399\bibrangedash 425}
+      \range{pages}{27}
+    \endentry
+    \entry{jeynes2002meta}{article}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=74a16ef234650ae3aeb8ea6236b18d8c}{%
+           family={Jeynes},
+           family_i={J\bibinitperiod},
+           given={William\bibnamedelima H},
+           given_i={W\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Sage Publications}%
+      }
+      \strng{namehash}{74a16ef234650ae3aeb8ea6236b18d8c}
+      \strng{fullhash}{74a16ef234650ae3aeb8ea6236b18d8c}
+      \field{sortinit}{J}
+      \field{sortinithash}{ec3950a647c092421b9fcca6d819504a}
+      \field{labelyear}{2002}
+      \field{datelabelsource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Education and Urban Society}
+      \field{number}{1}
+      \field{title}{A meta-analysis of the effects of attending religious schools and religiosity on Black and Hispanic academic achievement}
+      \field{volume}{35}
+      \field{year}{2002}
+      \field{pages}{27\bibrangedash 49}
+      \range{pages}{23}
+    \endentry
+    \entry{kabacoff2015r}{book}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=35a114817f972835ebcd76252393d4e5}{%
+           family={Kabacoff},
+           family_i={K\bibinitperiod},
+           given={Robert},
+           given_i={R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Manning Publications Co.}%
+      }
+      \strng{namehash}{35a114817f972835ebcd76252393d4e5}
+      \strng{fullhash}{35a114817f972835ebcd76252393d4e5}
+      \field{sortinit}{K}
+      \field{sortinithash}{a7d5b3aec5a0890aae7baf85a209abfc}
+      \field{labelyear}{2015}
+      \field{datelabelsource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{R in action: data analysis and graphics with R}
+      \field{year}{2015}
+    \endentry
+    \entry{kim2015longitudinal}{article}{}
+      \name{author}{5}{}{%
+        {{uniquename=0,hash=5b1402f8ca23e5821c192cf476ca2b6e}{%
+           family={Kim-Spoon},
+           family_i={K\bibinithyphendelim S\bibinitperiod},
+           given={Jungmeen},
+           given_i={J\bibinitperiod}}}%
+        {{uniquename=0,hash=1549954d33df2d95bbfceb8564d7dbb4}{%
+           family={McCullough},
+           family_i={M\bibinitperiod},
+           given={Michael\bibnamedelima E},
+           given_i={M\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{uniquename=0,hash=5f7dd36b4e619465bbb0180e12d10ef8}{%
+           family={Bickel},
+           family_i={B\bibinitperiod},
+           given={Warren\bibnamedelima K},
+           given_i={W\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{uniquename=0,hash=c2acc55f8344d3bd6de9a8ab25478803}{%
+           family={Farley},
+           family_i={F\bibinitperiod},
+           given={Julee\bibnamedelima P},
+           given_i={J\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{uniquename=0,hash=3f348b7ea85886896ed591d6f2047444}{%
+           family={Longo},
+           family_i={L\bibinitperiod},
+           given={Gregory\bibnamedelima S},
+           given_i={G\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Wiley Online Library}%
+      }
+      \strng{namehash}{dace4806c82bcb44453b4a8af289dd8e}
+      \strng{fullhash}{5f46331fc4ea446bc909f824bf350513}
+      \field{sortinit}{K}
+      \field{sortinithash}{a7d5b3aec5a0890aae7baf85a209abfc}
+      \field{labelyear}{2015}
+      \field{datelabelsource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Research on Adolescence}
+      \field{number}{1}
+      \field{title}{Longitudinal associations among religiousness, delay discounting, and substance use initiation in early adolescence}
+      \field{volume}{25}
+      \field{year}{2015}
+      \field{pages}{36\bibrangedash 43}
+      \range{pages}{8}
+    \endentry
+    \entry{kirby1996delay}{article}{}
+      \name{author}{2}{}{%
+        {{uniquename=0,hash=3231691af41707d158275db3ae4a4416}{%
+           family={Kirby},
+           family_i={K\bibinitperiod},
+           given={Kris\bibnamedelima N},
+           given_i={K\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+        {{uniquename=0,hash=246b1e3c6564f8ed5ad7cb390415bc4b}{%
+           family={Maraković},
+           family_i={M\bibinitperiod},
+           given={Nino\bibnamedelima N},
+           given_i={N\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{b794344075c48ebf13a028de30c337c1}
+      \strng{fullhash}{b794344075c48ebf13a028de30c337c1}
+      \field{sortinit}{K}
+      \field{sortinithash}{a7d5b3aec5a0890aae7baf85a209abfc}
+      \field{labelyear}{1996}
+      \field{datelabelsource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Psychonomic bulletin \& review}
+      \field{number}{1}
+      \field{title}{Delay-discounting probabilistic rewards: Rates decrease as amounts increase}
+      \field{volume}{3}
+      \field{year}{1996}
+      \field{pages}{100\bibrangedash 104}
+      \range{pages}{5}
+    \endentry
+    \entry{lumley2002importance}{article}{}
+      \name{author}{4}{}{%
+        {{uniquename=0,hash=39da11a80e8c1b93bfa2c743dff2893e}{%
+           family={Lumley},
+           family_i={L\bibinitperiod},
+           given={Thomas},
+           given_i={T\bibinitperiod}}}%
+        {{uniquename=0,hash=9b7e2825148369f92c9494e48641840a}{%
+           family={Diehr},
+           family_i={D\bibinitperiod},
+           given={Paula},
+           given_i={P\bibinitperiod}}}%
+        {{uniquename=0,hash=79c18478f9104301f8a8d5352e4bbb4f}{%
+           family={Emerson},
+           family_i={E\bibinitperiod},
+           given={Scott},
+           given_i={S\bibinitperiod}}}%
+        {{uniquename=0,hash=54a3c319195500d522f4318c883d3e82}{%
+           family={Chen},
+           family_i={C\bibinitperiod},
+           given={Lu},
+           given_i={L\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Annual Reviews 4139 El Camino Way, PO Box 10139, Palo Alto, CA 94303-0139, USA}%
+      }
+      \strng{namehash}{5c2dd58534bd599ee9b1317ce2d81008}
+      \strng{fullhash}{7b3b34d009949adba9738d7ce8cc454b}
+      \field{sortinit}{L}
+      \field{sortinithash}{872351f18d0f736066eda0bf18bfa4f7}
+      \field{labelyear}{2002}
+      \field{datelabelsource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Annual review of public health}
+      \field{number}{1}
+      \field{title}{The importance of the normality assumption in large public health data sets}
+      \field{volume}{23}
+      \field{year}{2002}
+      \field{pages}{151\bibrangedash 169}
+      \range{pages}{19}
+    \endentry
+    \entry{mahoney1999marriage}{article}{}
+      \name{author}{7}{}{%
+        {{uniquename=0,hash=e2398b047dc2203e62d6455310b2944a}{%
+           family={Mahoney},
+           family_i={M\bibinitperiod},
+           given={Annette},
+           given_i={A\bibinitperiod}}}%
+        {{uniquename=0,hash=6ff24b5871971d7e432ace8e97c02b71}{%
+           family={Pargament},
+           family_i={P\bibinitperiod},
+           given={Kenneth\bibnamedelima I},
+           given_i={K\bibinitperiod\bibinitdelim I\bibinitperiod}}}%
+        {{uniquename=0,hash=0b452d06fc05c99de830123db2919077}{%
+           family={Jewell},
+           family_i={J\bibinitperiod},
+           given={Tracey},
+           given_i={T\bibinitperiod}}}%
+        {{uniquename=0,hash=b741d2a9697013e2a0f2e5aea0bc689f}{%
+           family={Swank},
+           family_i={S\bibinitperiod},
+           given={Aaron\bibnamedelima B},
+           given_i={A\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{uniquename=0,hash=a68fd5abfaf9b9517bd53d46606fa8d4}{%
+           family={Scott},
+           family_i={S\bibinitperiod},
+           given={Eric},
+           given_i={E\bibinitperiod}}}%
+        {{uniquename=0,hash=6341ed9843ae0ebf28b8737c9cdfecbf}{%
+           family={Emery},
+           family_i={E\bibinitperiod},
+           given={Erin},
+           given_i={E\bibinitperiod}}}%
+        {{uniquename=0,hash=1585e1296de55111d239a453577e7b4f}{%
+           family={Rye},
+           family_i={R\bibinitperiod},
+           given={Mark},
+           given_i={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Psychological Association}%
+      }
+      \strng{namehash}{939b501409171f6a2e3ed5b0e2170204}
+      \strng{fullhash}{2300a3e9cfb05ce2810ee25f0e89f1cb}
+      \field{sortinit}{M}
+      \field{sortinithash}{2684bec41e9697b92699b46491061da2}
+      \field{labelyear}{1999}
+      \field{datelabelsource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of family psychology}
+      \field{number}{3}
+      \field{title}{Marriage and the spiritual realm: The role of proximal and distal religious constructs in marital functioning.}
+      \field{volume}{13}
+      \field{year}{1999}
+      \field{pages}{321}
+      \range{pages}{1}
+    \endentry
+    \entry{mccullough2013religion}{article}{}
+      \name{author}{2}{}{%
+        {{uniquename=0,hash=1549954d33df2d95bbfceb8564d7dbb4}{%
+           family={McCullough},
+           family_i={M\bibinitperiod},
+           given={Michael\bibnamedelima E},
+           given_i={M\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{uniquename=0,hash=335eed3ef4ed1ef2f74c0c25a91305d0}{%
+           family={Carter},
+           family_i={C\bibinitperiod},
+           given={Evan\bibnamedelima C},
+           given_i={E\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \strng{namehash}{2af52687b39fa32e86e3607350c1540c}
+      \strng{fullhash}{2af52687b39fa32e86e3607350c1540c}
+      \field{sortinit}{M}
+      \field{sortinithash}{2684bec41e9697b92699b46491061da2}
+      \field{labelyear}{2013}
+      \field{datelabelsource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{APA handbook of psychology, religion, and spirituality}
+      \field{title}{Religion, self-control, and self-regulation: How and why are they related}
+      \field{volume}{1}
+      \field{year}{2013}
+      \field{pages}{123\bibrangedash 138}
+      \range{pages}{16}
+    \endentry
+    \entry{mccullough2000religious}{article}{}
+      \name{author}{5}{uniquelist=2}{%
+        {{uniquename=0,hash=1549954d33df2d95bbfceb8564d7dbb4}{%
+           family={McCullough},
+           family_i={M\bibinitperiod},
+           given={Michael\bibnamedelima E},
+           given_i={M\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{uniquename=0,hash=34542427ac677dbd91b1726b3515ca31}{%
+           family={Hoyt},
+           family_i={H\bibinitperiod},
+           given={William\bibnamedelima T},
+           given_i={W\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{uniquename=0,hash=0110464e64a72e3c0224cd757f6df434}{%
+           family={Larson},
+           family_i={L\bibinitperiod},
+           given={David\bibnamedelima B},
+           given_i={D\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{uniquename=0,hash=fbc24602ef39663c4dacb9ec585921e0}{%
+           family={Koenig},
+           family_i={K\bibinitperiod},
+           given={Harold\bibnamedelima G},
+           given_i={H\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{uniquename=0,hash=f4fa3cdab521adfdd255e5229349024f}{%
+           family={Thoresen},
+           family_i={T\bibinitperiod},
+           given={Carl},
+           given_i={C\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Psychological Association}%
+      }
+      \strng{namehash}{4a56ed9a58bff52d8e1246282e150238}
+      \strng{fullhash}{284523f0b5c511518b9c17f4f9562a7c}
+      \field{sortinit}{M}
+      \field{sortinithash}{2684bec41e9697b92699b46491061da2}
+      \field{labelyear}{2000}
+      \field{datelabelsource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Health psychology}
+      \field{number}{3}
+      \field{title}{Religious involvement and mortality: a meta-analytic review.}
+      \field{volume}{19}
+      \field{year}{2000}
+      \field{pages}{211}
+      \range{pages}{1}
+    \endentry
+    \entry{mccullough2009religion}{article}{}
+      \name{author}{2}{}{%
+        {{uniquename=0,hash=1549954d33df2d95bbfceb8564d7dbb4}{%
+           family={McCullough},
+           family_i={M\bibinitperiod},
+           given={Michael\bibnamedelima E},
+           given_i={M\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{uniquename=0,hash=2bd6d0b69796855fc8b527c4b3344ed0}{%
+           family={Willoughby},
+           family_i={W\bibinitperiod},
+           given={Brian\bibnamedelima LB},
+           given_i={B\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Psychological Association}%
+      }
+      \strng{namehash}{ea77e851c27080a1d4f150409649617c}
+      \strng{fullhash}{ea77e851c27080a1d4f150409649617c}
+      \field{sortinit}{M}
+      \field{sortinithash}{2684bec41e9697b92699b46491061da2}
+      \field{labelyear}{2009}
+      \field{datelabelsource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Psychological bulletin}
+      \field{number}{1}
+      \field{title}{Religion, self-regulation, and self-control: Associations, explanations, and implications.}
+      \field{volume}{135}
+      \field{year}{2009}
+      \field{pages}{69}
+      \range{pages}{1}
+    \endentry
+    \entry{norenzayan2008origin}{article}{}
+      \name{author}{2}{}{%
+        {{uniquename=0,hash=27efbf5c59eef289ed6ad538d7449347}{%
+           family={Norenzayan},
+           family_i={N\bibinitperiod},
+           given={Ara},
+           given_i={A\bibinitperiod}}}%
+        {{uniquename=0,hash=d5a0e78956823027955db76d817c2705}{%
+           family={Shariff},
+           family_i={S\bibinitperiod},
+           given={Azim\bibnamedelima F},
+           given_i={A\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Association for the Advancement of Science}%
+      }
+      \strng{namehash}{2008d27529aeec7d39cfcd5ec74f538b}
+      \strng{fullhash}{2008d27529aeec7d39cfcd5ec74f538b}
+      \field{sortinit}{N}
+      \field{sortinithash}{925374ca63e7594de7fafdb83e64d41d}
+      \field{labelyear}{2008}
+      \field{datelabelsource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{science}
+      \field{number}{5898}
+      \field{title}{The origin and evolution of religious prosociality}
+      \field{volume}{322}
+      \field{year}{2008}
+      \field{pages}{58\bibrangedash 62}
+      \range{pages}{5}
+    \endentry
+    \entry{rounding2012religion}{article}{}
+      \name{author}{4}{}{%
+        {{uniquename=0,hash=7d880e109dbc405cd44f464b9448c3b3}{%
+           family={Rounding},
+           family_i={R\bibinitperiod},
+           given={Kevin},
+           given_i={K\bibinitperiod}}}%
+        {{uniquename=0,hash=31caf4fcf9d8e270cbd0d214d74dddb2}{%
+           family={Lee},
+           family_i={L\bibinitperiod},
+           given={Albert},
+           given_i={A\bibinitperiod}}}%
+        {{uniquename=0,hash=29394571ab6ba0fb79da5e7b183e7c42}{%
+           family={Jacobson},
+           family_i={J\bibinitperiod},
+           given={Jill\bibnamedelima A},
+           given_i={J\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{uniquename=0,hash=5917537e153130c3b947b7c82d405f2e}{%
+           family={Ji},
+           family_i={J\bibinitperiod},
+           given={Li-Jun},
+           given_i={L\bibinithyphendelim J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Sage Publications}%
+      }
+      \strng{namehash}{fb24203e675ec1f07eaf443dd246cf93}
+      \strng{fullhash}{29cda7cbcc8a623ed1eea90974320b57}
+      \field{sortinit}{R}
+      \field{sortinithash}{c7387613477035a752d935acfc3e3ea2}
+      \field{labelyear}{2012}
+      \field{datelabelsource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Psychological Science}
+      \field{number}{6}
+      \field{title}{Religion replenishes self-control}
+      \field{volume}{23}
+      \field{year}{2012}
+      \field{pages}{635\bibrangedash 642}
+      \range{pages}{8}
+    \endentry
+    \entry{samuelson1937note}{article}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=0223068b2a33a97c8cbefb513e97911c}{%
+           family={Samuelson},
+           family_i={S\bibinitperiod},
+           given={Paul\bibnamedelima A},
+           given_i={P\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {JSTOR}%
+      }
+      \strng{namehash}{0223068b2a33a97c8cbefb513e97911c}
+      \strng{fullhash}{0223068b2a33a97c8cbefb513e97911c}
+      \field{sortinit}{S}
+      \field{sortinithash}{fd1e7c5ab79596b13dbbb67f8d70fb5a}
+      \field{labelyear}{1937}
+      \field{datelabelsource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Review of Economic Studies}
+      \field{number}{2}
+      \field{title}{A note on measurement of utility}
+      \field{volume}{4}
+      \field{year}{1937}
+      \field{pages}{155\bibrangedash 161}
+      \range{pages}{7}
+    \endentry
+    \entry{schupp2002maintenance}{article}{}
+      \name{author}{2}{}{%
+        {{uniquename=0,hash=b5a94fba4fc7802f6cf0788dc20bd5c8}{%
+           family={Schupp},
+           family_i={S\bibinitperiod},
+           given={Jürgen},
+           given_i={J\bibinitperiod}}}%
+        {{uniquename=0,hash=3383bfc55a318f78cc5735131949a30e}{%
+           family={Wagner},
+           family_i={W\bibinitperiod},
+           given={Gert\bibnamedelima G},
+           given_i={G\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {DIW Discussion Paper}%
+      }
+      \strng{namehash}{b984369284992b0bea7e86ac66b8e47e}
+      \strng{fullhash}{b984369284992b0bea7e86ac66b8e47e}
+      \field{sortinit}{S}
+      \field{sortinithash}{fd1e7c5ab79596b13dbbb67f8d70fb5a}
+      \field{labelyear}{2002}
+      \field{datelabelsource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Maintenance of and innovation in long-term panel studies: The case of the German Socio-Economic Panel (GSOEP)}
+      \field{year}{2002}
+    \endentry
+    \entry{smith2003religiousness}{article}{}
+      \name{author}{3}{}{%
+        {{uniquename=0,hash=067ec30c4056c3c29c87e4190a91f356}{%
+           family={Smith},
+           family_i={S\bibinitperiod},
+           given={Timothy\bibnamedelima B},
+           given_i={T\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{uniquename=0,hash=1549954d33df2d95bbfceb8564d7dbb4}{%
+           family={McCullough},
+           family_i={M\bibinitperiod},
+           given={Michael\bibnamedelima E},
+           given_i={M\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{uniquename=0,hash=5a52cf7661006f297dcb340781d37a62}{%
+           family={Poll},
+           family_i={P\bibinitperiod},
+           given={Justin},
+           given_i={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Psychological Association}%
+      }
+      \strng{namehash}{0503eda73c3ce9abdd4478f64262ee17}
+      \strng{fullhash}{0503eda73c3ce9abdd4478f64262ee17}
+      \field{sortinit}{S}
+      \field{sortinithash}{fd1e7c5ab79596b13dbbb67f8d70fb5a}
+      \field{labelyear}{2003}
+      \field{datelabelsource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Psychological bulletin}
+      \field{number}{4}
+      \field{title}{Religiousness and depression: evidence for a main effect and the moderating influence of stressful life events.}
+      \field{volume}{129}
+      \field{year}{2003}
+      \field{pages}{614}
+      \range{pages}{1}
+    \endentry
+    \entry{thaler1991some}{article}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=c3ed9a34647b120971c11464406d7e86}{%
+           family={Thaler},
+           family_i={T\bibinitperiod},
+           given={Richard\bibnamedelima H},
+           given_i={R\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Russell Sage Foundation New York, NY, United States}%
+      }
+      \strng{namehash}{c3ed9a34647b120971c11464406d7e86}
+      \strng{fullhash}{c3ed9a34647b120971c11464406d7e86}
+      \field{sortinit}{T}
+      \field{sortinithash}{423d138a005a533b47e6475e39378bf2}
+      \field{labelyear}{1991}
+      \field{datelabelsource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Quasi rational economics}
+      \field{title}{‘Some Empirical Evidence on Dynamic Inconsistency}
+      \field{volume}{1}
+      \field{year}{1991}
+      \field{pages}{127\bibrangedash 136}
+      \range{pages}{10}
+    \endentry
+    \entry{thornton2015divine}{article}{}
+      \name{author}{3}{}{%
+        {{uniquename=0,hash=a8f4a8947c69f7aa51f18df7eaca568b}{%
+           family={Thornton},
+           family_i={T\bibinitperiod},
+           given={Jeremy\bibnamedelima P},
+           given_i={J\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{uniquename=0,hash=5d46e4d862f6b1a87b1252f3c44a420c}{%
+           family={Stokes},
+           family_i={S\bibinitperiod},
+           given={Charles\bibnamedelima E},
+           given_i={C\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{uniquename=0,hash=cedcec16186827517eb8f3e734eb16a3}{%
+           family={Helms},
+           family_i={H\bibinitperiod},
+           given={Sara},
+           given_i={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{5b87ac96f251a831bef995c3b104431e}
+      \strng{fullhash}{5b87ac96f251a831bef995c3b104431e}
+      \field{sortinit}{T}
+      \field{sortinithash}{423d138a005a533b47e6475e39378bf2}
+      \field{labelyear}{2015}
+      \field{datelabelsource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Available at SSRN}
+      \field{title}{Divine Restraint: An Experimental Analysis of Religious Preference and Intertemporal Discounting.}
+      \field{year}{2015}
+    \endentry
+    \entry{wagner2006enhancing}{article}{}
+      \name{author}{3}{}{%
+        {{uniquename=0,hash=3383bfc55a318f78cc5735131949a30e}{%
+           family={Wagner},
+           family_i={W\bibinitperiod},
+           given={Gert\bibnamedelima G},
+           given_i={G\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{uniquename=0,hash=3fc894d4037b2dd2fe9905c731fb0718}{%
+           family={Frick},
+           family_i={F\bibinitperiod},
+           given={Joachim\bibnamedelima R},
+           given_i={J\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{uniquename=0,hash=b5a94fba4fc7802f6cf0788dc20bd5c8}{%
+           family={Schupp},
+           family_i={S\bibinitperiod},
+           given={Jürgen},
+           given_i={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{e1e1b108e147c5462c1f5a7075710438}
+      \strng{fullhash}{e1e1b108e147c5462c1f5a7075710438}
+      \field{sortinit}{W}
+      \field{sortinithash}{99e3ba1b3f78bb6f073e7fa7ac11636b}
+      \field{labelyear}{2006}
+      \field{datelabelsource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Data Documentation}
+      \field{title}{Enhancing the power of household panel studies: The case of the German Socio-Economic Panel Study (SOEP)}
+      \field{volume}{13}
+      \field{year}{2006}
+    \endentry
+    \entry{wooldridge2010econometric}{book}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=a4ab0dbe03e0668bf780bbfc5c39ad4c}{%
+           family={Wooldridge},
+           family_i={W\bibinitperiod},
+           given={Jeffrey\bibnamedelima M},
+           given_i={J\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {MIT press}%
+      }
+      \strng{namehash}{a4ab0dbe03e0668bf780bbfc5c39ad4c}
+      \strng{fullhash}{a4ab0dbe03e0668bf780bbfc5c39ad4c}
+      \field{sortinit}{W}
+      \field{sortinithash}{99e3ba1b3f78bb6f073e7fa7ac11636b}
+      \field{labelyear}{2010}
+      \field{datelabelsource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Econometric analysis of cross section and panel data}
+      \field{year}{2010}
+    \endentry
+    \entry{wooldridge2015introductory}{book}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=a4ab0dbe03e0668bf780bbfc5c39ad4c}{%
+           family={Wooldridge},
+           family_i={W\bibinitperiod},
+           given={Jeffrey\bibnamedelima M},
+           given_i={J\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Nelson Education}%
+      }
+      \strng{namehash}{a4ab0dbe03e0668bf780bbfc5c39ad4c}
+      \strng{fullhash}{a4ab0dbe03e0668bf780bbfc5c39ad4c}
+      \field{sortinit}{W}
+      \field{sortinithash}{99e3ba1b3f78bb6f073e7fa7ac11636b}
+      \field{labelyear}{2015}
+      \field{datelabelsource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Introductory econometrics: A modern approach}
+      \field{year}{2015}
+    \endentry
+    \entry{wright2010evolution}{book}{}
+      \name{author}{1}{}{%
+        {{uniquename=1,hash=b5e8ae6e7634b4c923d9863066f70138}{%
+           family={Wright},
+           family_i={W\bibinitperiod},
+           given={Robert},
+           given_i={R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Hachette UK}%
+      }
+      \strng{namehash}{b5e8ae6e7634b4c923d9863066f70138}
+      \strng{fullhash}{b5e8ae6e7634b4c923d9863066f70138}
+      \field{sortinit}{W}
+      \field{sortinithash}{99e3ba1b3f78bb6f073e7fa7ac11636b}
+      \field{labelyear}{2010}
+      \field{datelabelsource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The evolution of God: the origins of our beliefs}
+      \field{year}{2010}
+    \endentry
+  \endsortlist
+\endrefsection
+\endinput
+

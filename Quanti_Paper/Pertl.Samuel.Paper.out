@@ -1,0 +1,39 @@
+\BOOKMARK [1][-]{section.1}{Einleitung}{}% 1
+\BOOKMARK [1][-]{section.2}{Discounted-Utility Model}{}% 2
+\BOOKMARK [1][-]{section.3}{Forschungsfrage und Hypothesen}{}% 3
+\BOOKMARK [1][-]{section.4}{Datensatz}{}% 4
+\BOOKMARK [2][-]{subsection.4.1}{Sample}{section.4}% 5
+\BOOKMARK [2][-]{subsection.4.2}{Experiment}{section.4}% 6
+\BOOKMARK [3][-]{subsubsection.4.2.1}{Experimentablauf}{subsection.4.2}% 7
+\BOOKMARK [3][-]{subsubsection.4.2.2}{Experimentdesign}{subsection.4.2}% 8
+\BOOKMARK [3][-]{subsubsection.4.2.3}{Auszahlung und Glaubw\374rdigkeit der Auszahlung}{subsection.4.2}% 9
+\BOOKMARK [1][-]{section.5}{Methodik}{}% 10
+\BOOKMARK [2][-]{subsection.5.1}{Variablen}{section.5}% 11
+\BOOKMARK [3][-]{subsubsection.5.1.1}{Abh\344ngige Variable}{subsection.5.1}% 12
+\BOOKMARK [3][-]{subsubsection.5.1.2}{Unabh\344ngige Variable}{subsection.5.1}% 13
+\BOOKMARK [3][-]{subsubsection.5.1.3}{Kontrollvariablen}{subsection.5.1}% 14
+\BOOKMARK [1][-]{section.6}{Resultate}{}% 15
+\BOOKMARK [2][-]{subsection.6.1}{Datenvisualisierung}{section.6}% 16
+\BOOKMARK [3][-]{subsubsection.6.1.1}{Central Limit Theorem}{subsection.6.1}% 17
+\BOOKMARK [2][-]{subsection.6.2}{Deskriptive Statistik}{section.6}% 18
+\BOOKMARK [2][-]{subsection.6.3}{Regression}{section.6}% 19
+\BOOKMARK [1][-]{section.7}{Robustheit}{}% 20
+\BOOKMARK [2][-]{subsection.7.1}{Transformation der abh\344ngigen Variable}{section.7}% 21
+\BOOKMARK [2][-]{subsection.7.2}{Tobit Model}{section.7}% 22
+\BOOKMARK [1][-]{section.8}{Diagnostik}{}% 23
+\BOOKMARK [2][-]{subsection.8.1}{Globaler Test von Modellannahmen}{section.8}% 24
+\BOOKMARK [2][-]{subsection.8.2}{Normalverteilung der Residuen}{section.8}% 25
+\BOOKMARK [2][-]{subsection.8.3}{Independence of Error}{section.8}% 26
+\BOOKMARK [2][-]{subsection.8.4}{Linearit\344t}{section.8}% 27
+\BOOKMARK [2][-]{subsection.8.5}{Heteroskedastizit\344t}{section.8}% 28
+\BOOKMARK [2][-]{subsection.8.6}{Multikollinarit\344t}{section.8}% 29
+\BOOKMARK [2][-]{subsection.8.7}{Abnormale Beobachtungen}{section.8}% 30
+\BOOKMARK [3][-]{subsubsection.8.7.1}{Outliers}{subsection.8.7}% 31
+\BOOKMARK [3][-]{subsubsection.8.7.2}{Leverage observations}{subsection.8.7}% 32
+\BOOKMARK [3][-]{subsubsection.8.7.3}{Influental observations}{subsection.8.7}% 33
+\BOOKMARK [1][-]{section.9}{Endogenit\344t}{}% 34
+\BOOKMARK [2][-]{subsection.9.1}{Omitted Variable Bias}{section.9}% 35
+\BOOKMARK [2][-]{subsection.9.2}{Measurement Error}{section.9}% 36
+\BOOKMARK [2][-]{subsection.9.3}{Simultaneity}{section.9}% 37
+\BOOKMARK [1][-]{section.10}{Conclusion}{}% 38
+\BOOKMARK [1][-]{section.11}{Appendix}{}% 39

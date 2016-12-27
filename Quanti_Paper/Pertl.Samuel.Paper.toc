@@ -1,0 +1,81 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\select@language {ngerman}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1}Einleitung}{5}{section.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2}Discounted-Utility Model}{7}{section.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3}Forschungsfrage und Hypothesen}{8}{section.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4}Datensatz}{10}{section.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.1}Sample}{10}{subsection.4.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.2}Experiment}{11}{subsection.4.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.2.1}Experimentablauf}{11}{subsubsection.4.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.2.2}Experimentdesign}{11}{subsubsection.4.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.2.3}Auszahlung und Glaubw\IeC {\"u}rdigkeit der Auszahlung}{13}{subsubsection.4.2.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5}Methodik}{13}{section.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.1}Variablen}{14}{subsection.5.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {5.1.1}Abh\IeC {\"a}ngige Variable}{14}{subsubsection.5.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {5.1.2}Unabh\IeC {\"a}ngige Variable}{14}{subsubsection.5.1.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {5.1.3}Kontrollvariablen}{14}{subsubsection.5.1.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6}Resultate}{17}{section.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.1}Datenvisualisierung}{17}{subsection.6.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {6.1.1}Central Limit Theorem}{18}{subsubsection.6.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.2}Deskriptive Statistik}{18}{subsection.6.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.3}Regression}{20}{subsection.6.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7}Robustheit}{21}{section.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.1}Transformation der abh\IeC {\"a}ngigen Variable}{22}{subsection.7.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.2}Tobit Model}{22}{subsection.7.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {8}Diagnostik}{25}{section.8}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.1}Globaler Test von Modellannahmen}{25}{subsection.8.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.2}Normalverteilung der Residuen}{26}{subsection.8.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.3}Independence of Error}{26}{subsection.8.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.4}Linearit\IeC {\"a}t}{26}{subsection.8.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.5}Heteroskedastizit\IeC {\"a}t}{27}{subsection.8.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.6}Multikollinarit\IeC {\"a}t}{28}{subsection.8.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.7}Abnormale Beobachtungen}{28}{subsection.8.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {8.7.1}Outliers}{28}{subsubsection.8.7.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {8.7.2}Leverage observations}{29}{subsubsection.8.7.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {8.7.3}Influental observations}{29}{subsubsection.8.7.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {9}Endogenit\IeC {\"a}t}{30}{section.9}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {9.1}Omitted Variable Bias}{30}{subsection.9.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {9.2}Measurement Error}{30}{subsection.9.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {9.3}Simultaneity}{31}{subsection.9.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {10}Conclusion}{31}{section.10}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {11}Appendix}{33}{section.11}

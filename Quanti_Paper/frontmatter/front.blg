@@ -1,0 +1,5 @@
+[0] Config.pm:343> INFO - This is Biber 2.5
+[0] Config.pm:346> INFO - Logfile is 'front.blg'
+[57] biber-darwin:290> INFO - === Mon Nov 21, 2016, 15:32:29
+[174] Utils.pm:165> ERROR - Cannot find control file 'front.bcf'! - did you pass the "backend=biber" option to BibLaTeX?
+[174] Biber.pm:112> INFO - ERRORS: 1

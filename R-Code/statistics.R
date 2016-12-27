@@ -1,4 +1,26 @@
-##### statistics 
+##### visualization/descriptive statistics and linear regression 
+
+
+# this scripts provides the code for the visualization/descriptive statistic and the linear regression 
+# reponse variable is the switching row 
+
+
+# 1) calculate descriptive statistic for various variables 
+# 2) visualization of my response variable 
+# 3) apply several transformation to my response variable 
+# 4) conduct parametric and non-parametric test for my response variable 
+    # parametirc test of the response variable for some subgroups 
+# 5) linear regression 
+      # linear regression on some subgroups 
+# 7) Robustnes 
+  # transform switching row with log 
+  # tobit model that controls for censored data 
+ 
+
+
+# set the working directory for all the figures of the section 
+#setwd(paste(wkdir, "/figures/", sep = ""))
+
 
 # baisc statistics 
 # switching row (various desctriptive statistics)
@@ -32,12 +54,13 @@ prop.table(tablewest)*100
 
 ####################### visualize the data
 
-tikz(file = "switchingrow.tex", width = 5, height = 5)
-ggplot(dtnew, aes(T012 !=21))+
+
+# make a histogram of the switching row with a normal distribution 
+tikz(file = "histswitchingrow.tex", width = 5, height = 5)
+ggplot(dtnew, aes(T012))+
   geom_histogram(aes(y=..density..), bins = 20)+
   stat_function(fun = dnorm, colour = "red", args = list(mean = mean(dtnew$T012), sd = sd(dtnew$T012)), lwd = 0.9)+
-  ggtitle("switching row with normal distribution")+
-  xlab("switching row")
+  xlab("Switching row")
 dev.off()
 
 # data does not look normally distributed as most observations are on the very reight end 
@@ -52,8 +75,10 @@ ggplot(dtnew, aes(sample = T012))+
 # qqline is still missing 
 
 # normality of switching row with base package 
+tikz(file = "QQplotswitching.tex", width = 5, height = 5)
 qqnorm(dtnew$T012)
-qqline(dtnew$T012)
+qqline(dtnew$T012, col = 2, lwd = 0.9)
+dev.off()
 
 # how would it look like if the data is normally distributed 
 switch.t <- rnorm(500, mean(dtnew$T012), sd(dtnew$T012) )
@@ -64,7 +89,7 @@ qqline(switch.t)
 # compare the two qqplots (normality) in one window 
 
 
-tikz(file = "normalityswitchingrow.tex", width = 5, height = 5)
+tikz(paste(p.figures,"normalityswitchingrow.tex"), width = 5, height = 5)
 par(mfrow = c(2,1))
 
 qqnorm(dtnew$T012)
@@ -143,75 +168,55 @@ hist(expT012)
 ########### no transformation is appropriate so we go on with the untransformed T012 
 
 
-
-
-
-
 ############ testing for normality Shapiro test 
 # check if the switching row is normally distributed 
 shapiro.test(dtnew$T012) # p< 0.0001 -> T012 is likely not normally distrbuted 
 
-# are the test normally distributed 
-shapiro.test(dtnew$wordtest)
-shapiro.test(dtnew$symtest)
+# t-Test check whether the means of religious and non-religious people are different
+# I use a Welch´s t-test as the variances are not the same 
 
-# Testing for Runs 
-runs.test(as.factor(dtnew$religion))
-runs.test(as.factor(dtnew$male))
+# switching row for religious or not 
+tapply(dtnew$T012, dtnew$religion, mean, na.rm = T) # 0=12.45 1 = 13.81 
+
+# test if the variances of religious and non-religious are equal so we can decide which t-test we can use  
+tapply(dtnew$T012, dtnew$religion, var) # 0 = 58.24937 1 = 50.42187 
+
+# variances are not equal so we should use a Welch´s t-test 
 
 
-# t-Test check out what does alternative mena? is it Ho?
-# why have I choosen this t-test 
-
-# test if the variances are equal so we know which t-test we can use 
-tapply(dtnew$T012, dtnew$religion, var) # 0 = 58.25, 1= 50,42 
-# variances are not equal so we should use a Welchs t-test 
+# standard deviation of religious and no-religious participants 
+tapply(dtnew$T012, dtnew$religion, sd) # 0 = 7.632127, 1= 7.100836 
+# sd are very close  
 
 # Welchs t-test 
 t.test(dtnew$T012~dtnew$religion, conf.level =0.90)
 
 # difference in religious intensity 
-t.test(dtnew$T012~ dtnew$reliintens, conf.level=0.90)
-# Ho: both group switch at the same row 
-# we can reject the Ho at an alpha = 5% sig. level. that both groups swith at the same group 
+# t.test(dtnew$T012~ dtnew$reliintens, conf.level=0.90)
+
+
 
 
 # Wilcox-Test (nonparametric test) -> we use a nonparametric test as the T012 is not normally distributed 
 # sign test 
-wilcox.test(dtnew$T012~dtnew$religion, conf.level=0.90)
+wilcox.test(dtnew$T012~dtnew$religion, conf.level=0.95)
 # what is the interpretation of the Wilcox-Test 
 
-wilcox.test(dtnew$T012~ dtnew$reliintens, conf.level=0.90)
 
-
-################ randomization and resampling 
-
+# test wether there is a difference in religious intensity 
+#wilcox.test(dtnew$T012~ dtnew$reliintens, conf.level=0.90)
 
 
 # we stick with the original T012 as the CLT applies 
 # variance test 
 # F-test when the distributions are normal 
-var.test(dtnew$T012~ dtnew$religion, conf.level=0.90)
+var.test(dtnew$T012~ dtnew$religion, conf.level=0.95)
 
 # levene test when the distributions are not normal 
 leveneTest(dtnew$T012,dtnew$religion)
-# check how to interpret this result 
 
 
-
-
-# Correlation
-# what do we measure with a correlation? 
-
-# spearman test as we have not normal distributed data 
-# for normal distributed data we can use pearson: I should do this as well as switching row is not normal distributed 
-
-
-cor.test(dtnew$religion, dtnew$T012, method = "spearman")
-cor.test(dtnew$religion, dtnew$T012, method = "pearson")
-
-
-cor.test(dtnew$reliintens, dtnew$T012, method = "spearman")
+####### investigate the switching row for various subgroups 
 
 # switching row for the religious subgroups
 tapply(dtnew$T012, dtnew$relicom, mean, na.rm=T)
@@ -229,79 +234,103 @@ tapply(dtnew$T012, dtnew$religion, mean, na.rm = T)
 tapply(dtnew$T012, dtnew$reliintens, mean, na.rm=T)
 
 
-# graphs for different groups
-
-# Introducation in Statistic with R page 74
-
 # religious communities 
 ggplot(data.frame(dtnew), aes(x=dtnew$relicom))+
   geom_bar()
 
 
-# regression on subpopulation 
 
+######## linear regression: 
+
+# switching row ~ religion 
+reg1 <- lm(dtnew$T012 ~ dtnew$religion, na.action = na.omit) 
+summary(reg1)
+# participant that are in a religious comunity have a switiching row that is 1.36 higher and therefore discount the future more 
+
+
+# update reg1 for the first anova/we need the same amount of rows 
+reg1b <- lm(reg1, subset = !is.na(dtnew$scaledbig_g) & !is.na(dtnew$scaledbig_e) & !is.na(dtnew$scaledbig_n) & !is.na(dtnew$scaledbig_o) & !is.na(dtnew$scaledbig_v) & !is.na(dtnew$male))
+summary(reg1b)
+
+# uptdate for reg1 for first anova 
+reg1c <- lm(reg1, subset = !is.na(dtnew$male) & !is.na(dtnew$constraint) & !is.na(dtnew$logincom) & !is.na(dtnew$age))
+summary(reg1c)
+
+####### regression on subpopulation 
+
+# age <= 44 and >44 
 sub1 <- lm(dtnew$T012~ dtnew$religion, subset = dtnew$age<=44, na.action = na.exclude)
 summary(sub1)
 
 sub2 <- lm(dtnew$T012 ~ dtnew$religion, subset = dtnew$age>44, na.action = na.exclude)
 summary(sub2)
 
+
+# subset for gender 
 sub3 <- lm(dtnew$T012 ~ dtnew$religion, subset = dtnew$male==1, na.action = na.exclude)
 summary(sub3)
 
 sub4 <- lm(dtnew$T012~ dtnew$religion, subset = dtnew$male==0, na.action = na.exclude)
 summary(sub4)
 
+############## 
+
+# variable other degree will be exclude from the regression analysis as we do not have a observation 
+
+# control for age, male, logincome constraint 
+reg2 = lm(dtnew$T012 ~ dtnew$religion + dtnew$age + I(dtnew$age^2) + dtnew$male + dtnew$logincom + dtnew$constraint, na.action = na.omit)
+summary(reg2)
+
+# update reg2 for the second anova 
+
+reg2b <- lm(reg2, subset =!is.na(dtnew$scaledbig_g) & !is.na(dtnew$scaledbig_e) & !is.na(dtnew$scaledbig_n) & !is.na(dtnew$scaledbig_o) & !is.na(dtnew$scaledbig_v) )
+
+# controll for  all control variables 
+reg3 = lm(dtnew$T012 ~ dtnew$religion + dtnew$age + I(dtnew$age^2) + dtnew$male + dtnew$logincom + dtnew$constraint + dtnew$scaledbig_g + dtnew$scaledbig_e + dtnew$scaledbig_n + dtnew$scaledbig_o + dtnew$scaledbig_v + dtnew$scaledbig_g*dtnew$male + dtnew$scaledbig_e*dtnew$male +
+          dtnew$scaledbig_n*dtnew$male + dtnew$scaledbig_o*dtnew$male+ dtnew$scaledbig_v*dtnew$male + dtnew$abi + dtnew$real + dtnew$enrolled + dtnew$nodegree , na.action = na.exclude)
+summary(reg3)
+
+# update reg3 for regression 
+reg3b = lm(reg3, subset = !is.na(dtnew$scaledbig_g) & !is.na(dtnew$scaledbig_e) & !is.na(dtnew$scaledbig_n) & !is.na(dtnew$scaledbig_o) & !is.na(dtnew$scaledbig_v) & !is.na(dtnew$logincom) & !is.na(dtnew$constraint) & !is.na(dtnew$age) )
+
+# reg3 without interactions for the linear assumption 
+reg3c <-  lm(dtnew$T012~ dtnew$religion + dtnew$age + I(dtnew$age^2) + dtnew$male + dtnew$logincom + dtnew$constraint + dtnew$scaledbig_g + dtnew$scaledbig_e + dtnew$scaledbig_n + dtnew$scaledbig_o + dtnew$scaledbig_v  + dtnew$abi + dtnew$real + dtnew$enrolled + dtnew$nodegree , na.action = na.omit)
+summary(reg3c)
 
 
-# export subgroups 
-stargazer(sub1, sub2, sub3, sub4,
-          out = "table3.tex",
-          dep.var.labels = c("Ungeduld (Experimentergebnis)"), 
-          column.labels = c("Alter>=44", "Alter>44", "Männlich", "Weiblich"),
-          covariate.labels = c("Religionszugehoerigkeit", "Constant"),
-          align = TRUE, 
+
+######### ANOVA 
+
+# first anova: compare reg1 with reg2
+anova(reg1c, reg2)
+
+# second anova: compare reg2 with reg3
+anova(reg2b, reg3)
+
+
+###### export the three regression outputs 
+stargazer(reg1, reg3,
+          order = c(1,2,3,4,5,6,7,8,9,10,11,16,17,18,19,20,12,13,14,15,21), 
+          dep.var.labels = c("Switching row"),
+          covariate.labels = c("Religionszugehoerigkeit", "Alter", "Alter quadriert", "Male", "Einkommen (log)", "Kreditbeschraenkung",
+                     "Gewissenhafigkeit", "Extraversion", "Neurotizismus", "Offenheit", "Vertraeglichkeit", "Gewissenhaftikeit*Male",
+                     "Extraversion*Male", "Neurotizismus*Male", "Offenheit *Male", "Vertraeglichkeit*Male", "Abitur", "Realschulabschluss", "Besucht die Schule",
+                     "Kein Schulabschluss", "Constant"), 
+          align = TRUE,
           no.space = TRUE)
 
 
-######## linear regression: 
-
-# switching row ~ religion 
-reg1 <- lm(dtnew$T012 ~ dtnew$religion) 
-summary(reg1)
-# participant that are in a religious comunity have a switiching row that is 1.36 higher and therefore discount the future more 
-
-plot(reg1)
-
-outlier.test(reg1)
-influence.measures(reg1)
-
-# check for autocorrelation 
-dwtest(reg1) 
-
-# refit r1 so that we have the same number of rows 
-reg1a <- update(reg1, subset = !is.na(dtnew$scaledbig_g) & !is.na(dtnew$scaledbig_e) & !is.na(dtnew$scaledbig_n) & !is.na(dtnew$scaledbig_o) & !is.na(dtnew$scaledbig_v) & !is.na(dtnew$male) & !is.na(dtnew$scaledwordtest) & !is.na(dtnew$scaledsymtest) & !is.na(dtnew$constraint) & !is.na(dtnew$logincom) & !is.na(dtnew$age))
-summary(reg1a)
-
-reg1b <- update(reg1, subset = !is.na(dtnew$scaledbig_g) & !is.na(dtnew$scaledbig_e) & !is.na(dtnew$scaledbig_n) & !is.na(dtnew$scaledbig_o) & !is.na(dtnew$scaledbig_v) & !is.na(dtnew$male))
-nobs(reg1a)
 
 
-any(is.na(dtnew$scaledbig_g))
-any(is.na(dtnew$scaledbig_e))
-any(is.na(dtnew$scaledbig_n))
-any(is.na(dtnew$scaledbig_o))
-any(is.na(dtnew$scaledbig_v))
-any(is.na(dtnew$male))
+
+# this analysis is not part of the paper 
+
+# control for age, male, logincome, constraint and education 
+reg4 = lm(dtnew$T012 ~ dtnew$religion + dtnew$age + I(dtnew$age^2) + dtnew$male + dtnew$logincom + dtnew$constraint + dtnew$abi + dtnew$real + dtnew$enrolled + dtnew$nodegree, na.action = na.omit)
+summary(reg4)
 
 
-# controll for intelligence 
-reg6 = lm(dtnew$T012 ~ dtnew$religion + dtnew$age + I(dtnew$age^2) + dtnew$male + dtnew$logincom + dtnew$constraint + dtnew$scaledbig_g + dtnew$scaledbig_e + dtnew$scaledbig_n + dtnew$scaledbig_o + dtnew$scaledbig_v + dtnew$scaledbig_g*dtnew$male + dtnew$scaledbig_e*dtnew$male +
-          dtnew$scaledbig_n*dtnew$male + dtnew$scaledbig_o*dtnew$male + dtnew$scaledbig_v*dtnew$male + dtnew$abi + dtnew$real + dtnew$enrolled + dtnew$nodegree  + dtnew$scaledsymtest + dtnew$scaledwordtest, na.action = na.exclude)
-summary(reg6)
-
-
-# no NA´s 
+# check if ther are NA´s 
 any(is.na(dtnew$T012))
 any(is.na(dtnew$religion))
 any(is.na(dtnew$male))
@@ -322,127 +351,66 @@ any(is.na(dtnew$constraint))
 any(is.na(dtnew$logincom))
 any(is.na(dtnew$age))
 
-# compare the two models 
-anova1 <- anova(reg1a, reg6)
 
-stargazer(anova1)
-# update regression r6 
-reg6a <- update(reg6, subset = !is.na(dtnew$scaledwordtest) & !is.na(dtnew$scaledsymtest) & !is.na(dtnew$scaledbig_g) & !is.na(dtnew$scaledbig_e) & !is.na(dtnew$scaledbig_n) & !is.na(dtnew$scaledbig_o) & !is.na(dtnew$scaledbig_v) & !is.na(dtnew$male) & !is.na(dtnew$constraint) & !is.na(dtnew$logincom) & !is.na(dtnew$age)) 
-summary(reg6a)
- 
 
-stargazer(reg1, reg6, 
-          out = "table4",
-          order = c(1,2,3,4,5,6,7,8,9,10,11,18,19,20,21,22,12,13,14,15,16,17,24),
-          dep.var.labels = c("Switching row"),
+############ robustnes 
+
+# Log of switching row 
+rob1 = lm(log(dtnew$T012) ~ dtnew$religion, na.action = na.omit)
+summary(rob1)
+
+rob2 = lm(log(dtnew$T012) ~ dtnew$religion + dtnew$age + I(dtnew$age^2) + dtnew$male + dtnew$logincom + dtnew$constraint + dtnew$scaledbig_g + dtnew$scaledbig_e + dtnew$scaledbig_n + dtnew$scaledbig_o + dtnew$scaledbig_v + dtnew$scaledbig_g*dtnew$male + dtnew$scaledbig_e*dtnew$male +
+            dtnew$scaledbig_n*dtnew$male + dtnew$scaledbig_o*dtnew$male+ dtnew$scaledbig_v*dtnew$male + dtnew$abi + dtnew$real + dtnew$enrolled + dtnew$nodegree , na.action = na.exclude)
+summary(rob2)
+
+
+stargazer(rob1, rob2,
+          order = c(1,2,3,4,5,6,7,8,9,10,11,16,17,18,19,20,12,13,14,15,21), 
+          dep.var.labels = c("Switching row (log)"),
           covariate.labels = c("Religionszugehoerigkeit", "Alter", "Alter quadriert", "Male", "Einkommen (log)", "Kreditbeschraenkung",
-                               "Gewissenhafigkeit", "Extraversion", "Neurotizismus", "Offenheit für Erfahrungen", "Vertraeglichkeit", "Gewissenhaftikeit*Male",
-                               "Extraversion*Male", "Neurotizismus*Male", "Offenheit für Erfahrungen*Male", "Vertraeglichkeit*Male", "Abitur", "Realschulabschluss", "Besucht die Schule",
-                               "kein Schulabschluss", "Kognitiver Test I (nonverbaler Test)", "Kognitiver Test II (verbaler Test)", "Constant"), 
+                               "Gewissenhafigkeit", "Extraversion", "Neurotizismus", "Offenheit", "Vertraeglichkeit", "Gewissenhaftikeit*Male",
+                               "Extraversion*Male", "Neurotizismus*Male", "Offenheit *Male", "Vertraeglichkeit*Male", "Abitur", "Realschulabschluss", "Besucht die Schule",
+                               "Kein Schulabschluss", "Constant"), 
           align = TRUE,
           no.space = TRUE)
 
+# religious intensity 
 
-# Robustness 
+rob3 = lm(dtnew$T012 ~ dtnew$reliintens, na.action = na.omit)
+summary(rob3)
 
 
-# subgroups 
-rsub = dtnew %>% group_by(relicom) %>% do(model = lm(dtnew$T012~ dtnew$religion))
-rsub
-rsub$model
-
-rsub %>% tidy(model)
-rsub %>% glance(model)
-
-# how can I see all variables 
-
-# one-way anova 
-oneway.test(dtnew$T012~ dtnew$religion)
-
-# difference between means of groups 
-rsub2<- oneway.test(dtnew$T012~ dtnew$relicom, subset = 230:500)
-# how to exclude one observation 'Andere religioese Gemeinschaft' 
-
-TukeyHSD(rsub2)
-
-# rebust anova (kruskal-wallis test) -> are the group medians significantly different? 
-kruskal.test(dtnew$T012~ dtnew$religion)
-
-# table 
-table(dtnew$T012, dtnew$religion)
+rob4 = lm(dtnew$T012 ~ dtnew$reliintens + dtnew$age + I(dtnew$age^2) + dtnew$male + dtnew$logincom + dtnew$constraint + dtnew$scaledbig_g + dtnew$scaledbig_e + dtnew$scaledbig_n + dtnew$scaledbig_o + dtnew$scaledbig_v + dtnew$scaledbig_g*dtnew$male + dtnew$scaledbig_e*dtnew$male +
+            dtnew$scaledbig_n*dtnew$male + dtnew$scaledbig_o*dtnew$male+ dtnew$scaledbig_v*dtnew$male + dtnew$abi + dtnew$real + dtnew$enrolled + dtnew$nodegree , na.action = na.exclude)
+summary(rob4)
 
 
 
 
-# controll for log()
-reg9 = lm(log(dtnew$T012) ~ dtnew$religion + dtnew$age + I(dtnew$age^2) + dtnew$male + dtnew$logincom + dtnew$constraint + dtnew$scaledbig_g + dtnew$scaledbig_e + dtnew$scaledbig_n + dtnew$scaledbig_o + dtnew$scaledbig_v + dtnew$scaledbig_g*dtnew$male + dtnew$scaledbig_e*dtnew$male +
-          dtnew$scaledbig_n*dtnew$male + dtnew$scaledbig_o*dtnew$male + dtnew$scaledbig_v*dtnew$male + dtnew$abi + dtnew$real + dtnew$enrolled + dtnew$nodegree  + dtnew$scaledsymtest + dtnew$scaledwordtest, na.action = na.exclude)
-summary(reg9)
+# for different religious subgroups 
+rob5 <- lm(dtnew$T012 ~ dtnew$relicom)
+summary(rob5)
 
-stargazer(reg9,
-          order = c(1,2,3,4,5,6,7,8,9,10,11,18,19,20,21,22,12,13,14,15,16,17,24),
-          dep.var.labels = c("Switching row"),
-          covariate.labels = c("Religionszugehoerigkeit", "Alter", "Alter quadriert", "Male", "Einkommen (log)", "Kreditbeschraenkung",
-                               "Gewissenhafigkeit", "Extraversion", "Neurotizismus", "Offenheit für Erfahrungen", "Vertraeglichkeit", "Gewissenhaftikeit*Male",
-                               "Extraversion*Male", "Neurotizismus*Male", "Offenheit für Erfahrungen*Male", "Vertraeglichkeit*Male", "Abitur", "Realschulabschluss", "Besucht die Schule",
-                               "kein Schulabschluss", "Kognitiver Test I (nonverbaler Test)", "Kognitiver Test II (verbaler Test)", "Constant"), 
-          align = TRUE,
-          no.space = TRUE)
+rob6 <- lm(dtnew$T012 ~ dtnew$relicom + dtnew$age + I(dtnew$age^2) + dtnew$male + dtnew$logincom + dtnew$constraint + dtnew$scaledbig_g + dtnew$scaledbig_e + dtnew$scaledbig_n + dtnew$scaledbig_o + dtnew$scaledbig_v + dtnew$scaledbig_g*dtnew$male + dtnew$scaledbig_e*dtnew$male +
+             dtnew$scaledbig_n*dtnew$male + dtnew$scaledbig_o*dtnew$male+ dtnew$scaledbig_v*dtnew$male + dtnew$abi + dtnew$real + dtnew$enrolled + dtnew$nodegree , na.action = na.exclude)
+summary(rob6)
 
-
-# regression religious intensity 
-reg8 = lm(dtnew$T012~ dtnew$reliintens + + dtnew$age + I(dtnew$age^2) + dtnew$male + dtnew$logincom + dtnew$constraint + dtnew$scaledbig_g + dtnew$scaledbig_e + dtnew$scaledbig_n + dtnew$scaledbig_o + dtnew$scaledbig_v + dtnew$scaledbig_g*dtnew$male + dtnew$scaledbig_e*dtnew$male +
-            dtnew$scaledbig_n*dtnew$male + dtnew$scaledbig_o*dtnew$male + dtnew$scaledbig_v*dtnew$male + dtnew$abi + dtnew$real + dtnew$enrolled + dtnew$nodegree  + dtnew$scaledsymtest + dtnew$scaledwordtest, na.action = na.exclude)
-summary(reg8)
-
-stargazer(reg8, 
-          order = c(1,2,3,4,5,6,7,8,9,10,11,18,19,20,21,22,12,13,14,15,16,17,24),
-          dep.var.labels = c("Switching row"),
-          covariate.labels = c("Intensitaet Religion", "Alter", "Alter quadriert", "Male", "Einkommen (log)", "Kreditbeschraenkung",
-                               "Gewissenhafigkeit", "Extraversion", "Neurotizismus", "Offenheit für Erfahrungen", "Vertraeglichkeit", "Gewissenhaftikeit*Male",
-                               "Extraversion*Male", "Neurotizismus*Male", "Offenheit für Erfahrungen*Male", "Vertraeglichkeit*Male", "Abitur", "Realschulabschluss", "Besucht die Schule",
-                               "Kein Schulabschluss", "Kognitiver Test I (nonverbaler Test)", "Kognitiver Test II (verbaler Test)", "Constant"), 
-          align = TRUE,
-          no.space = TRUE)
-
-
-# Tobit model can be mixed with interval regression survival package
-
-# Tobit model 
-t1 <- vglm(dtnew$T012 ~ dtnew$religion, tobit(Lower = 1, Upper = 21), na.action = na.exclude)
+####### Tobit model that controls for consored data/ not used in the analysis 
+# tobit model with 
+t1 <- vglm(dtnew$T012 ~ dtnew$religion, tobit(Lower = 1, Upper = 21), na.action = na.omit)
 summary(t1)
 
 
 t2 <- vglm(dtnew$T012 ~ dtnew$religion + dtnew$age + I(dtnew$age^2) + dtnew$male + dtnew$logincom + dtnew$constraint + dtnew$scaledbig_g + dtnew$scaledbig_e + dtnew$scaledbig_n + dtnew$scaledbig_o + dtnew$scaledbig_v + dtnew$scaledbig_g*dtnew$male + dtnew$scaledbig_e*dtnew$male +
-             dtnew$scaledbig_n*dtnew$male + dtnew$scaledbig_o*dtnew$male + dtnew$scaledbig_v*dtnew$male + dtnew$abi + dtnew$real + dtnew$enrolled + dtnew$scaledsymtest + dtnew$scaledwordtest, tobit(Lower = 1, Upper = 21), na.action = na.omit)
+             dtnew$scaledbig_n*dtnew$male + dtnew$scaledbig_o*dtnew$male + dtnew$scaledbig_v*dtnew$male + dtnew$abi + dtnew$real + dtnew$enrolled, tobit(Lower = 1, Upper = 21), na.action = na.omit)
+
 # why can´t I include dtnew$nodegree I think I just have 3 observations 
+
 summary(t2)
 
+# stargazer does not function for tobit models/mache es selbst in LaTex 
 
 
-# export Tobit model: can´t export the Tobit model with stargazer
-# possible with memisic 
-stargazer(t1, t2,
-          align = TRUE,
-          no.space = TRUE)
-
-
-# intervall regression 
-# I think this just applies if we use the returns more of a limitation so the next paper could be conducted with interval regression 
-
-
-
-# we deal with count data glm model with poisson distribution 
-glm1 <- glm(dtnew$T012 ~ dtnew$religion, family = quasipoisson, na.action = na.exclude)
-summary(glm1)
-
-
-
-glm2 = glm(dtnew$T012 ~ dtnew$religion + dtnew$age + I(dtnew$age^2) + dtnew$male + dtnew$logincom + dtnew$constraint + dtnew$scaledbig_g + dtnew$scaledbig_e + dtnew$scaledbig_n + dtnew$scaledbig_o + dtnew$scaledbig_v + dtnew$scaledbig_g*dtnew$male + dtnew$scaledbig_e*dtnew$male +
-             dtnew$scaledbig_n*dtnew$male + dtnew$scaledbig_o*dtnew$male + dtnew$scaledbig_v*dtnew$male + dtnew$abi + dtnew$real + dtnew$enrolled + dtnew$nodegree  + dtnew$scaledsymtest + dtnew$scaledwordtest, family = poisson(link = "log") ,na.action = na.exclude )
-summary(glm2)
-
-# adjust the number of rows first 
-anova(glm1, glm2)
+##########################################
 
 

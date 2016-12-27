@@ -1,0 +1,5 @@
+[0] Config.pm:343> INFO - This is Biber 2.5
+[0] Config.pm:346> INFO - Logfile is 'presentation.blg'
+[40] biber-darwin:290> INFO - === Wed Dec 21, 2016, 09:15:55
+[58] Biber.pm:351> INFO - Reading 'presentation.bcf'
+[142] Utils.pm:149> WARN - No data sources defined!

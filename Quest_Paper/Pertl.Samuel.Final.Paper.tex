@@ -1,0 +1,274 @@
+\documentclass[10pt,a4paper]{article} 
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage[all]{nowidow} 
+\usepackage[style=authoryear, backend=biber, maxnames=3]{biblatex} 
+\usepackage[all]{nowidow} 
+\usepackage{hyperref} 
+\usepackage[pdftex]{graphicx}
+\usepackage[onehalfspacing]{setspace} 
+
+\usepackage{tikz}
+\usepackage{standalone}
+\usepackage{eurosym}
+\usepackage{ntheorem}
+\theoremseparator{:}
+\newtheorem{hyp}{Hypothese}
+\usepackage{dcolumn}
+\usepackage{graphics}
+\usepackage[toc,page]{appendix}
+\usepackage{booktabs,caption,fixltx2e}
+\usepackage[flushleft]{threeparttable}
+
+\usepackage[english]{babel} % for the language
+
+\usepackage{fullpage} % this and the next one is for 1-inch margin 
+\addbibresource{bib_file.bib} 
+\setlength\parindent{0pt} 
+\newcommand{\Title}{Religious people do not discount the future less} 
+\newcommand{\Programme}{Corporate Management \& Economics}
+\newcommand{\AsssignmentName}{Assignment}
+\newcommand{\Name}{Samuel Pertl}
+\newcommand{\MatrikelNummer}{000055998}
+\newcommand{\Date}{20-12-2016}
+\newcommand{\Semester}{Fall Term 2017}
+\newcommand{\Supervisor}{Thor Veen}
+\newcommand{\Class}{Data Science A}
+
+\begin{document}
+\pagenumbering{gobble}
+\input{front}
+\newpage
+
+
+\pagenumbering{arabic}
+\tableofcontents
+\listoffigures
+\listoftables
+
+\newpage
+
+\begin{abstract}
+\textcite{carter2012religious} found that religious people discount future rewards more than non-religious people. Studies by\textcite{thornton2015divine} and \textcite{benjamin2010religious} did not find such a relationship. In this study I found that religion is positively related to future discounting, indicating that religious people discount future payments more than non-religious people. However, this result is just marginally significant.
+\end{abstract}
+ 
+
+\section{Introduction}
+As shown by \textcite{mccullough2013religion} religion is associated with several beneficial outcomes such as longer life, fewer depressive symptoms and higher school achievements. One possible beneficial real life outcome of religion could be the postponement of gratification \parencite{carter2012religious}. Delay gratification could be encouraged by religion as many religions emphasize future rewards instead of immediate gratification such as reincarnation, resurrection and immorality \parencite{carter2012religious}. Furthermore, patience has an important role in many religions \parencite{carter2012religious}. Socialization in a religious environment might therefore lead to a more patient behavior, resulting in a preference for a higher later reward instead of a instant gratification \parencite{carter2012religious}.\\
+In line with the economic literature the trade-off between instant and delay gratification can be modeled through an intertemporal choice experiment. In an intertemporal choice experiment participants have to decide between an amount $x$ now and a higher amount $x+y$ later, where $y$ is positive.\\ 
+
+% not clear what I mean by future discounting 
+To my knowledge three papers have investigated the relationship between religion and future discounting so far. On the one hand, \textcite{carter2012religious} found that religious people discount future payments more than their non-religious counterparts. On the other hand, neither \textcite{thornton2015divine} nor \textcite{benjamin2010religious} observed such a relationship between religion and discounting of future rewards.\\ 
+
+Based on the contradictory findings as well as the scarcity of the previous research more research is needed to clarify the relationship between religion and the discounting of future rewards.\\
+Beside this, all three studies have major drawbacks. \textcite{carter2012religious, benjamin2010religious} use undergraduate students from the United States as their participants. According to \textcite{henrich2010weirdest} undergraduate students from "Western, Educated, Industrialized, Rich and Democratic" (WEIRD) societies - especially form the USA - are the least representative samples which substantially limits the generalization of this findings. \textcite{thornton2015divine} take this drawback into consideration and recruited their participants on the online labour market M-Turk. Even though participants from M-Turk are a more representative sample than undergraduates they are not representative enough since people who work online are - as well as undergraduates - also just a small fraction of the whole population \parencite{horton2011online}.\\
+
+This study takes these drawbacks into consideration and uses a representative sample of the German population to investigate the relationship between future discounting and religion.\footnote{For a detailed description of the data collection see \textcite{dohmen2010risk}}
+Based on the existing literature the research question for the following analysis is: 
+\begin{hyp}
+Religious people discount the future less than non-religious people and have therefore a stronger preference for later payments as non-religious participants
+\end{hyp}
+
+%The sample consist of a cross section of the German population. 
+\section{Methods}
+To measure future discounting each participant took part in an intertemporal choice experiment. For this purpose each participant received an intertemporal choice matrix with 20 rows.\footnote{Table ~\ref{tab:c} in the Appendix displays intertemporal choice matrix} For each row the participant had to decide between 100 euros "today" or a higher amount of $Y$ in 12 months \parencite{dohmen2010risk}. For all rows the early payment was 100 euros but the future payment increased by each subsequent row.\\
+The first time that a participant switched from the early payment to the later payment shows to which extent the participant discounts future rewards, indicated by the internal rate of return.\footnote{A detailed description of the internal rate of return can be found by brealey2013principios} For participants who never switch from the early payment to the later one, a switching row of 21 is assumed.\\  
+% why they do that 
+% here I have to mention that this is not appropriat e
+
+The response variable is the switching row, which indicates how strong a participant discounts future rewards. A higher switching row indicates that the participant discounts future payments stronger since he/she demands a higher return to give up the immediate payment for the reward in 12 months.\\
+The explanatory variable is the religious affiliation of a participant. Religious affiliation is coded as a dummy variable with 1 when the participant belongs to a religious community and with 0 if this is not the case.\\
+Control variables are extracted from the existing literature and are displayed in Table~\ref{tab:a}.\footnote{The exact coding of the control variables can be found in the R-script}
+
+
+\begin{table}[!htbp] 
+\centering 
+  \caption{Control variables}\label{tab:a}
+\begin{center}
+\scalebox{0.7}{
+\begin{tabular}{|p{5cm}|p{17cm}|}
+\hline Gender & 1 = male and 0 = female \\
+\hline Age  & Age in years \\
+%\hline Income & Logarithm of monthly income in euros of all household members, net of taxes and benefits \\ 
+%\hline Credit constraint & 1 = no credit constraint and 0 = credit constraint\\
+%\hline Big Five & Openness to experience, Conscientiousness, Extraversion, Agreeableness, Neuroticism\\  
+\hline
+\end{tabular}}
+\end{center}
+\end{table}
+
+% add the notes so 
+%If monthly income was not available, income is modeled through self-reported income measured in intervals (0-750; 750-1500; 1500-2500; 2500-3500; 3500-5000: $>$5000). The interval midpoint (7500 in the case of $>$5000) function as the monthly income.\\ 
+
+%Credit constraint is modeled through the question: "If you suddenly encounter an unforeseen situation, and had to pay an expense of 1000 euros in the next two weeks, would you be able to make the payment?". The Big Five is a psychological model that measures personality through five key dimensions: conscientiousness, extroversion, agreeableness, openness and neuroticism \parencite{dohmen2010risk}. Each personality trait is measured on a seven-point-scale with 3 question per personality trait. For each peculiarity of Big Five the scores from the three questions are added, resulting in an overall score for each Big Five. \footnote{When necessary the scores from some questions are reversed in their polarity in order to possibly achieve the maximum overall score} In order to make a statement how an individual participant's score compares with the score of the hole sample I standardize each Big Five. Therefore estimators for each personality trait have to be interpreted as a change in the switching row through an increase of the respective Big Five by one standard deviation, ceteris paribus. To control for systematic differences between male and female regarding the Big Five, each personality trait is interacted with gender \parencite{dohmen2010risk}. 
+
+
+%which variables do I use and why do I use them 
+
+In the first step the data is visualized to get an overview and observe whether the response variable switching row is normally distributed. Checking the normality provides the basis on which statistical tests can be applied. 
+In a second step a Welch two-sample t-test is applied to compare the means of switching row between religious and non-religious people as the variances of these two groups are not equal. A Welch two-sample t-test is appropriate as switching row is approximately normally distributed. \footnote{For a detailed description why switching row is normal distributed see the Result Section} Although a Welch t-test is sufficient a nonparametric test (Wilcoxon-Mann-Whitney test) is conducted to verify the previous results.
+In a third step a linear regression model is fitted to the data. This allows to control for variables that may have an influence on intertemporal decision making and detect whether religion still has an influence on the switching row after controlling for these variables. Forth, an analysis of variance (ANOVA) is performed to compare two regression models and decide whether the  model with more variables fits the data better than the model with less variables. Finally, I carry out a regression diagnostic and check whether the assumptions normality of residuals and  homoscedasticity are met within the linear regression.\\  
+
+Results are interpreted in light of the conventional 5 \% significance level. For the interpretation of the linear regression the ceteris paribus clause pertains and is not mentioned again.
+
+\section{Results}
+
+
+53.8 \% of the participants are female and 46.2 \% are male with a mean of age of 46 (range: 14 - 90). Participants belong to a wide range of religious communities (Protestant: 34.8\%, Catholic: 31.4 \%, member of a different Christian denomination or religious community: 2.6\%, Islamic: 2.2\%, another religious community: 0.2\%, no religious community: 28.8\%).\\
+ 
+Visualizing the data with a histogram (Figure~\ref{fig:a}) shows that switching row is not normally distributed since the data is highly left skewed. A Q-Q Plot as well as a Shapiro-Wilk test support this result of a non-Normal distribution of switching row (p-value $< 0.001$).\footnote{Q-Q Plot can be found in the Appendix}\\
+
+\begin{figure}[!htbp] 
+\begin{center}
+\caption{Histogramm of switching row with a normal distribution}\label{fig:a}
+\scalebox{0.5}{
+\input{switchingrow.tex}}
+\end{center}
+\end{figure}
+eine
+Applying various transformation to the the variable does not result in a normal distribution of switching row and are therefore not utilized.\footnote{Logarithm, Arcsine, Square-root, Square, Reciprocal, Antilog transformations are applied and can be found in the R-script} 
+
+According the the Central Limit Theorem (CLT), samples with a sufficient large size are approximately normal distributed and therefore parametric tests are suitable. Moreover, normality is not a requirement to fit a linear regression since just the coefficients estimates $\hat{\beta}$ have to be normal to compute confidence intervals and perform tests \parencite{lumley2002importance}. As $\hat{\beta}$ is a weighted sum of the response variable, “the CLT guarantees that it will be normally distributed if the sample size is large enough, and so tests and confidence intervals can be based on the associated t-statistic" \parencite{lumley2002importance}. However, it is questionable if the CLT applies and which sample size would be “large enough" as my sample is extremely non-Normal with a highly left skewness. \textcite{lumley2002importance} show for extremely non-Normal public health data that a sample is sufficiently large when the sample size is around 500. As my data set has a sample size of 500 observations and I see no reason why there should be a substantial difference between highly non-Normal data from the health care sector and my data parametric tests as well as a linear regression are appropriate.\\
+
+%validity of t-test and linear regression  in sufficiently large samples depends only on assumptions about the variance of the response 
+
+% http://stats.stackexchange.com/questions/100214/assumptions-of-linear-models-and-what-to-do-if-the-residuals-are-not-normally-di
+% http://stats.stackexchange.com/questions/29731/regression-when-the-ols-residuals-are-not-normally-distributed
+% http://stats.stackexchange.com/questions/29636/robust-regression-setting-the-limit-between-errors-and-influential-observations
+
+The mean switching row for religious participants is 13.81 (sd = 7.1) and for non-religious people 12.45 (sd = 7.63). Comparing the two means with a Welch t-test shows that the two means are not significantly different and that religious people do not have a higher switching row than their non-religious counterparts (p-value: $0.066$). This is supported by a 95\% confidence interval which does include a mean difference of zero. Also a Wilcoxon-Mann-Whitney test indicates that the switching rows of religious participants are likely not shifted left or right with respect to switching row of the non-religious participants (p-value: $0.081$).\\ 
+
+\subsection{Linear regression}
+The results of the linear regression are shown in Table ~\ref{tab:b}. The intercept of first the regression model indicates the expected switching row for the non-religious participants is 12.45 (p-value $<$ 0.0001). The estimator for the dummy variable religion shows that that the expected switching row for religious participants is 1.36 higher than the switching row of non-religious participants. However, this result is not statistically significant but very close to the 5\% mark (p-value: 0.058). The F-test displays that the model statistically does not fit the data since the estimator religion is not different from zero (p-value: 0.058). The adjusted $R^2$ implies that the model explains 0.05\% of the variance of switching row but this is not statistically significant.\\
+
+% also does not explain a lot exconomically 
+
+The second model controls for age and gender. The intercept of 12.44 is the expected switching row for non-religious females (p-value $<$ 0.001). The estimator religion shows that the expected switching row for religious participants is 1.386 higher than the expected switching row for non-religious participants. Again, this is not statistically significant (p-value: 0.054). The estimator age implies that if we increase age by one year the expected switching row increases by 0.006. Though, this is not significant (p-value: 0.732). The F-test indicates that the model does not fit the data since all the coefficients are not different from zero (p-value: 0.197).\\
+
+Comparing the two models with an ANOVA also shows that we should not keep the additional variables in the model as the reduction in the sum of squared residuals of 46.066 is not statistical significant and the two models are therefore not significantly different (p-value: 0.645).\\
+
+%The estimator $log(income)$ indicates that if we increase income by 10 percent the switching row decreases by 0.223 (p-value: 0.000172).
+
+%Participants that have a secondary-school degree have an expected switching row that is 1.92 higher than the switching row for participants who do not have a secondary-school degree (p-value: 0.044). Participants that have a no school leaving degree have an expected switching row that is 8.63 higher than the switching row for participants who have a school degree (p-value: 0.0973).
+
+% interaction term still do not know how to interpret an interaction effect when 
+
+ 
+
+%The adjusted $R^2$ shows that 4.958\% of the variance in switching row is explained by the model but the remaining 95.042 \% are still unexplained.
+
+
+\begin{table}[!htbp] 
+\centering 
+\caption{Regression Results}\label{tab:b}
+\scalebox{0.6}{
+\label{}
+\begin{tabular}{@{\extracolsep{5pt}}lD{.}{.}{-3} D{.}{.}{-3} } 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{2}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-3} 
+\\[-1.8ex] & \multicolumn{2}{c}{Switching row} \\ 
+\\[-1.8ex] & \multicolumn{1}{c}{(1)} & \multicolumn{1}{c}{(2)}\\ 
+\hline \\[-1.8ex] 
+ Religio & 1.363^{*}$ $(0.717) & 1.386^{*}$ $(0.717) \\ 
+  Male &  & -0.562$ $(0.651) \\ 
+  Age &  & 0.006$ $(0.018) \\ 
+  Constant & 12.451^{***}$ $(0.605) & 12.436^{***}$ $(1.069) \\ 
+ \hline \\[-1.8ex] 
+Observations & \multicolumn{1}{c}{500} & \multicolumn{1}{c}{499} \\ 
+R$^{2}$ & \multicolumn{1}{c}{0.007} & \multicolumn{1}{c}{0.009} \\ 
+Adjusted R$^{2}$ & \multicolumn{1}{c}{0.005} & \multicolumn{1}{c}{0.003} \\ 
+Residual Std. Error & \multicolumn{1}{c}{7.257 (df = 498)} & \multicolumn{1}{c}{7.250 (df = 495)} \\ 
+F Statistic & \multicolumn{1}{c}{3.618$^{*}$ (df = 1; 498)} & \multicolumn{1}{c}{1.564 (df = 3; 495)} \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{2}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\
+\hline Standard errors are reported in the brackets  \\
+\end{tabular}}
+\end{table}
+
+
+
+% label the graph 
+
+As the two models are not statistically different I use the first regression model to analyze the assumptions of the linear regression. The regression residuals are not normally distributed since they substantially deviate form the straight line which represents a normal distribution.\footnote{Diagnostic plots (Figure ~\ref{fig:b} and Figure ~\ref{fig:c}) can be found in the Appendix} Also a histogram shows that the residuals are not normally distributed as the they do not follow the curve of the normal distribution. Non-normality of the residuals is further supported by a Shapiro-Wilk test (p-value $<$ 0.001).\\
+
+% this should not be a problem as 
+
+%A first step to investigate whether the variance is constant (homoscedasicity) is to plot the residuals. Plot shows that the residuals might be constant. 
+% should I use the first plot or the third plot 
+% do not know how to do that 
+To investigate whether the variance is constant (homoscedasticity) a Breusch-Pagan test is conducted.\footnote{For a detailed description of the Breusch-Pagan test see \textcite{wooldridge2015introductory}} The Breusch-Pagan test shows that we fail to reject the null hypothesis that the variance is constant (p-value: 0.069). The p-value is very close to 5\% therefore a more detailed analysis of the variance of regression residuals is necessary.\footnote{Another instrument to detect heteroscedasticity is the White test} Nevertheless, this is not the scope of this paper and is not further investigated.\\
+
+\section{Discussion}
+The descriptive statistics as well as the linear regression shows that the switching row for religious participants is higher than the switching row of non-religious participants. This implies that religious participants discount the future more than their non-religious counterparts. All these results are not statistically significant at the conventional 5\% significance level but are very close to the 5\% mark. Hence, results could be interpreted as marginally significant. A positive relationship between religion and future discounting is controversial to the previous literature. One possible explanation could be that I use a representative sample instead of undergraduates or online laborers. More research is needed to clarify the relationship between religion and future discounting.\\
+
+%what are the implications??, why could religious participants have a higher switching row 
+%what does the diagnostic show 
+
+This paper is not without limitations. First, the data is extremely left skewed. Although the CLT should apply it could be that the sample size is not large enough and descriptive statistics as well as linear regression are misleading. Second, the adjusted $R^2$ is very small indicating that other variables could explain switching rows better. % is that correct?? 
+Third, for 35 \% of the participants a switching row of 21 is assumed as they never switch from the immediate to the later payment. This limits the validity of my analysis because I do not know the real switching row of these participants and just assume 21 as their switching row. A proper analysis should therefore just analyze the first 20 rows.\\
+Future research should conduct the experiment with a larger sample size to make sure that the CLT applies. Moreover, future experimental design should increase the amount of switching rows as well as vary the extent of the discount rates to avoid extremely skewed data. Another potential application could be to fit more complex regression models such as Tobit model (controlling for censored data), robust regression methods or non-linear models to increase the fit of the linear regression. Additionally, theoretical research is needed to explain, why religion could foster immediate gratification. Finally, future work should control for more variables such as income, credit constraints, Big Five, education or cognitive ability as these variables are associated with intertemporal decision making. 
+
+
+\newpage
+\printbibliography
+
+
+\begin{appendices}
+
+\begin{table}[!htbp] 
+\centering 
+  \caption{Pay-off matrix for intertemporal choice experiment}\label{tab:c}
+\begin{center}
+\scalebox{0.7}{
+\begin{tabular}{p{2cm}|p{3cm}|p{2cm}|p{3cm}}
+  & today & or & in 12 months\\
+\hline 1 & 100.00 & & 102.50\\
+\hline 2 & 100.00 & & 105.10 \\
+\hline 3 & 100.00 & & 107.60 \\
+\hline 4 & 100.00 & & 110.20 \\
+\hline 5 & 100.00 & & 112.80 \\
+\hline 6 & 100.00 & & 115.50 \\
+\hline 7 & 100.00 & & 118.20 \\
+\hline 8 & 100.00 & & 121.00 \\
+\hline 9 & 100.00 & & 123.70 \\
+\hline 10 & 100.00 & & 126.50 \\
+\hline 11 & 100.00 & & 129.30 \\
+\hline 12 & 100.00 & & 132.20 \\
+\hline 13 & 100.00 & & 135.10 \\
+\hline 14 & 100.00 & & 138.00 \\
+\hline 15 & 100.00 & & 141.00 \\
+\hline 16 & 100.00 & & 144.00 \\
+\hline 17 & 100.00 & & 147.00 \\
+\hline 18 & 100.00 & & 150.00 \\
+\hline 19 & 100.00 & & 153.10 \\
+\hline 20 & 100.00 & & 156.20\\
+\hline
+\end{tabular}}
+\end{center}
+\end{table}
+
+
+\begin{figure}
+    \centering
+    \begin{minipage}{0.45\textwidth}
+\caption{Histogram of regression residuals with normal distribution}\label{fig:b}
+        \includegraphics[width=0.9\textwidth]{final.tex} % first figure itself
+        
+    \end{minipage}\hfill
+    \begin{minipage}{0.45\textwidth}
+\caption{Q-Q Plot of regression residuals}\label{fig:c}
+        \includegraphics[width=0.9\textwidth]{final2.tex} % second figure itself
+        
+    \end{minipage}
+\end{figure}
+
+
+\end{appendices}
+
+
+\end{document}

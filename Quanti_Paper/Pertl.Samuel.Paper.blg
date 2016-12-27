@@ -1,0 +1,27 @@
+[0] Config.pm:343> INFO - This is Biber 2.5
+[0] Config.pm:346> INFO - Logfile is 'Pertl.Samuel.Paper.blg'
+[55] biber-darwin:290> INFO - === Sun Dec 25, 2016, 12:51:07
+[78] Biber.pm:351> INFO - Reading 'Pertl.Samuel.Paper.bcf'
+[170] Biber.pm:776> INFO - Found 35 citekeys in bib section 0
+[183] Biber.pm:3493> INFO - Processing section 0
+[260] Biber.pm:3657> INFO - Looking for bibtex format file 'bib_file.bib' for section 0
+[263] bibtex.pm:1187> INFO - Decoding LaTeX character macros into UTF-8
+[265] bibtex.pm:1048> INFO - Found BibTeX data source 'bib_file.bib'
+[298] Utils.pm:149> WARN - BibTeX subsystem: /var/folders/cb/l0p24hjn7lbb0f5f7mly9pgw0000gn/T/kiVSmN0pOW/bib_file.bib_999.utf8, line 6, warning: 12 characters of junk seen at toplevel
+[298] Utils.pm:149> WARN - BibTeX subsystem: /var/folders/cb/l0p24hjn7lbb0f5f7mly9pgw0000gn/T/kiVSmN0pOW/bib_file.bib_999.utf8, line 24, warning: 18 characters of junk seen at toplevel
+[298] Utils.pm:149> WARN - BibTeX subsystem: /var/folders/cb/l0p24hjn7lbb0f5f7mly9pgw0000gn/T/kiVSmN0pOW/bib_file.bib_999.utf8, line 105, warning: 2 characters of junk seen at toplevel
+[298] Utils.pm:149> WARN - BibTeX subsystem: /var/folders/cb/l0p24hjn7lbb0f5f7mly9pgw0000gn/T/kiVSmN0pOW/bib_file.bib_999.utf8, line 140, warning: 9 characters of junk seen at toplevel
+[298] Utils.pm:149> WARN - BibTeX subsystem: /var/folders/cb/l0p24hjn7lbb0f5f7mly9pgw0000gn/T/kiVSmN0pOW/bib_file.bib_999.utf8, line 171, warning: 8 characters of junk seen at toplevel
+[298] Utils.pm:149> WARN - BibTeX subsystem: /var/folders/cb/l0p24hjn7lbb0f5f7mly9pgw0000gn/T/kiVSmN0pOW/bib_file.bib_999.utf8, line 254, warning: 8 characters of junk seen at toplevel
+[298] Utils.pm:149> WARN - BibTeX subsystem: /var/folders/cb/l0p24hjn7lbb0f5f7mly9pgw0000gn/T/kiVSmN0pOW/bib_file.bib_999.utf8, line 291, warning: 19 characters of junk seen at toplevel
+[298] Utils.pm:149> WARN - BibTeX subsystem: /var/folders/cb/l0p24hjn7lbb0f5f7mly9pgw0000gn/T/kiVSmN0pOW/bib_file.bib_999.utf8, line 315, warning: 16 characters of junk seen at toplevel
+[298] Utils.pm:149> WARN - BibTeX subsystem: /var/folders/cb/l0p24hjn7lbb0f5f7mly9pgw0000gn/T/kiVSmN0pOW/bib_file.bib_999.utf8, line 334, warning: 7 characters of junk seen at toplevel
+[298] Utils.pm:149> WARN - BibTeX subsystem: /var/folders/cb/l0p24hjn7lbb0f5f7mly9pgw0000gn/T/kiVSmN0pOW/bib_file.bib_999.utf8, line 343, warning: 10 characters of junk seen at toplevel
+[298] Utils.pm:149> WARN - BibTeX subsystem: /var/folders/cb/l0p24hjn7lbb0f5f7mly9pgw0000gn/T/kiVSmN0pOW/bib_file.bib_999.utf8, line 365, warning: 11 characters of junk seen at toplevel
+[433] UCollate.pm:66> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
+[433] UCollate.pm:66> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[433] Biber.pm:3306> INFO - Sorting list 'nyt/global/' of type 'entry' with scheme 'nyt' and locale 'de-DE'
+[433] Biber.pm:3310> INFO - No sort tailoring available for locale 'de-DE'
+[487] bbl.pm:526> INFO - Writing 'Pertl.Samuel.Paper.bbl' with encoding 'UTF-8'
+[492] bbl.pm:619> INFO - Output to Pertl.Samuel.Paper.bbl
+[492] Biber.pm:108> INFO - WARNINGS: 11

@@ -1,0 +1,153 @@
+\documentclass[10pt]{beamer}
+\usetheme{metropolis}
+\usepackage{appendixnumberbeamer}
+\usepackage{booktabs}
+\usepackage[scale=2]{ccicons}
+\usepackage{pgfplots}
+\usepgfplotslibrary{dateplot}
+\usepackage{xspace}
+\newcommand{\themename}{\textbf{\textsc{metropolis}}\xspace}
+\usepackage[style=authoryear, backend=biber, maxnames=3]{biblatex}
+\usepackage{tikz}
+\usepackage{standalone}
+%\usepackage[pdftex]{graphicx}
+
+
+\title{Religion and Future Discounting}
+%\subtitle{A modern beamer theme}
+\date{\today}
+\author{Samuel Pertl}
+\institute{Quest University}
+% \titlegraphic{\hfill\includegraphics[height=1.5cm]{logo.pdf}}
+
+
+\begin{document}
+
+\maketitle
+\begin{frame}{Table of contents}
+\setbeamertemplate{section in toc}[sections numbered]
+\tableofcontents[hideallsubsections]
+\end{frame}
+
+\section{Motivation}
+\begin{frame}[fragile] {Scarcity of research and contradictory findings} 
+\begin{itemize}
+\item Carter et. al (2012) found that religious people discount future rewards less than non-religious people  
+\\  
+\item Benjamin, Choi, and Fisher (2012) Thornton, Stokes, and Helms (2105) did not find such a relationship 
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}[fragile] {What is future discounting} 
+\begin{itemize}
+\item Measurement for the preference to have something now instead in the future (time preference) 
+\item Example: Cookie
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}[fragile] {Future discounting in my data} 
+\begin{table}
+\caption{Intertemporal choice matrix}
+\scalebox{0.5}{
+\begin{tabular}{p{2cm}|p{3cm}|p{2cm}|p{3cm}}
+  & today & or & in 12 months\\
+\hline 1 & 100.00 & & 102.50\\
+\hline 2 & 100.00 & & 105.10 \\
+\hline 3 & 100.00 & & 107.60 \\
+\hline 4 & 100.00 & & 110.20 \\
+\hline 5 & 100.00 & & 112.80 \\
+\hline 6 & 100.00 & & 115.50 \\
+\hline 7 & 100.00 & & 118.20 \\
+\hline 8 & 100.00 & & 121.00 \\
+\hline 9 & 100.00 & & 123.70 \\
+\hline 10 & 100.00 & & 126.50 \\
+\hline 11 & 100.00 & & 129.30 \\
+\hline 12 & 100.00 & & 132.20 \\
+\hline 13 & 100.00 & & 135.10 \\
+\hline 14 & 100.00 & & 138.00 \\
+\hline 15 & 100.00 & & 141.00 \\
+\hline 16 & 100.00 & & 144.00 \\
+\hline 17 & 100.00 & & 147.00 \\
+\hline 18 & 100.00 & & 150.00 \\
+\hline 19 & 100.00 & & 153.10 \\
+\hline 20 & 100.00 & & 156.20\\
+\hline
+\end{tabular}}
+\end{table}
+\end{frame}
+
+
+
+
+
+
+\begin{frame}[fragile] {My variables} 
+\begin{table}
+\caption{Variables}
+\scalebox{0.6}{
+\begin{tabular}{|p{3cm}|p{3cm}|p{8cm}|}
+\hline Switching row & Response variable & 1 - 21 \\
+\hline Religion & Explanatory variable & 1 = religious affiliation and 0 = no religious affiliation\\ 
+\hline Gender & Control variable &1 = male and 0 = female \\
+\hline Age  & Control variable & Age in years \\
+\hline
+\end{tabular}}
+\end{table}
+\end{frame}
+
+\begin{frame}[fragile] {Research question} 
+Religious participants discount the future less than non-religious participants and have therefore a stronger preference for later payments as non-religious participants
+\end{frame}
+
+\section{Results}
+
+\begin{frame}[fragile] {Descriptive Statistics} 
+\begin{itemize}
+\item Mean switching row religious participants: 13.81 (sd = 7.1) \item Mean switching row non-religious participants: 12.45 (sd = 7.63)
+\item Welch t-test: 
+means of switching row between religious and non-religious participants are not significantly different (p-value: $0.066$)
+\item Wilcoxon-Mann-Whitney: two means are not significantly different (p-value: $0.081$)
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Linear regression results}
+  \begin{table}
+    \caption{Linear regression}
+    \begin{tabular}{lrr}
+      \toprule
+      Estimator & Regression 1 & Regression 2 \\
+      \midrule
+      $\hat{\beta_0}$ & $12.45^{\star\star\star}$ (0.62)& $12.44^{\star\star\star}$ (1.07) \\
+      $\hat{\beta}_{Religion} $ & $1.36^\star$ (0.72) & $1.39^\star$ (0.72) \\
+       $ \hat{\beta}_{Male}$ & & -0.56 (0.65)\\
+      $ \hat{\beta}_{Age}$ & &0.01 (0.02) \\
+      \\
+      Observations &  500 & 499 \\
+      Adjusted $R^2$ &  0.005  & 0.003\\
+      Residuals Std. Error&   7.257 (df = 498) &7.250 (df = 495) \\
+      F-Statistic & $3.618^\star$ (df = 1; 498)  & 1.564 (df = 3; 495) \\
+\midrule
+Note & $^\star p<0.1; ^{\star\star} p<0.05;$ & $ ^{\star\star\star} p<0.001$ \\
+      \bottomrule
+    \end{tabular}
+\end{table}
+\end{frame}
+
+\section{Limitations}
+\begin{frame}[fragile] {Descriptive Statistics} 
+\begin{itemize}
+\item Data is extremely left skewed 
+\item $R^2$ is very small 
+\item For 35 \% of the participants a switching row of 21 is assumed as they never switch from the immediate to the later payment
+\end{itemize}
+\end{frame}
+
+\begin{frame}[standout]
+Questions? 
+\end{frame}
+
+
+\end{document}
