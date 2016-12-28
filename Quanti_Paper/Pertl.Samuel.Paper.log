@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.6.30)  27 DEC 2016 12:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.6.30)  28 DEC 2016 13:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1454,12 +1454,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 105--106
 
  []
 
-[8]
+
 Underfull \hbox (badness 10000) in paragraph at lines 109--110
 
  []
 
-
+[8]
 Underfull \hbox (badness 10000) in paragraph at lines 118--119
 
  []
@@ -1497,27 +1497,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 131--133
 
 Package hyperref Info: bookmark level for unknown hyp defaults to 0 on input li
 ne 141.
-[10]
+
 Underfull \hbox (badness 10000) in paragraph at lines 150--151
 
  []
 
-
+[10]
 Underfull \hbox (badness 10000) in paragraph at lines 155--157
 
  []
 
-[11]
+
 Underfull \hbox (badness 10000) in paragraph at lines 158--159
 
  []
 
-[12]
+[11]
 Underfull \hbox (badness 10000) in paragraph at lines 196--197
 
  []
 
-
+[12]
 Underfull \hbox (badness 10000) in paragraph at lines 198--199
 
  []
@@ -1532,7 +1532,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 220--221
 
  []
 
-[14]
+
 Overfull \hbox (5.3975pt too wide) in paragraph at lines 240--241
  [] 
  []
@@ -1542,7 +1542,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 245--246
 
  []
 
-
+[14]
 Underfull \hbox (badness 10000) in paragraph at lines 247--248
 
  []
@@ -1552,12 +1552,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 249--251
 
  []
 
-[15]
+
 Underfull \hbox (badness 10000) in paragraph at lines 252--253
 
  []
 
-
+[15]
 Underfull \hbox (badness 10000) in paragraph at lines 254--257
 
  []
@@ -1586,14 +1586,32 @@ Underfull \hbox (badness 10000) in paragraph at lines 302--304
 
  []
 
-[18] [19]
+
 Underfull \hbox (badness 10000) in paragraph at lines 382--383
 
  []
 
-
+[18] [19]
 Underfull \hbox (badness 10000) in paragraph at lines 385--386
 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 389--390
+
+ []
+
+
+Overfull \hbox (12.23602pt too wide) in paragraph at lines 394--397
+\OT1/cmr/m/n/10.95 ei-nem Haupt-schul-ab-schluss ($\OML/cmm/m/it/10.95 p \OT1/c
+mr/m/n/10.95 = 0\OML/cmm/m/it/10.95 :\OT1/cmr/m/n/10.95 097$). Die-ses Er-geb-n
+is ent-spricht den aus-gef[]uhrten []okonomischen
+ []
+
+
+Overfull \hbox (11.98587pt too wide) in paragraph at lines 394--397
+\OT1/cmr/m/n/10.95 Er-war-tun-gen. Je-doch hat $[]$ nur 3 Be-ob-ach-tun-gen, wa
+s die Aus-sa-ge-kraft die-ses Sch[]atzers
  []
 
 
@@ -1651,11 +1669,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 604--605
 
  []
 
-[26] (./heteroscedasticity.tex)
+(./heteroscedasticity.tex)
 File: heteroscedasticity.tex Graphic file (type tex)
  (./Spreadlevel.tex)
 File: Spreadlevel.tex Graphic file (type tex)
-
+ [26]
 Underfull \hbox (badness 10000) in paragraph at lines 638--639
 
  []
@@ -1681,12 +1699,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 677--678
 
  []
 
-[29]
+
 Underfull \hbox (badness 10000) in paragraph at lines 693--694
 
  []
 
-
+[29]
 Underfull \hbox (badness 10000) in paragraph at lines 696--697
 
  []
@@ -1701,12 +1719,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 704--705
 
  []
 
-[30]
+
 Underfull \hbox (badness 10000) in paragraph at lines 709--712
 
  []
 
-
+[30]
 Underfull \hbox (badness 10000) in paragraph at lines 719--721
 
  []
@@ -1739,10 +1757,10 @@ Package logreq Info: Writing requests to 'Pertl.Samuel.Paper.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 25704 strings out of 493014
- 469789 string characters out of 6133351
- 1118729 words of memory out of 5000000
- 28586 multiletter control sequences out of 15000+600000
+ 25699 strings out of 493014
+ 469720 string characters out of 6133351
+ 1119530 words of memory out of 5000000
+ 28581 multiletter control sequences out of 15000+600000
  13256 words of font info for 50 fonts, out of 8000000 for 9000
  1145 hyphenation exceptions out of 8191
  57i,17n,96p,1779b,1687s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1803,10 +1821,10 @@ ve/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/
 6/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2016
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2016/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on Pertl.Samuel.Paper.pdf (37 pages, 454353 bytes).
+Output written on Pertl.Samuel.Paper.pdf (37 pages, 453849 bytes).
 PDF statistics:
- 689 PDF objects out of 1000 (max. 8388607)
- 628 compressed objects within 7 object streams
+ 687 PDF objects out of 1000 (max. 8388607)
+ 626 compressed objects within 7 object streams
  143 named destinations out of 1000 (max. 500000)
  325 words of extra memory for PDF output out of 10000 (max. 10000000)
 

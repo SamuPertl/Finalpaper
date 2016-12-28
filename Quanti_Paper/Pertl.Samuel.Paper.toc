@@ -30,27 +30,27 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {5.1.3}Kontrollvariablen}{14}{subsubsection.5.1.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6}Resultate}{17}{section.6}
+\contentsline {section}{\numberline {6}Resultate}{16}{section.6}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {6.1}Datenvisualisierung}{17}{subsection.6.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {6.1.1}Central Limit Theorem}{18}{subsubsection.6.1.1}
+\contentsline {subsubsection}{\numberline {6.1.1}Central Limit Theorem}{17}{subsubsection.6.1.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {6.2}Deskriptive Statistik}{18}{subsection.6.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.3}Regression}{20}{subsection.6.3}
+\contentsline {subsection}{\numberline {6.3}Regression}{18}{subsection.6.3}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {7}Robustheit}{21}{section.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.1}Transformation der abh\IeC {\"a}ngigen Variable}{22}{subsection.7.1}
+\contentsline {subsection}{\numberline {7.1}Transformation der abh\IeC {\"a}ngigen Variable}{21}{subsection.7.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {7.2}Tobit Model}{22}{subsection.7.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8}Diagnostik}{25}{section.8}
+\contentsline {section}{\numberline {8}Diagnostik}{22}{section.8}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {8.1}Globaler Test von Modellannahmen}{25}{subsection.8.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.2}Normalverteilung der Residuen}{26}{subsection.8.2}
+\contentsline {subsection}{\numberline {8.2}Normalverteilung der Residuen}{25}{subsection.8.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {8.3}Independence of Error}{26}{subsection.8.3}
 \defcounter {refsection}{0}\relax 
@@ -64,17 +64,17 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {8.7.1}Outliers}{28}{subsubsection.8.7.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {8.7.2}Leverage observations}{29}{subsubsection.8.7.2}
+\contentsline {subsubsection}{\numberline {8.7.2}Leverage observations}{28}{subsubsection.8.7.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {8.7.3}Influental observations}{29}{subsubsection.8.7.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {9}Endogenit\IeC {\"a}t}{30}{section.9}
+\contentsline {section}{\numberline {9}Endogenit\IeC {\"a}t}{29}{section.9}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {9.1}Omitted Variable Bias}{30}{subsection.9.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {9.2}Measurement Error}{30}{subsection.9.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.3}Simultaneity}{31}{subsection.9.3}
+\contentsline {subsection}{\numberline {9.3}Simultaneity}{30}{subsection.9.3}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {10}Conclusion}{31}{section.10}
 \defcounter {refsection}{0}\relax 
